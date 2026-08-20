@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Корабельная артель — судостроительная верфь</title>
+<meta name="description" content="Корабельная артель — судостроительная верфь в Саратове, на берегу Волги. Строит суда из авиационного алюминия с 1992 года.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css?v=17">
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav">
+    <a class="nav__logo" href="/" aria-label="Корабельная артель">
+      <img src="assets/logo/wordmark-white.svg" alt="Корабельная артель">
+    </a>
+    <nav class="nav__links">
+      <a href="fleet.html">Флот</a>
+      <a href="about.html">О верфи</a>
+      <a href="#stories">Истории</a>
+      <a href="#gallery">Галерея</a>
+      <a href="contact.html">Контакты</a>
+    </nav>
+    <a class="nav__cta" href="#contact">Связаться</a>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <!-- carousel slides — placeholder repeats of one photo until the hero set is ready -->
+    <div class="hero__slides" id="heroSlides">
+      <div class="hero__slide is-active" style="background-image:url('assets/img/hero-shipyard.jpg')"></div>
+      <div class="hero__slide" style="background-image:url('assets/img/hero-shipyard.jpg')"></div>
+      <div class="hero__slide" style="background-image:url('assets/img/hero-shipyard.jpg')"></div>
+      <div class="hero__slide" style="background-image:url('assets/img/hero-shipyard.jpg')"></div>
+    </div>
+    <div class="hero__scrim"></div>
+
+    <div class="hero__inner">
+      <h1 class="hero__title">Судостроительная верфь</h1>
+      <p class="hero__text">
+        Корабельная артель базируется в Саратове, на берегу Волги.
+        Строит суда из авиационного алюминия с 1992 года.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#fleet">Смотреть Флот</a>
+        <a class="btn btn--secondary" href="about.html">О верфи</a>
+      </div>
+    </div>
+
+    <div class="hero__trackers" id="heroTrackers" aria-label="Слайды галереи">
+      <button class="hero__track is-active" aria-label="Слайд 1"></button>
+      <button class="hero__track" aria-label="Слайд 2"></button>
+      <button class="hero__track" aria-label="Слайд 3"></button>
+      <button class="hero__track" aria-label="Слайд 4"></button>
+    </div>
+  </section>
+
+  <!-- ===================== ВЕРФЬ ===================== -->
+  <section class="verf" id="about">
+    <div class="verf__inner">
+      <div class="verf__collage">
+        <img class="a" src="assets/img/verf-yard.jpg" alt="Верфь «Саратов-ПТБ» в Саратове">
+        <img class="b" src="assets/img/verf-workshop.jpg" alt="Строительство корпуса в цехе">
+        <img class="c" src="assets/img/verf-boat.jpg" alt="«Сибирский исследователь» на трейлере">
+      </div>
+      <div class="verf__text">
+        <h2 class="verf__title">Верфь</h2>
+        <div class="verf__body">
+          <p>С 1992 года на берегу Волги в Саратове наша верфь создаёт уникальные суда — от исследовательских кораблей до скоростных катеров. За более чем тридцать лет мы реализовали десятки проектов, каждый из которых несёт в себе нашу преданность ремеслу.</p>
+          <p>Мы используем авиационный алюминий и дуб российского производства, тик от лучших мировых поставщиков и оборудование ведущих производителей — чтобы каждое судно соответствовало высочайшим стандартам качества.</p>
+          <p>Наш стратегический партнёр — Русское географическое общество, для которого мы построили «Сибирский исследователь».</p>
+        </div>
+        <div class="verf__actions">
+          <a class="btn btn--primary" href="#fleet">Смотреть Флот</a>
+          <a class="btn btn--secondary" href="#partner">Наш партнёр</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STATS ===================== -->
+  <section class="stats">
+    <div class="stats__inner">
+      <div class="stat"><div class="stat__num">1992</div><div class="stat__label">Год основания</div></div>
+      <div class="stat"><div class="stat__num">30+</div><div class="stat__label">Построенных судов</div></div>
+      <div class="stat"><div class="stat__num">6</div><div class="stat__label">Типов судов</div></div>
+      <div class="stat"><div class="stat__num">РГО</div><div class="stat__label">Стратегический партнёр</div></div>
+    </div>
+  </section>
+
+  <!-- ===================== ФЛОТ ===================== -->
+  <section class="fleet" id="fleet">
+    <div class="fleet__inner">
+      <h2 class="fleet__title">Флот</h2>
+      <div class="fleet__grid">
+        <article class="fleet-card">
+          <img class="fleet-card__img" src="assets/img/fleet-katera.jpg" alt="Глиссирующие катера">
+          <h3 class="fleet-card__title">Глиссирующие катера</h3>
+          <p class="fleet-card__sub">Катера линейки T-Rex</p>
+          <p class="fleet-card__sub">Для скорости, волн и приключений</p>
+        </article>
+        <article class="fleet-card">
+          <img class="fleet-card__img" src="assets/img/fleet-korabli.jpg" alt="Корабли">
+          <h3 class="fleet-card__title">Корабли</h3>
+          <p class="fleet-card__sub">Суда средних размеров</p>
+          <p class="fleet-card__sub">Для больших компаний и комфорта</p>
+        </article>
+        <article class="fleet-card">
+          <img class="fleet-card__img" src="assets/img/fleet-expedition.jpg" alt="Экспедиционные">
+          <h3 class="fleet-card__title">Экспедиционные</h3>
+          <p class="fleet-card__sub">Научно-исследовательские суда</p>
+          <p class="fleet-card__sub">Для экстремальных условий и адреналина</p>
+        </article>
+        <article class="fleet-card">
+          <img class="fleet-card__img" src="assets/img/fleet-traulery.jpg" alt="Траулеры">
+          <h3 class="fleet-card__title">Траулеры</h3>
+          <p class="fleet-card__sub">Рыболовные суда</p>
+          <p class="fleet-card__sub">Для рыбалки и морских промыслов</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== НАШ ПОДХОД ===================== -->
+  <section class="approach" id="approach">
+    <div class="approach__inner">
+      <h2 class="approach__title">Наш подход</h2>
+
+      <div class="approach__grid">
+        <!-- LEFT: elongated photo + tabs under it -->
+        <div class="approach__left">
+          <img class="approach__img" id="approachImg" src="assets/img/approach-ph.jpg" alt="">
+          <div class="approach__tabs" id="approachTabs" role="tablist">
+            <button class="approach__tab is-active" data-panel="korpus"  data-img="assets/img/approach-ph.jpg" role="tab">Корпус</button>
+            <button class="approach__tab" data-panel="komfort" data-img="assets/img/approach-ph.jpg" role="tab">Комфорт</button>
+            <button class="approach__tab" data-panel="tehno"   data-img="assets/img/approach-ph.jpg" role="tab">Технологии</button>
+            <button class="approach__tab" data-panel="oborud"  data-img="assets/img/approach-ph.jpg" role="tab">Оборудование</button>
+            <button class="approach__tab" data-panel="univers" data-img="assets/img/approach-ph.jpg" role="tab">Универсальность</button>
+          </div>
+        </div>
+
+        <!-- RIGHT: description that swaps per tab -->
+        <div class="approach__right" id="approachPanels">
+          <div class="approach__panel is-active" data-panel="korpus">
+            <p class="approach__lead">«Мы строим из авиационного алюминия и не работаем с пластиком.»</p>
+            <p class="approach__body">Корпус выполнен из алюминиевого сплава АМГ5М — усиленная конструкция и дополнительно укреплённая килевая область. Алюминий не боится коррозии, держит удар и служит десятилетиями, в отличие от пластика, который со временем стареет и трескается. А усиленный киль позволяет катеру уверенно ходить по мелководью и подходить к самому берегу.</p>
+          </div>
+          <div class="approach__panel" data-panel="komfort">
+            <p class="approach__lead">«Защита от непогоды, тишина на борту.»</p>
+            <p class="approach__body">Каждое решение продумано с вниманием к комфорту и безопасности пассажиров. Фальшборт поднят до 300 мм и закрывает от ветра и волн, а иллюминаторы убраны за фальшборт для дополнительной защиты. Усиленная термоизоляция держит тепло, а обновлённые электрика и электроника делают время на воде спокойнее и безопаснее.</p>
+          </div>
+          <div class="approach__panel" data-panel="tehno">
+            <p class="approach__lead">«Своя энергия и климат в любых условиях.»</p>
+            <p class="approach__body">Солнечная батарея мощностью 360 Вт даёт дополнительную энергию для оборудования и устройств на борту. Отопление и кондиционирование работают независимо друг от друга: жидкостное отопление Eberspächer с четырьмя радиаторами улучшает качество воздуха и снижает шум, а кондиционер Airwell на 37 000 BTU держит климат даже в жару. Гальюн отделён от душевой, которую при желании можно дооборудовать в хамам.</p>
+          </div>
+          <div class="approach__panel" data-panel="oborud">
+            <p class="approach__lead">«Только судовое оборудование мировых марок.»</p>
+            <p class="approach__body">На борт мы ставим лишь проверенное оборудование от известных мировых производителей — Vetus, Osculati, Maritim, Mastervolt, Victron Energy, BlueSea, Webasto, Eberspächer, Dometic, Lewmar, Quick и других. Каждый компонент выбран так, чтобы гарантировать качество и надёжность на годы вперёд.</p>
+          </div>
+          <div class="approach__panel" data-panel="univers">
+            <p class="approach__lead">«От Золотого кольца до просторов Сибири.»</p>
+            <p class="approach__body">Катер рассчитан на длительные автономные путешествия — по рекам Золотого кольца или по большой воде Сибири. Три каюты вмещают до 12 человек, а продуманная планировка одинаково подходит для корпоративных выходов, семейного отдыха и рыбалки с друзьями. Один катер — под любые задачи на воде.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ГАЛЕРЕЯ ===================== -->
+  <section class="gallery" id="gallery">
+    <div class="gallery__inner">
+      <div class="gallery__head">
+        <h2 class="gallery__title">Галерея</h2>
+        <a class="btn btn--secondary" href="#gallery">Все фотографии</a>
+      </div>
+      <div class="gallery__grid">
+        <div class="gallery__cell gallery__big"></div>
+        <div class="gallery__cell"></div>
+        <div class="gallery__cell"></div>
+        <div class="gallery__cell"></div>
+        <div class="gallery__cell"></div>
+        <div class="gallery__cell"></div>
+        <div class="gallery__cell"></div>
+        <div class="gallery__cell"></div>
+        <div class="gallery__cell"></div>
+        <div class="gallery__cell"></div>
+        <div class="gallery__cell"></div>
+        <div class="gallery__cell"></div>
+        <div class="gallery__logo"><img src="assets/logo/seal-white.svg" alt="Корабельная артель"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="faq" id="faq">
+    <div class="faq__inner">
+      <div class="faq__img"></div>
+      <div class="faq__content">
+        <h2 class="faq__title">Частые вопросы</h2>
+        <div class="faq__list" id="faqList">
+          <div class="faq__item is-open">
+            <button class="faq__q">Из какого материала вы строите суда?</button>
+            <div class="faq__a"><p>Мы строим из авиационного алюминия (сплав АМГ5М) и не работаем с пластиком. Алюминий не боится коррозии, держит удар и служит десятилетиями.</p></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q">Можно ли заказать судно по индивидуальному проекту?</button>
+            <div class="faq__a"><p>Да. Большинство наших судов — штучные проекты. Мы обсуждаем задачи, планировку и оснащение и строим судно под них.</p></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q">Сколько времени занимает постройка?</button>
+            <div class="faq__a"><p>Сроки зависят от проекта и комплектации. Точные сроки мы называем после согласования технического задания.</p></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q">Какое оборудование вы устанавливаете?</button>
+            <div class="faq__a"><p>Только судовое оборудование мировых марок — Vetus, Victron Energy, Webasto, Eberspächer, Dometic, Lewmar и других.</p></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q">Где базируется верфь?</button>
+            <div class="faq__a"><p>В Саратове, на берегу Волги. Мы будем рады показать производство — приезжайте на верфь.</p></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q">Помогаете ли вы после передачи судна?</button>
+            <div class="faq__a"><p>Да. Мы остаёмся на связи, консультируем по эксплуатации и помогаем с обслуживанием.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== НАШИ АДРЕСА ===================== -->
+  <section class="loc" id="locations">
+    <div class="loc__inner">
+      <div class="loc__text">
+        <h2 class="loc__title">Наши адреса</h2>
+        <div class="loc__items">
+          <div class="loc__item">
+            <h3 class="loc__name">Верфь</h3>
+            <p class="loc__addr">Саратов, на берегу Волги<br><span class="loc__ph">Точный адрес уточняется</span></p>
+            <div class="loc__actions">
+              <a class="btn btn--secondary loc__btn" href="#locations">Показать на карте</a>
+            </div>
+          </div>
+          <div class="loc__item">
+            <h3 class="loc__name">Шоурум</h3>
+            <p class="loc__addr"><span class="loc__ph">Адрес уточняется</span></p>
+            <div class="loc__actions">
+              <a class="btn btn--secondary loc__btn" href="#locations">Показать на карте</a>
+            </div>
+          </div>
+          <div class="loc__item">
+            <h3 class="loc__name">Отдел продаж</h3>
+            <p class="loc__addr">Kartel Boats<br><span class="loc__ph">Адрес уточняется</span></p>
+            <div class="loc__actions">
+              <a class="btn btn--secondary loc__btn" href="#locations">Показать на карте</a>
+            </div>
+          </div>
+          <div class="loc__item">
+            <h3 class="loc__name">Связаться</h3>
+            <p class="loc__addr"><span class="loc__ph">Телефон и почта — уточняются</span></p>
+            <div class="loc__actions">
+              <a class="btn btn--secondary loc__btn" href="#contact">Позвонить</a>
+              <a class="btn btn--secondary loc__btn" href="#contact">Написать</a>
+            </div>
+          </div>
+          <div class="loc__item">
+            <h3 class="loc__name">Режим работы</h3>
+            <p class="loc__addr">Пн–Пт, 9:00–18:00<br>Экскурсии по верфи — по записи</p>
+          </div>
+        </div>
+      </div>
+      <div class="loc__map">Карта</div>
+    </div>
+  </section>
+
+  <!-- ===================== KARTEL BOATS ===================== -->
+  <section class="kartel" id="kartel">
+    <div class="kartel__inner">
+      <div class="kartel__text">
+        <h2 class="kartel__title">Kartel Boats</h2>
+        <p class="kartel__body">Корабельная артель и Kartel Boats — одна компания. Верфь строит суда, а Kartel Boats отвечает за продажи. Готовые катера, корабли и экспедиционные суда можно выбрать и купить на сайте Kartel Boats.</p>
+      </div>
+      <div class="kartel__card">
+        <div class="kartel__logo">Kartel Boats</div>
+        <a class="kartel__cta" href="https://kartelboats.ru" target="_blank" rel="noopener">Перейти на Kartel Boats →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="foot">
+    <div class="foot__inner">
+      <div class="foot__top">
+        <!-- COL 1: wordmark + CTA -->
+        <div class="foot__col">
+          <a class="foot__brand" href="#top" aria-label="Корабельная артель">
+            <img src="assets/logo/wordmark-white.svg" alt="Корабельная артель">
+          </a>
+          <h3 class="foot__eyebrow">Начните свой проект</h3>
+          <p class="foot__sub">Экскурсия по верфи и консультация — по записи</p>
+          <a class="foot__cta" href="#locations">Связаться</a>
+        </div>
+
+        <!-- COL 2: locations -->
+        <div class="foot__col">
+          <p class="foot__coltitle">Локации</p>
+          <ul class="foot__locs">
+            <li>
+              <a class="foot__loc-name" href="https://yandex.ru/maps/?text=Саратов+улица+Огородная+3" target="_blank" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2C16 2 19 5 19 9c0 5-7 13-7 13S5 14 5 9c0-4 3-7 7-7Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+                Верфь — Саратов
+              </a>
+              <div class="foot__loc-lines"><p>г. Саратов, ул. Огородная, 3</p></div>
+            </li>
+            <li>
+              <a class="foot__loc-name" href="https://yandex.ru/maps/?text=Саратов+Большая+Затонская" target="_blank" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2C16 2 19 5 19 9c0 5-7 13-7 13S5 14 5 9c0-4 3-7 7-7Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+                Шоурум — Саратов
+              </a>
+              <div class="foot__loc-lines"><p>г. Саратов, ул. Большая Затонская</p></div>
+            </li>
+            <li>
+              <a class="foot__loc-name" href="https://yandex.ru/maps/?text=Москва+Краснопресненская+набережная+12" target="_blank" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2C16 2 19 5 19 9c0 5-7 13-7 13S5 14 5 9c0-4 3-7 7-7Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+                Отдел продаж — Москва
+              </a>
+              <div class="foot__loc-lines">
+                <p>Краснопресненская наб. 12</p>
+                <p>6-й подъезд, 11 этаж, офис 1148</p>
+                <p>Гостиница «Международная»</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- COL 3: contacts -->
+        <div class="foot__col">
+          <p class="foot__coltitle">Контакты</p>
+          <ul class="foot__contacts">
+            <li>
+              <a class="foot__contact" href="tel:+74957418258">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 4h3l2 4-2 2c1.5 3.5 3 5 6.5 6.5l2-2 4 2v3c0 1.5-1 2.5-2.5 2.5C10 22 2 14 2 6 2 4.5 3 4 4 4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                +7 (495) 741-82-58
+              </a>
+            </li>
+            <li>
+              <a class="foot__contact" href="mailto:office@kartelboats.ru">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="1" stroke="currentColor" stroke-width="1.6"/><path d="M2 6l10 7 10-7" stroke="currentColor" stroke-width="1.6"/></svg>
+                office@kartelboats.ru
+              </a>
+            </li>
+          </ul>
+          <div class="foot__social">
+            <a class="foot__soc" href="https://t.me/kartelboats" target="_blank" rel="noopener" aria-label="Telegram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21.5 4 2 9.5 9 12l3 7 3-5 4.5 3L21.5 4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="foot__soc" href="https://www.youtube.com/@kartelboats" target="_blank" rel="noopener" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M10 9l6 3-6 3V9Z" fill="currentColor"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <hr class="foot__hr">
+
+      <div class="foot__related">
+        <span class="foot__related-label">Связанные сайты:</span>
+        <a href="https://kartelboats.ru" target="_blank" rel="noopener">Kartel Boats
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 8 8 2M8 2H4M8 2v4" stroke="currentColor" stroke-width="1.2"/></svg>
+        </a>
+        <a href="https://expedition65.ru" target="_blank" rel="noopener">Экспедиция 65
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 8 8 2M8 2H4M8 2v4" stroke="currentColor" stroke-width="1.2"/></svg>
+        </a>
+      </div>
+
+      <nav class="foot__nav">
+        <a href="#fleet">Флот</a>
+        <a href="about.html">О верфи</a>
+        <a href="#approach">Наш подход</a>
+        <a href="#gallery">Галерея</a>
+        <a href="#locations">Адреса</a>
+        <a href="#kartel">Kartel Boats</a>
+      </nav>
+
+      <div class="foot__legal">
+        <a href="#">Политика конфиденциальности</a>
+        <a href="#">Условия использования</a>
+        <a href="#">Политика cookies</a>
+        <span>© 2026 Корабельная артель</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/carousel.js"></script>
+  <script src="js/features.js"></script>
+</body>
+</html>
