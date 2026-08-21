@@ -365,7 +365,7 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 /* ============================================================
    FLEET PAGE  (hero + family sections of boat cards + filters)
    ============================================================ */
-.fleet-hero{position:relative;min-height:clamp(340px,52vh,560px);display:flex;align-items:flex-end;color:var(--white);overflow:hidden}
+.fleet-hero{position:relative;min-height:clamp(440px,60vh,640px);display:flex;flex-direction:column;justify-content:flex-end;color:var(--white);overflow:hidden}
 .fleet-hero__bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.62) saturate(1.12)}
 .fleet-hero__scrim{position:absolute;inset:0;background:
   linear-gradient(180deg,rgba(0,0,0,.35),transparent 40%),
@@ -373,25 +373,42 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 .fleet-hero__inner{position:relative;z-index:2;width:100%;max-width:var(--maxw);margin:0 auto;padding:clamp(2rem,5vw,4rem) var(--gutter)}
 .fleet-hero__title{font-family:var(--serif);font-weight:600;font-size:clamp(2.4rem,5vw,4rem);line-height:1;text-shadow:0 2px 24px rgba(0,0,0,.5)}
 .fleet-hero__sub{margin-top:1rem;max-width:46ch;font-size:clamp(1rem,1.3vw,1.15rem);line-height:1.5;color:rgba(255,255,255,.92);text-shadow:0 1px 12px rgba(0,0,0,.5)}
+/* filter band tucked into the bottom of the hero image */
+.fleet-hero__band{position:relative;z-index:3;
+  background:linear-gradient(0deg,rgba(11,15,40,.85),rgba(11,15,40,.42));
+  -webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);
+  border-top:1px solid rgba(255,255,255,.16)}
+.fleet-hero__band-inner{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter);
+  display:flex;gap:.5rem}
+.fleet-tab{flex:1 1 0;position:relative;background:none;border:0;cursor:pointer;
+  font-family:var(--sans);font-weight:600;font-size:clamp(13px,1.05vw,15px);letter-spacing:.01em;
+  color:rgba(255,255,255,.66);padding:1.35rem .5rem 1.5rem;transition:color .2s ease}
+.fleet-tab::after{content:"";position:absolute;left:.6rem;right:.6rem;bottom:1rem;height:2px;
+  border-radius:2px;background:rgba(255,255,255,.2);transition:background .2s ease}
+.fleet-tab:hover{color:#fff}
+.fleet-tab.is-active{color:#fff}
+.fleet-tab.is-active::after{background:var(--brass)}
 
 /* filter + quick-link bar */
-.fleet-controls{position:sticky;top:0;z-index:9;background:var(--white);border-bottom:1px solid var(--grey-300)}
+.fleet-controls{position:sticky;top:0;z-index:9;background:var(--white)}
 .fleet-controls__inner{max-width:var(--maxw);margin:0 auto;padding:1rem var(--gutter);
-  display:flex;flex-wrap:wrap;gap:.55rem;align-items:center}
-.fleet-controls__sep{width:1px;height:22px;background:var(--grey-300);margin:0 .35rem}
+  display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;align-items:center;justify-content:space-between}
+.fleet-filters{display:flex;flex-wrap:wrap;gap:.55rem;align-items:center}
+.fleet-nav{display:flex;flex-wrap:wrap;gap:.1rem;align-items:center}
 .fleet-chip{font-family:var(--sans);font-weight:600;font-size:14px;line-height:1;
   padding:.55rem 1.15rem;border-radius:25px;border:1px solid var(--grey-300);
   background:var(--white);color:var(--charcoal);cursor:pointer;
   transition:background .2s ease,color .2s ease,border-color .2s ease}
 .fleet-chip:hover{border-color:var(--navy)}
 .fleet-chip.is-active{background:var(--navy);color:var(--white);border-color:var(--navy)}
-.fleet-jump{font-family:var(--sans);font-weight:600;font-size:14px;color:var(--charcoal);
-  padding:.55rem .4rem;transition:color .2s ease}
-.fleet-jump:hover{color:var(--brass)}
+.fleet-jump{font-family:var(--sans);font-weight:500;font-size:13px;color:var(--grey-500);
+  padding:.4rem .55rem;transition:color .2s ease}
+.fleet-jump:hover{color:var(--navy)}
+.fleet-count{font-family:var(--sans);font-size:13px;font-weight:500;color:var(--grey-500)}
 
 /* family sections */
 .fleet-fam{max-width:var(--maxw);margin:0 auto;padding:clamp(2.5rem,5vw,4rem) var(--gutter) 0}
-.fleet-fam:last-of-type{padding-bottom:clamp(3rem,6vw,5rem)}
+#fleetSections{display:block;padding-bottom:clamp(3rem,6vw,5rem)}
 .fleet-fam.is-empty{display:none}
 .fleet-fam__title{font-family:var(--serif);font-weight:600;color:var(--near-black);
   font-size:clamp(1.6rem,3vw,2.25rem);line-height:1.1;
@@ -420,6 +437,26 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 .boat-card__meta{position:absolute;left:1rem;right:1rem;bottom:1rem;z-index:2}
 .boat-card__name{font-family:var(--serif);font-weight:600;font-size:1.25rem;line-height:1.15}
 .boat-card__year{margin-top:.15rem;font-family:var(--sans);font-size:.8rem;color:rgba(255,255,255,.8)}
+/* not-yet-available cards (planning / build): grey mesh that lifts on hover */
+.boat-card[data-status="planning"] .boat-card__img,
+.boat-card[data-status="build"] .boat-card__img{filter:grayscale(.8) brightness(.8);transition:filter .4s ease,transform .5s ease}
+.boat-card[data-status="planning"]:hover .boat-card__img,
+.boat-card[data-status="build"]:hover .boat-card__img{filter:none}
+.boat-card[data-status="planning"]::after,
+.boat-card[data-status="build"]::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  transition:opacity .4s ease;
+  background:repeating-linear-gradient(45deg,rgba(255,255,255,.05) 0 2px,transparent 2px 7px),rgba(66,68,76,.45)}
+.boat-card[data-status="planning"]:hover::after,
+.boat-card[data-status="build"]:hover::after{opacity:0}
+/* construction progress bar (build only) */
+.boat-card__progress{margin-top:.6rem;height:5px;border-radius:3px;background:rgba(255,255,255,.25);overflow:hidden}
+.boat-card__progress span{display:block;height:100%;background:var(--brass);border-radius:3px}
+/* free (available) cards: bright blue glow beneath */
+.boat-card[data-status="available"]{
+  box-shadow:0 3px 14px -2px rgba(64,120,240,.6), 0 12px 30px -6px rgba(64,120,240,.9);
+  transition:box-shadow .35s ease}
+.boat-card[data-status="available"]:hover{
+  box-shadow:0 4px 16px -2px rgba(64,120,240,.78), 0 16px 40px -6px rgba(64,120,240,1)}
 
 /* ============================================================
    BOAT DETAIL PAGE — low-fi wireframe (grey boxes + placeholder lines)

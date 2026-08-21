@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=17">
+<link rel="stylesheet" href="css/styles.css?v=114">
 </head>
 <body>
 
@@ -29,7 +29,7 @@
 
   <!-- ===================== FLEET ===================== -->
   <main>
-    <!-- HERO -->
+    <!-- HERO with filter band tucked into the bottom of the image -->
     <section class="fleet-hero">
       <div class="fleet-hero__bg" style="background-image:url('assets/img/fleet-hero.jpg')"></div>
       <div class="fleet-hero__scrim"></div>
@@ -37,24 +37,15 @@
         <h1 class="fleet-hero__title">Флот</h1>
         <p class="fleet-hero__sub">Катера, экспедиционные суда, прогулочные лодки и корабли — построенные на верфи в Саратове с 1992 года.</p>
       </div>
-    </section>
-
-    <!-- CONTROLS: status filters + family quick-links -->
-    <div class="fleet-controls">
-      <div class="fleet-controls__inner" id="fleetControls">
-        <button class="fleet-chip is-active" data-filter="all">Все</button>
-        <button class="fleet-chip" data-filter="available">Свободные</button>
-        <button class="fleet-chip" data-filter="build">В постройке</button>
-        <button class="fleet-chip" data-filter="planning">В проекте</button>
-        <button class="fleet-chip" data-filter="sold">Проданные</button>
-        <span class="fleet-controls__sep"></span>
-        <a class="fleet-jump" href="#fam-trex">T-Rex</a>
-        <a class="fleet-jump" href="#fam-expedition">Expedition</a>
-        <a class="fleet-jump" href="#fam-korabli">Корабли</a>
-        <a class="fleet-jump" href="#fam-traulery">Траулеры</a>
-        <a class="fleet-jump" href="#fam-gulyanki">Гулянки</a>
+      <div class="fleet-hero__band">
+        <div class="fleet-hero__band-inner" id="fleetControls">
+          <button class="fleet-tab is-active" data-filter="all">Все</button>
+          <button class="fleet-tab" data-filter="available">Готовые к продаже</button>
+          <button class="fleet-tab" data-filter="inproject">В проекте</button>
+          <button class="fleet-tab" data-filter="sold">Проданные</button>
+        </div>
       </div>
-    </div>
+    </section>
 
     <!-- FAMILY SECTIONS (rendered by js/fleet.js) -->
     <div id="fleetSections"></div>
@@ -164,7 +155,7 @@
     </div>
   </footer>
 
-  <script src="js/boats-data.js?v=17"></script>
-  <script src="js/fleet.js?v=17"></script>
+  <script src="js/boats-data.js?v=32"></script>
+  <script src="js/fleet.js?v=32"></script>
 </body>
 </html>

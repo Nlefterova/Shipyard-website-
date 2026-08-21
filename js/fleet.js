@@ -5,6 +5,9 @@ function boatCard(b) {
   const badge = `<span class="boat-card__badge boat-card__badge--${b.status}">${STATUS_LABEL[b.status]}</span>`;
   const tags = (b.tags || []).map((t) => `<span class="boat-card__tag">${t}</span>`).join("");
   const year = b.year ? `<div class="boat-card__year">${b.year}</div>` : "";
+  const progress = (b.status === "build" && b.progress)
+    ? `<div class="boat-card__progress"><span style="width:${b.progress}%"></span></div>`
+    : "";
   return `
     <a class="boat-card" href="boat.html?id=${b.id}" data-status="${b.status}" aria-label="${b.name}">
       <img class="boat-card__img" src="assets/img/${b.img}" alt="${b.name}">
@@ -13,6 +16,7 @@ function boatCard(b) {
       <div class="boat-card__meta">
         <div class="boat-card__name">${b.name}</div>
         ${year}
+        ${progress}
       </div>
     </a>`;
 }
@@ -31,20 +35,33 @@ function render() {
   }).join("");
 }
 
+function boatWord(n) {
+  const d = n % 10, dd = n % 100;
+  if (d === 1 && dd !== 11) return "судно";
+  if (d >= 2 && d <= 4 && (dd < 12 || dd > 14)) return "судна";
+  return "судов";
+}
+
 function applyFilter(filter) {
+  let total = 0;
   document.querySelectorAll(".fleet-fam").forEach((fam) => {
     let visible = 0;
     fam.querySelectorAll(".boat-card").forEach((card) => {
-      const show = filter === "all" || card.dataset.status === filter;
+      const s = card.dataset.status;
+      // "inproject" groups the not-yet-available boats: planned + under construction
+      const show = filter === "all" || s === filter ||
+        (filter === "inproject" && (s === "planning" || s === "build"));
       card.style.display = show ? "" : "none";
-      if (show) visible++;
+      if (show) { visible++; total++; }
     });
     fam.classList.toggle("is-empty", visible === 0);
   });
+  const c = document.getElementById("fleetCount");
+  if (c) c.textContent = total + " " + boatWord(total);
 }
 
 function initFilters() {
-  const chips = Array.from(document.querySelectorAll("#fleetControls .fleet-chip"));
+  const chips = Array.from(document.querySelectorAll("#fleetControls .fleet-tab"));
   chips.forEach((chip) => {
     chip.addEventListener("click", () => {
       chips.forEach((c) => c.classList.remove("is-active"));
@@ -56,3 +73,4 @@ function initFilters() {
 
 render();
 initFilters();
+applyFilter("all");
