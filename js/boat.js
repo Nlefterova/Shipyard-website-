@@ -142,6 +142,12 @@
     // OVERVIEW
     setText(".wf-overview .wf-lead", c.overviewLead);
     fillBodies(".wf-overview__text .wf-body", c.overviewBody);
+    // booklet button — kept only for boats that actually have a booklet
+    const bookBtn = document.querySelector(".wf-overview .wf-btns .btn--secondary");
+    if (bookBtn) {
+      if (c.booklet) { if (typeof c.booklet === "string") bookBtn.href = c.booklet; }
+      else bookBtn.remove();
+    }
     // STORY
     if (c.storyTitle) setText(".wf-story .wf-sectitle", c.storyTitle);
     setText(".wf-story .wf-lead", c.storyLead);
