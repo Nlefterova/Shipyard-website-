@@ -28,7 +28,7 @@ const BOATS = [
   { id: "specialist",family: "trex", name: "T-Rex Specialist", status: "planning", year: "", img: "trex-specialist.jpg" },
   { id: "egoist",    family: "trex", name: "T-Rex Egoist",     status: "build",    year: "2026", img: "trex-egoist.jpg", progress: 55 },
   { id: "trex-44fly",family: "trex", name: "T-Rex 44 Fly", status: "available", year: "2024", img: "trex44fly.jpg" },
-  { id: "trex-44cr", family: "trex", name: "T-Rex 44 CR",  status: "available", year: "2023", img: "fleet-katera.jpg" },
+  { id: "trex-44cr", family: "trex", name: "T-Rex 44 CR",  status: "available", year: "2023", img: "trex44cr.jpg", photos: { hero2: "trex44cr-2.jpg", overview: "trex44cr-dock.jpg?v=2", construction: "trex44cr-beach.jpg?v=2", thumbs: ["trex44cr-i1.jpg","trex44cr-i2.jpg","trex44cr-i3.jpg","trex44cr-i4.jpg","trex44cr-i5.jpg","trex44cr-i6.jpg"], captions: ["Камбуз","Камбуз","Мастер-каюта","Носовая каюта","Санузел","Душевая"], gallery: ["trex44cr-i5.jpg","trex44cr-i1.jpg","trex44cr-beach.jpg?v=2","trex44cr-i3.jpg","trex44cr-i4.jpg","trex44cr-dock.jpg?v=2","trex44cr-2.jpg","trex44cr-i2.jpg","trex44cr-i6.jpg"], plans: ["trex44cr-plan1.png","trex44cr-plan2.png"] } },
   { id: "trex-40",   family: "trex", name: "T-Rex 40",     status: "sold",      year: "2020", img: "trex40.jpg" },
   { id: "trex-37",   family: "trex", name: "T-Rex 37",     status: "sold",      year: "2018", img: "trex37.jpg" },
   // Expedition
