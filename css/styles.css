@@ -588,7 +588,10 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 .wf-plans__label{font-family:var(--serif);font-weight:600;color:var(--near-black);
   font-size:clamp(1.1rem,1.8vw,1.35rem);margin-bottom:clamp(.75rem,1.5vw,1.1rem)}
 .wf-plans{display:flex;flex-direction:column;gap:clamp(1.5rem,3.5vw,2.75rem);width:min(640px,100%);margin-inline:auto}
+/* three decks (Fly) — tighter, original wireframe spacing so all three fit */
+.wf-plans--3{gap:clamp(.75rem,1.5vw,1.15rem);width:min(500px,100%)}
 .wf-specsheet__right{display:grid;align-content:center}
+.wf-specsheet__right:has(.wf-plans--3){align-content:start}
 .wf-plans__img{position:relative;width:100%;aspect-ratio:531/243;background:#e9e9e9;
   padding:.75rem clamp(1.5rem,4vw,3rem);background-origin:content-box}
 .wf-plan__label{position:absolute;left:clamp(.9rem,2vw,1.4rem);right:clamp(.9rem,2vw,1.4rem);

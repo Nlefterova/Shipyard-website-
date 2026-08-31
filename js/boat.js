@@ -57,19 +57,7 @@
           }
         });
       }
-      // floor plans — line-art, shown fully (contain) on the cream box
-      if (Array.isArray(boat.photos.plans)) {
-        const pboxes = document.querySelectorAll(".wf-plans__img");
-        boat.photos.plans.forEach((f, i) => {
-          const el = pboxes[i];
-          if (el && f) {
-            el.style.backgroundImage = "url('assets/img/" + f + "')";
-            el.style.backgroundSize = "contain";
-            el.style.backgroundRepeat = "no-repeat";
-            el.style.backgroundPosition = "center";
-          }
-        });
-      }
+      // (floor plans are rendered in fillContent, so the box count follows the data)
     }
   }
 
@@ -121,37 +109,95 @@
     });
   }
 
-  if (id === "trex-44cr") return; // the one filled card — leave the rest exactly as-is
+  /* ---- Editorial content ------------------------------------------------
+     If the boat carries a `content` block in js/boats-data.js, fill the page
+     from it (this scales to any boat). Otherwise fall back to wireframe. The
+     static markup in boat.html is just the default (currently T-Rex 44 CR). */
+  if (boat && boat.content) { fillContent(boat); return; }
+  fillWireframe();
 
-  const LOREM =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod " +
-    "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim " +
-    "veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.";
+  // tiny DOM helpers
+  function setText(sel, txt) { const el = document.querySelector(sel); if (el && txt != null) el.textContent = txt; }
+  function setAll(sel, txt) { document.querySelectorAll(sel).forEach((el) => { if (txt != null) el.textContent = txt; }); }
+  function fillBodies(sel, arr, asHtml) {
+    if (!Array.isArray(arr)) return;
+    document.querySelectorAll(sel).forEach((el, i) => {
+      if (arr[i] == null) return;
+      if (asHtml) el.innerHTML = arr[i]; else el.textContent = arr[i];
+    });
+  }
 
-  document.title = "Судно — Корабельная артель";
+  function fillContent(boat) {
+    const c = boat.content;
+    document.title = boat.name + " — Корабельная артель";
+    // HERO
+    setText(".wf-hero__info .wf-field .wf-label", c.eyebrow);
+    setAll(".wf-name", boat.name);
+    setText(".wf-desc", c.desc);
+    setAll(".wf-year__num", boat.year || "—");
+    if (Array.isArray(c.heroSpecs)) {
+      const ul = document.querySelector(".spec-list");
+      if (ul) ul.innerHTML = c.heroSpecs.map((r) => "<li>" + r[0] + " — " + r[1] + "</li>").join("");
+    }
+    // OVERVIEW
+    setText(".wf-overview .wf-lead", c.overviewLead);
+    fillBodies(".wf-overview__text .wf-body", c.overviewBody);
+    // STORY
+    if (c.storyTitle) setText(".wf-story .wf-sectitle", c.storyTitle);
+    setText(".wf-story .wf-lead", c.storyLead);
+    fillBodies(".wf-story__text .wf-body", c.storyBody, true);
+    // SPEC TABLE
+    if (Array.isArray(c.specs)) {
+      const st = document.querySelector(".wf-spectable");
+      if (st) st.innerHTML = c.specs.map((r) => "<li><span>" + r[0] + "</span><span>" + r[1] + "</span></li>").join("");
+    }
+    // FLOOR PLANS — build one box per deck (2 for CR, 3 for Fly, …); drop in
+    // the line-art drawing where one exists (boat.photos.plans[i]).
+    if (Array.isArray(c.decks)) {
+      const wrap = document.querySelector(".wf-plans");
+      if (wrap) {
+        wrap.classList.add("wf-plans--" + c.decks.length);
+        wrap.innerHTML = c.decks.map((d) =>
+          '<div class="wf-box wf-plans__img"><ul class="wf-plan__label">' +
+            '<li class="wf-plan__deck">' + d.name + "</li>" +
+            d.items.map((it) => "<li>" + it + "</li>").join("") +
+          "</ul></div>"
+        ).join("");
+        const plans = (boat.photos && boat.photos.plans) || [];
+        wrap.querySelectorAll(".wf-plans__img").forEach((el, i) => {
+          if (plans[i]) {
+            el.style.backgroundImage = "url('assets/img/" + plans[i] + "')";
+            el.style.backgroundSize = "contain";
+            el.style.backgroundRepeat = "no-repeat";
+            el.style.backgroundPosition = "center";
+          }
+        });
+      }
+    }
+  }
 
-  // HERO — name, type, short description, year
-  document.querySelectorAll(".wf-name").forEach((el) => (el.textContent = "Название судна"));
-  const series = document.querySelector(".wf-hero__info .wf-field .wf-label");
-  if (series) series.textContent = "Тип судна";
-  document.querySelectorAll(".wf-desc").forEach((el) => (el.textContent = "Lorem ipsum dolor sit amet consectetur."));
-  document.querySelectorAll(".wf-lead").forEach((el) => (el.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."));
-  document.querySelectorAll(".wf-year__num").forEach((el) => (el.textContent = "—"));
-
-  // BODY COPY — Overview + Construction (vary so the two paragraphs differ)
-  const LOREMS = [
-    LOREM,
-    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
-    "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis.",
-  ];
-  document.querySelectorAll(".wf-body").forEach((el, i) => (el.textContent = LOREMS[i % LOREMS.length]));
-
-  // HERO SPEC LIST — keep the labels, remove the measurements
-  document.querySelectorAll(".spec-list li").forEach((li) => {
-    const label = li.textContent.split("—")[0].trim();
-    li.textContent = label + " — —";
-  });
-
-  // FULL SPEC TABLE — dash out every value
-  document.querySelectorAll(".wf-spectable li > span:last-child").forEach((v) => (v.textContent = "—"));
+  function fillWireframe() {
+    const LOREM =
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod " +
+      "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim " +
+      "veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.";
+    document.title = "Судно — Корабельная артель";
+    document.querySelectorAll(".wf-name").forEach((el) => (el.textContent = "Название судна"));
+    const series = document.querySelector(".wf-hero__info .wf-field .wf-label");
+    if (series) series.textContent = "Тип судна";
+    document.querySelectorAll(".wf-desc").forEach((el) => (el.textContent = "Lorem ipsum dolor sit amet consectetur."));
+    document.querySelectorAll(".wf-lead").forEach((el) => (el.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."));
+    document.querySelectorAll(".wf-year__num").forEach((el) => (el.textContent = "—"));
+    const LOREMS = [
+      LOREM,
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis.",
+    ];
+    document.querySelectorAll(".wf-body").forEach((el, i) => (el.textContent = LOREMS[i % LOREMS.length]));
+    document.querySelectorAll(".spec-list li").forEach((li) => {
+      const label = li.textContent.split("—")[0].trim();
+      li.textContent = label + " — —";
+    });
+    document.querySelectorAll(".wf-spectable li > span:last-child").forEach((v) => (v.textContent = "—"));
+  }
 })();
