@@ -25,14 +25,18 @@ const STATUS_LABEL = { planning: "В проекте", build: "В построй�
 
 const BOATS = [
   // T-Rex
-  { id: "specialist",family: "trex", name: "T-Rex Specialist", status: "planning", year: "", img: "trex-specialist.jpg" },
-  { id: "egoist",    family: "trex", name: "T-Rex Egoist",     status: "build",    year: "2026", img: "trex-egoist.jpg", progress: 55 },
-  { id: "trex-44fly", family: "trex", name: "T-Rex 44 Fly", status: "available", year: "2025", img: "trex44fly.jpg?v=2",
+  { id: "specialist",family: "trex", name: "T-Rex Specialist", status: "planning", year: "", img: "trex-specialist.jpg", noLink: true },
+  { id: "egoist", family: "trex", name: "T-Rex Egoist", status: "build", year: "2026", img: "trex-egoist.jpg", progress: 55, heroOnly: true, noLink: true,
+    content: {
+      eyebrow: "Глиссирующий катер",
+      desc: "Новый катер линейки T-Rex — сейчас в постройке."
+    } },
+  { id: "trex-44fly", family: "trex", name: "T-Rex 44 Fly", status: "available", year: "2025", img: "trex44fly-2.jpg", cardImg: "trex44fly-card.jpg",
     photos: {
-      hero2: "trex44fly-2.jpg", overview: "trex44fly-overview.jpg", construction: "trex44fly-story.jpg",
+      hero2: "trex44fly-3.jpg", overview: "trex44fly-overview.jpg?v=2", construction: "trex44fly-story.jpg",
       thumbs: ["trex44fly-i1.jpg","trex44fly-i2.jpg","trex44fly-i3.jpg","trex44fly-i4.jpg","trex44fly-i5.jpg","trex44fly-i6.jpg"],
       captions: ["Салон","Салон","Камбуз","Мастер-каюта","Гостевая каюта","Санузел"],
-      gallery: ["trex44fly-i2.jpg","trex44fly-i1.jpg","trex44fly-overview.jpg","trex44fly-i3.jpg","trex44fly-i4.jpg","trex44fly-story.jpg","trex44fly-2.jpg","trex44fly-i5.jpg","trex44fly-i6.jpg"],
+      gallery: ["trex44fly-i2.jpg","trex44fly-i1.jpg","trex44fly-overview.jpg?v=2","trex44fly-i3.jpg","trex44fly-i4.jpg","trex44fly-story.jpg","trex44fly-2.jpg","trex44fly-i5.jpg","trex44fly-i6.jpg"],
       plans: ["trex44fly-plan3.png","trex44fly-plan1.png","trex44fly-plan2.png"]
     },
     content: {
@@ -62,7 +66,7 @@ const BOATS = [
         { name: "нижняя палуба", items: ["мастер-каюта","гостевая каюта","два санузла с душем"] }
       ]
     } },
-  { id: "trex-44cr", family: "trex", name: "T-Rex 44 CR",  status: "available", year: "2023", img: "trex44cr.jpg",
+  { id: "trex-44cr", family: "trex", name: "T-Rex 44 CR",  status: "available", year: "2023", img: "trex44cr.jpg", cardImg: "trex44cr-card.jpg",
     photos: { hero2: "trex44cr-2.jpg", overview: "trex44cr-dock.jpg?v=2", construction: "trex44cr-beach.jpg?v=2", thumbs: ["trex44cr-i1.jpg","trex44cr-i2.jpg","trex44cr-i3.jpg","trex44cr-i4.jpg","trex44cr-i5.jpg","trex44cr-i6.jpg"], captions: ["Камбуз","Камбуз","Мастер-каюта","Носовая каюта","Санузел","Душевая"], gallery: ["trex44cr-i5.jpg","trex44cr-i1.jpg","trex44cr-beach.jpg?v=2","trex44cr-i3.jpg","trex44cr-i4.jpg","trex44cr-dock.jpg?v=2","trex44cr-2.jpg","trex44cr-i2.jpg","trex44cr-i6.jpg"], plans: ["trex44cr-plan1.png","trex44cr-plan2.png"] },
     content: {
       eyebrow: "Глиссирующий катер",
@@ -90,8 +94,14 @@ const BOATS = [
         { name: "нижняя палуба", items: ["мастер-каюта","носовая каюта","детская каюта","два санузла","душевая"] }
       ]
     } },
-  { id: "trex-40", family: "trex", name: "T-Rex 40", status: "sold", year: "2020", img: "trex40.jpg",
-    photos: { plans: ["trex40-plan-side.png","trex40-plan-top.png","trex40-plan-front.png"] },
+  { id: "trex-40", family: "trex", name: "T-Rex 40", status: "sold", year: "2020", img: "trex40-4.jpg",
+    photos: {
+      hero2: "trex40-2.jpg", hero2Pos: "center 28%", overview: "trex40-3.jpg", construction: "trex40-story2.jpg",
+      thumbs: ["trex40-i1.jpg","trex40-i2.jpg","trex40-i3.jpg","trex40-i4.jpg","trex40-i5.jpg","trex40-i6.jpg"],
+      captions: ["Пост управления","Салон","Кают-компания","Каюта","Камбуз","На воде"],
+      gallery: ["trex40-i2.jpg","trex40-i1.jpg","trex40.jpg?v=2","trex40-i3.jpg","trex40-i4.jpg","trex40-overview.jpg","trex40-2.jpg","trex40-i5.jpg","trex40-story.jpg"],
+      plans: ["trex40-plan-side.png","trex40-plan-top.png","trex40-plan-front.png"]
+    },
     content: {
       eyebrow: "Глиссирующий катер",
       desc: "Глиссирующий катер из морского алюминия, построенный для автономных выходов по рекам и морю.",
@@ -118,8 +128,14 @@ const BOATS = [
         { name: "вид спереди", items: [] }
       ]
     } },
-  { id: "trex-37", family: "trex", name: "T-Rex 37", status: "sold", year: "2018", img: "trex37.jpg",
-    photos: { plans: ["trex37-plan-side.png","trex37-plan-front.png"] },
+  { id: "trex-37", family: "trex", name: "T-Rex 37", status: "sold", year: "2018", img: "trex37-2.jpg", cardPos: "40% 50%",
+    photos: {
+      hero2: "trex37.jpg?v=2", overview: "trex37-overview.jpg", construction: "trex37-story.jpg",
+      thumbs: ["trex37-i1.jpg","trex37-i2.jpg","trex37-i3.jpg","trex37-i4.jpg","trex37-i5.jpg","trex37-i6.jpg"],
+      captions: ["Пост управления","Салон","Кают-компания","Каюта","Камбуз","На воде"],
+      gallery: ["trex37-i2.jpg","trex37-i1.jpg","trex37.jpg?v=2","trex37-i3.jpg","trex37-i4.jpg","trex37-overview.jpg","trex37-2.jpg","trex37-i5.jpg","trex37-i6.jpg"],
+      plans: ["trex37-plan-side.png","trex37-plan-front.png"]
+    },
     content: {
       eyebrow: "Глиссирующий катер",
       desc: "Первый катер линейки T-Rex — компактный, полностью автономный, с водолазным оснащением.",

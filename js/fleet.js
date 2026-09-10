@@ -8,9 +8,14 @@ function boatCard(b) {
   const progress = (b.status === "build" && b.progress)
     ? `<div class="boat-card__progress"><span style="width:${b.progress}%"></span></div>`
     : "";
+  // some boats (e.g. planning placeholders) have no detail page yet — render
+  // them as a plain, non-clickable card instead of a link.
+  const tag = b.noLink ? "div" : "a";
+  const href = b.noLink ? "" : ` href="boat.html?id=${b.id}"`;
+  const nolinkClass = b.noLink ? " boat-card--nolink" : "";
   return `
-    <a class="boat-card" href="boat.html?id=${b.id}" data-status="${b.status}" aria-label="${b.name}">
-      <img class="boat-card__img" src="assets/img/${b.img}" alt="${b.name}">
+    <${tag} class="boat-card${nolinkClass}"${href} data-status="${b.status}" aria-label="${b.name}">
+      <img class="boat-card__img" src="assets/img/${b.cardImg || b.img}"${b.cardPos ? ` style="object-position:${b.cardPos}"` : ""} alt="${b.name}">
       <div class="boat-card__scrim"></div>
       <div class="boat-card__badges">${badge}${tags}</div>
       <div class="boat-card__meta">
@@ -18,7 +23,7 @@ function boatCard(b) {
         ${year}
         ${progress}
       </div>
-    </a>`;
+    </${tag}>`;
 }
 
 function render() {

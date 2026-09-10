@@ -29,6 +29,11 @@
     // extra per-boat photos (secondary hero image, thumbnail squares, etc.)
     if (boat.photos) {
       setPhoto(".wf-hero__img2", boat.photos.hero2);
+      // optional per-boat crop position for the second hero photo
+      if (boat.photos.hero2Pos) {
+        const el2 = document.querySelector(".wf-hero__img2");
+        if (el2) el2.style.backgroundPosition = boat.photos.hero2Pos;
+      }
       setPhoto(".wf-overview__img", boat.photos.overview);
       setPhoto(".wf-story__img", boat.photos.construction);
       if (Array.isArray(boat.photos.thumbs)) {
@@ -106,6 +111,16 @@
       if (e.key === "Escape") close();
       else if (e.key === "ArrowLeft") show(idx - 1);
       else if (e.key === "ArrowRight") show(idx + 1);
+    });
+  }
+
+  /* ---- Hero-only boats (e.g. under construction) — show just the hero and
+     drop everything after it, plus the empty hero sub-boxes. */
+  if (boat && boat.heroOnly) {
+    [".wf-overview", ".wf-story", ".wf-gallery-sec", ".wf-specsheet",
+     ".wf-hero__img2", ".wf-specs", ".wf-thumbs"].forEach((sel) => {
+      const el = document.querySelector(sel);
+      if (el) el.remove();
     });
   }
 
