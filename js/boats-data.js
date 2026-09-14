@@ -376,7 +376,7 @@ const BOATS = [
       ],
       decks: []
     } },
-  { id: "volnyi",    family: "korabli", name: "Вольный",    status: "sold", year: "2010", img: "volnyi.jpg?v=2", tags: ["На заказ"],
+  { id: "volnyi",    family: "korabli", name: "Вольный",    status: "sold", year: "2010", img: "volnyi.jpg?v=2", cardPos: "center 65%", tags: ["На заказ"],
     photos: { hero2: "volnyi-story.jpg", hero2Pos: "center 72%", overview: "volnyi-overview.jpg", construction: "volnyi-2.jpg",
       thumbs: ["volnyi-i1.jpg","volnyi-i2.jpg","volnyi-i3.jpg","volnyi-i4.jpg","volnyi-i5.jpg","volnyi-i6.jpg"],
       captions: ["Кают-компания","Ходовая рубка","Салон","Мастер-каюта","Каюта","Зона отдыха"],
@@ -401,7 +401,7 @@ const BOATS = [
       ],
       decks: []
     } },
-  { id: "piligrim",  family: "korabli", name: "Пилигрим",   status: "sold", year: "2009", img: "pilgrim.jpg?v=2", cardImg: "pilgrim-card.jpg?v=2", tags: ["На заказ"],
+  { id: "piligrim",  family: "korabli", name: "Пилигрим",   status: "sold", year: "2009", img: "pilgrim.jpg?v=2", cardImg: "pilgrim-card.jpg?v=3", tags: ["На заказ"],
     photos: { hero2: "pilgrim-2.jpg", overview: "pilgrim-overview.jpg", construction: "pilgrim-story.jpg" },
     content: {
       eyebrow: "Моторная яхта",
@@ -423,7 +423,31 @@ const BOATS = [
       ],
       decks: []
     } },
-  { id: "yeti",      family: "korabli", name: "Yeti",       status: "sold", year: "2005", img: "yeti.jpg", tags: ["На заказ"] },
+  { id: "yeti",      family: "korabli", name: "Yeti",       status: "sold", year: "2005", img: "yeti.jpg?v=2", cardImg: "yeti-card.jpg", tags: ["На заказ"],
+    photos: { hero2: "yeti-2.jpg?v=3", overview: "yeti-overview.jpg", construction: "yeti-story.jpg",
+      thumbs: ["yeti-i1.jpg","yeti-i2.jpg","yeti-i3.jpg","yeti-i4.jpg","yeti-i5.jpg","yeti-i6.jpg"],
+      captions: ["Кают-компания","Ходовая рубка","Камбуз","Мастер-каюта","Носовая каюта","Гостевая каюта"],
+      gallery: ["yeti-i1.jpg","yeti-2.jpg?v=3","yeti-i4.jpg","yeti-i3.jpg","yeti-overview.jpg","yeti-i2.jpg","yeti-i5.jpg","yeti-story.jpg","yeti-i6.jpg"] },
+    content: {
+      eyebrow: "Прогулочная яхта",
+      desc: "Моторная яхта 18 метров для комфортного отдыха на воде — две каюты, баня, палуба с лежаками и мангалом.",
+      heroSpecs: [["Длина","18 м"],["Каюты","2"],["Баня","есть"],["Тип","моторная яхта"]],
+      overviewLead: "Моторная яхта 18 метров для отдыха на воде — две гостевые каюты, баня и просторная палуба.",
+      overviewBody: [
+        "18 метров: кают-компания с кожаным диваном, столом и телевизором, камбуз с электроплитой, холодильником и кондиционером. Две гостевые каюты — одна с двуспальной кроватью, носовая с отдельной кроватью — и все удобства на борту.",
+        "На верхней палубе — лежаки, шезлонги и мангал для отдыха на воде. И, конечно, баня — редкость для судна такого размера."
+      ],
+      storyLead: "Её вода — Волга у Саратова, а дело — чужие праздники.",
+      storyBody: [
+        "Она возит компании по Волге у Саратова — дни рождения, встречи, долгие летние прогулки. Несколько палуб на любую погоду: открытая тентованная палуба с мангалом, где накрывают праздничный стол, и кают-компания с кухней и панорамным видом на реку, чтобы и непогода не мешала веселью.",
+        "Но по-настоящему её любят за баньку — с отдельной палубой, банкетным столом и лесенкой прямо в Волгу: попарился с веником — и в воду. А когда день позади и эмоций через край, на борту ждут две гостевые каюты. Так и идёт её жизнь — не парадная, а живая: год за годом она возит людям радость."
+      ],
+      specs: [
+        ["Длина","18 м"],["Каюты","2 гостевые"],["Баня","есть"],["Камбуз","электроплита, холодильник"],
+        ["Климат","кондиционер"],["Палуба","лежаки, шезлонги, мангал"],["Год постройки","2005"]
+      ],
+      decks: []
+    } },
   { id: "dundukovsky-1", family: "korabli", name: "Дундуковский 1", status: "sold", year: "2001", img: "boat-ph.jpg", tags: ["На заказ"] },
   { id: "laita",     family: "korabli", name: "Лайта",      status: "sold", year: "2000", img: "laita.jpg", tags: ["На заказ"] },
   { id: "mara",      family: "korabli", name: "Мара",       status: "sold", year: "1999", img: "mara.jpg" },
