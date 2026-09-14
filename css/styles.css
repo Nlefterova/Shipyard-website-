@@ -591,9 +591,9 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
   font-size:clamp(1.1rem,1.8vw,1.35rem);margin-bottom:clamp(.75rem,1.5vw,1.1rem)}
 .wf-plans{display:flex;flex-direction:column;gap:clamp(1.5rem,3.5vw,2.75rem);width:min(640px,100%);margin-inline:auto}
 /* three decks (Fly) — tighter, original wireframe spacing so all three fit */
-.wf-plans--3{gap:clamp(.75rem,1.5vw,1.15rem);width:min(500px,100%)}
+.wf-plans--3,.wf-plans--4{gap:clamp(.75rem,1.5vw,1.15rem);width:min(500px,100%)}
 .wf-specsheet__right{display:grid;align-content:center}
-.wf-specsheet__right:has(.wf-plans--3){align-content:start}
+.wf-specsheet__right:has(.wf-plans--3),.wf-specsheet__right:has(.wf-plans--4){align-content:start}
 .wf-plans__img{position:relative;width:100%;aspect-ratio:531/243;background:#fff;border:1px solid var(--grey-300);
   padding:.75rem clamp(1.5rem,4vw,3rem);background-origin:content-box}
 .wf-plan__label{position:absolute;left:clamp(.9rem,2vw,1.4rem);right:clamp(.9rem,2vw,1.4rem);
