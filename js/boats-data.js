@@ -333,7 +333,30 @@ const BOATS = [
       ],
       decks: []
     } },
-  { id: "fiesta",    family: "korabli", name: "Fiesta",     status: "sold", year: "2012", img: "fiesta.jpg", tags: ["На заказ"] },
+  { id: "fiesta",    family: "korabli", name: "Fiesta",     status: "sold", year: "2012", img: "fiesta.jpg?v=2", cardImg: "fiesta-card.jpg?v=3", tags: ["На заказ"],
+    photos: { hero2: "fiesta-2.jpg?v=3", hero2Pos: "center 78%", overview: "fiesta-overview.jpg", construction: "fiesta-story.jpg", plans: ["fiesta-plan-side.png","fiesta-plan-main.png","fiesta-plan-lower.png"] },
+    content: {
+      eyebrow: "Моторная яхта",
+      desc: "Стальная моторная яхта 18 метров с флайбриджем — для дальних прогулок и отдыха на большой воде.",
+      heroSpecs: [["Длина","18 м"],["Ширина","5 м"],["Мощность","270 л.с."],["Осадка","0,9 м"]],
+      overviewLead: "Стальная моторная яхта 18 метров — два уровня с открытым флайбриджем, водоизмещающий корпус и малая осадка.",
+      overviewBody: [
+        "18 метров при ширине 5 — стальной корпус водоизмещающего типа с осадкой всего 0,9 метра, одинаково уверенный и на большой воде, и на мелких протоках. Два уровня плюс открытый флайбридж: салон с панорамным остеклением, камбуз, каюты и зоны отдыха на палубе.",
+        "Два дизельных двигателя по 135 л.с. — 270 сил суммарно. Запас топлива 3 тонны и полное водоизмещение 27 тонн рассчитаны на долгие переходы вдали от причала."
+      ],
+      storyLead: "",
+      storyBody: ["",""],
+      specs: [
+        ["Длина","18 м"],["Ширина","5 м"],["Осадка","0,9 м"],["Водоизмещение","27 т"],
+        ["Двигатели","2 × 135 л.с."],["Мощность","270 л.с."],["Запас топлива","3 т"],
+        ["Материал корпуса","сталь"],["Год постройки","2012"]
+      ],
+      decks: [
+        { name: "вид сбоку", items: [] },
+        { name: "главная палуба", items: [] },
+        { name: "нижняя палуба", items: [] }
+      ]
+    } },
   { id: "yul",       family: "korabli", name: "Юл",         status: "sold", year: "2011", img: "yul.jpg" },
   { id: "volnyi",    family: "korabli", name: "Вольный",    status: "sold", year: "2010", img: "volnyi.jpg", tags: ["На заказ"] },
   { id: "piligrim",  family: "korabli", name: "Пилигрим",   status: "sold", year: "2009", img: "pilgrim.jpg", tags: ["На заказ"] },
