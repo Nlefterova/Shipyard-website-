@@ -196,6 +196,9 @@ const BOATS = [
     } },
   { id: "sibirsky", family: "expedition", name: "Сибирский исследователь", status: "sold", year: "2022", img: "sibirsky.jpg", cardImg: "sibirsky-card.jpg", tags: ["На заказ"],
     photos: { hero2: "sibirsky-2.jpg", overview: "sibirsky-overview.jpg", construction: "sibirsky-story.jpg",
+      thumbs: ["sibirsky-i1.jpg","sibirsky-i2.jpg","sibirsky-i3.jpg","sibirsky-i4.jpg","sibirsky-i5.jpg","sibirsky-i6.jpg"],
+      captions: ["Салон и рубка","Кают-компания","Камбуз","Мастер-каюта","Носовая каюта","Санузел"],
+      gallery: ["sibirsky-i1.jpg","sibirsky-2.jpg","sibirsky-i4.jpg","sibirsky-i3.jpg","sibirsky-overview.jpg","sibirsky-i2.jpg","sibirsky-i5.jpg","sibirsky-story.jpg","sibirsky-i6.jpg"],
       plans: ["sibirsky-plan-side.png","sibirsky-plan-upper.png","sibirsky-plan-lower.png"] },
     content: {
       eyebrow: "Экспедиционное судно",
