@@ -229,7 +229,9 @@ const BOATS = [
   // Корабли
   { id: "mius", family: "korabli", name: "Миус", status: "sold", year: "2019", img: "mius.jpg?v=2", cardImg: "mius-card.jpg?v=2", tags: ["На заказ"],
     photos: { hero2: "mius-2.jpg", hero2Pos: "center 64%", overview: "mius-overview.jpg", construction: "mius-story.jpg",
-      thumbs: ["mius-i1.jpg","mius-i2.jpg","mius-i3.jpg"], captions: ["Ходовая рубка","Носовая палуба","На стоянке"] },
+      thumbs: ["mius-i1.jpg","mius-i2.jpg?v=2","mius-i3.jpg?v=2","mius-i4.jpg","mius-i5.jpg","mius-i6.jpg"],
+      captions: ["Ходовая рубка","Кают-компания","Салон","Камбуз","Каюта","Санузел"],
+      gallery: ["mius-i2.jpg?v=2","mius-2.jpg","mius-i5.jpg","mius-i4.jpg","mius-overview.jpg","mius-i3.jpg?v=2","mius-i6.jpg","mius-story.jpg","mius-i1.jpg"] },
     content: {
       eyebrow: "Круизный корабль",
       desc: "Стальной круизный корабль 17,25 метра водоизмещающего типа — для дальних походов по большой воде.",
