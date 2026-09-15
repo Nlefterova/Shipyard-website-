@@ -231,7 +231,8 @@ const BOATS = [
     photos: { hero2: "mius-2.jpg", hero2Pos: "center 64%", overview: "mius-overview.jpg", construction: "mius-story.jpg",
       thumbs: ["mius-i1.jpg","mius-i2.jpg?v=2","mius-i3.jpg?v=2","mius-i4.jpg","mius-i5.jpg","mius-i6.jpg"],
       captions: ["Ходовая рубка","Кают-компания","Салон","Камбуз","Каюта","Санузел"],
-      gallery: ["mius-i2.jpg?v=2","mius-2.jpg","mius-i5.jpg","mius-i4.jpg","mius-overview.jpg","mius-i3.jpg?v=2","mius-i6.jpg","mius-story.jpg","mius-i1.jpg"] },
+      gallery: ["mius-i2.jpg?v=2","mius-2.jpg","mius-i5.jpg","mius-i4.jpg","mius-overview.jpg","mius-i3.jpg?v=2","mius-i6.jpg","mius-story.jpg","mius-i1.jpg"],
+      plans: ["mius-plan-side.png?v=2","mius-plan-upper.png?v=2","mius-plan-lower.png?v=2"] },
     content: {
       eyebrow: "Круизный корабль",
       desc: "Стальной круизный корабль 17,25 метра водоизмещающего типа — для дальних походов по большой воде.",
@@ -249,7 +250,11 @@ const BOATS = [
         ["Двигатели","2 × 240 л.с. (дизель)"],["Максимальная скорость","22 км/ч"],["Крейсерская скорость","18 км/ч"],
         ["Запас топлива","5,95 т"],["Запас воды","1200 л"],["Материал корпуса","сталь 09Г2С"],["Год постройки","2019"]
       ],
-      decks: []
+      decks: [
+        { name: "вид сбоку", items: [] },
+        { name: "верхняя палуба", items: [] },
+        { name: "нижняя палуба", items: [] }
+      ]
     } },
   { id: "kasatka", family: "korabli", name: "Касатка", status: "sold", year: "2017", img: "kasatka-2.jpg", cardImg: "kasatka-card.jpg", tags: ["На заказ"],
     photos: { hero2: "kasatka-overview.jpg", overview: "kasatka.jpg?v=2", construction: "kasatka-story.jpg",
