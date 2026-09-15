@@ -320,7 +320,8 @@ const BOATS = [
     photos: { hero2: "rusich-2.jpg", overview: "rusich-overview.jpg", construction: "rusich-story.jpg",
       thumbs: ["rusich-i1.jpg","rusich-i2.jpg","rusich-i3.jpg","rusich-i4.jpg","rusich-i5.jpg","rusich-i6.jpg"],
       captions: ["Кают-компания","Ходовая рубка","Камбуз","Мастер-каюта","Камбуз","Санузел"],
-      gallery: ["rusich-i1.jpg","rusich-2.jpg","rusich-i4.jpg","rusich-i3.jpg","rusich-overview.jpg","rusich-i2.jpg","rusich-i5.jpg","rusich-story.jpg","rusich-i6.jpg"] },
+      gallery: ["rusich-i1.jpg","rusich-2.jpg","rusich-i4.jpg","rusich-i3.jpg","rusich-overview.jpg","rusich-i2.jpg","rusich-i5.jpg","rusich-story.jpg","rusich-i6.jpg"],
+      plans: ["rusich-plan-side.png","rusich-plan-upper.png","rusich-plan-main.png","rusich-plan-lower.png"] },
     content: {
       eyebrow: "Прогулочная яхта",
       desc: "Стальная прогулочная яхта 13,6 метра — компактная и автономная, для отдыха на большой воде компанией до 10 человек.",
@@ -338,7 +339,12 @@ const BOATS = [
         ["Мощность","135 л.с."],["Дизель-генератор","4 кВт"],["Скорость макс.","21,1 км/ч"],["Скорость крейсерская","18 км/ч"],
         ["Запас топлива","3,5 т"],["Запас воды","500 л"],["Материал корпуса","сталь 5-4-3"],["Год постройки","2013"]
       ],
-      decks: []
+      decks: [
+        { name: "вид сбоку", items: [] },
+        { name: "верхняя палуба", items: [] },
+        { name: "главная палуба", items: [] },
+        { name: "нижняя палуба", items: [] }
+      ]
     } },
   { id: "fiesta",    family: "korabli", name: "Fiesta",     status: "sold", year: "2012", img: "fiesta.jpg?v=2", cardImg: "fiesta-card.jpg?v=3", tags: ["На заказ"],
     photos: { hero2: "fiesta-2.jpg?v=3", hero2Pos: "center 78%", overview: "fiesta-overview.jpg", construction: "fiesta-story.jpg", plans: ["fiesta-plan-side.png","fiesta-plan-main.png","fiesta-plan-lower.png"] },
@@ -365,7 +371,8 @@ const BOATS = [
       ]
     } },
   { id: "yul",       family: "korabli", name: "Юл",         status: "sold", year: "2011", img: "yul.jpg?v=2",
-    photos: { hero2: "yul-2.jpg", overview: "yul-overview.jpg", construction: "yul-story.jpg" },
+    photos: { hero2: "yul-2.jpg", overview: "yul-overview.jpg", construction: "yul-story.jpg",
+      plans: ["yul-plan-side.png","yul-plan-top.png"] },
     content: {
       eyebrow: "Прогулочный катер",
       desc: "Компактный стальной катер 9,4 метра с малой осадкой и буксирным силуэтом — для неспешных прогулок по реке.",
@@ -381,13 +388,17 @@ const BOATS = [
         ["Длина","9,4 м"],["Ширина","3 м"],["Осадка","0,49 м"],["Высота","3,3 м"],
         ["Материал корпуса","сталь"],["Год постройки","2011"]
       ],
-      decks: []
+      decks: [
+        { name: "вид сбоку", items: [] },
+        { name: "вид сверху", items: [] }
+      ]
     } },
   { id: "volnyi",    family: "korabli", name: "Вольный",    status: "sold", year: "2010", img: "volnyi.jpg?v=2", cardPos: "center 65%", tags: ["На заказ"],
     photos: { hero2: "volnyi-story.jpg", hero2Pos: "center 72%", overview: "volnyi-overview.jpg", construction: "volnyi-2.jpg",
       thumbs: ["volnyi-i1.jpg","volnyi-i2.jpg","volnyi-i3.jpg","volnyi-i4.jpg","volnyi-i5.jpg","volnyi-i6.jpg"],
       captions: ["Кают-компания","Ходовая рубка","Салон","Мастер-каюта","Каюта","Зона отдыха"],
-      gallery: ["volnyi-i1.jpg","volnyi-story.jpg","volnyi-i4.jpg","volnyi-i3.jpg","volnyi-overview.jpg","volnyi-i2.jpg","volnyi-i5.jpg","volnyi-2.jpg","volnyi-i6.jpg"] },
+      gallery: ["volnyi-i1.jpg","volnyi-story.jpg","volnyi-i4.jpg","volnyi-i3.jpg","volnyi-overview.jpg","volnyi-i2.jpg","volnyi-i5.jpg","volnyi-2.jpg","volnyi-i6.jpg"],
+      plans: ["volnyi-plan-side.png","volnyi-plan-top.png"] },
     content: {
       eyebrow: "Моторная яхта",
       desc: "Стальная моторная яхта 18 метров прогулочного класса — полная автономность на несколько суток и дальность до 1000 км.",
@@ -406,10 +417,14 @@ const BOATS = [
         ["Автономность","3,5 суток"],["Дальность","1000 км"],["Запас топлива","3,5 т"],["Запас воды","500 л"],
         ["Материал корпуса","сталь 5-4-3"],["Год постройки","2010"]
       ],
-      decks: []
+      decks: [
+        { name: "вид сбоку", items: [] },
+        { name: "вид сверху", items: [] }
+      ]
     } },
   { id: "piligrim",  family: "korabli", name: "Пилигрим",   status: "sold", year: "2009", img: "pilgrim.jpg?v=2", cardImg: "pilgrim-card.jpg?v=3", tags: ["На заказ"],
-    photos: { hero2: "pilgrim-2.jpg", overview: "pilgrim-overview.jpg", construction: "pilgrim-story.jpg" },
+    photos: { hero2: "pilgrim-2.jpg", overview: "pilgrim-overview.jpg", construction: "pilgrim-story.jpg",
+      plans: ["pilgrim-plan-side.png","pilgrim-plan-main.png","pilgrim-plan-lower.png"] },
     content: {
       eyebrow: "Моторная яхта",
       desc: "Стальная моторная яхта 18 метров с флайбриджем — двенадцать человек на борту, автономность на несколько суток и дальность до 1300 миль.",
@@ -428,7 +443,11 @@ const BOATS = [
         ["Автономность","3,5 суток"],["Дальность","1300 миль"],["Запас топлива","3,5 т"],["Запас воды","500 л"],
         ["Материал корпуса","сталь 5-4-3"],["Год постройки","2009"]
       ],
-      decks: []
+      decks: [
+        { name: "вид сбоку", items: [] },
+        { name: "главная палуба", items: [] },
+        { name: "нижняя палуба", items: [] }
+      ]
     } },
   { id: "yeti",      family: "korabli", name: "Yeti",       status: "sold", year: "2005", img: "yeti.jpg?v=2", cardImg: "yeti-card.jpg", tags: ["На заказ"],
     photos: { hero2: "yeti-2.jpg?v=3", overview: "yeti-overview.jpg", construction: "yeti-story.jpg",
@@ -499,7 +518,28 @@ const BOATS = [
     } },
   { id: "proekt-1",  family: "korabli", name: "Проект №1",  status: "sold", year: "1995", img: "boat-ph.jpg" },
   // Траулеры
-  { id: "frank",     family: "traulery", name: "Frank",   status: "sold", year: "2006", img: "frank.jpg", tags: ["На заказ"] },
+  { id: "frank",     family: "traulery", name: "Frenk",   status: "sold", year: "2006", img: "frank.jpg", tags: ["На заказ"],
+    photos: { plans: ["frank-plan-side.png","frank-plan-upper.png","frank-plan-main.png","frank-plan-lower.png"] },
+    content: {
+      eyebrow: "Траулер",
+      desc: "Стальной траулер-яхта с флайбриджем — крепкий водоизмещающий корпус для дальних походов по большой воде.",
+      heroSpecs: [["Тип","Траулер"],["Корпус","сталь"],["Палубы","2 + флайбридж"],["Год","2006"]],
+      overviewLead: "Стальной траулер-яхта с флайбриджем — водоизмещающий корпус, три уровня, каюты на нижней палубе.",
+      overviewBody: [
+        "Классический траулерный силуэт: крепкий стальной корпус, ходовая рубка с панорамным остеклением и открытый флайбридж наверху. Главная палуба — салон, камбуз и пост управления; на нижней — спальные каюты и санузлы; на корме — просторный кокпит у самой воды."
+      ],
+      storyLead: "",
+      storyBody: ["",""],
+      specs: [
+        ["Тип","Траулер"],["Палубы","2 + флайбридж"],["Материал корпуса","сталь"],["Год постройки","2006"]
+      ],
+      decks: [
+        { name: "вид сбоку", items: [] },
+        { name: "верхняя палуба", items: [] },
+        { name: "главная палуба", items: [] },
+        { name: "нижняя палуба", items: [] }
+      ]
+    } },
   { id: "sapfir",    family: "traulery", name: "Сапфир",  status: "sold", year: "2004", img: "fleet-traulery.jpg", tags: ["На заказ"] },
   { id: "bandido",   family: "traulery", name: "Bandido", status: "sold", year: "2002", img: "boat-ph.jpg", tags: ["На заказ"] },
   // Гулянки
