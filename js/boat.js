@@ -136,10 +136,19 @@
   function setAll(sel, txt) { document.querySelectorAll(sel).forEach((el) => { if (txt != null) el.textContent = txt; }); }
   function fillBodies(sel, arr, asHtml) {
     if (!Array.isArray(arr)) return;
-    document.querySelectorAll(sel).forEach((el, i) => {
-      if (arr[i] == null) return;
-      if (asHtml) el.innerHTML = arr[i]; else el.textContent = arr[i];
+    const els = Array.from(document.querySelectorAll(sel));
+    if (!els.length) return;
+    // fill one paragraph per array item; clone extra slots when the copy has
+    // more paragraphs than the static markup (e.g. Мара's 3-paragraph story)
+    let last = els[els.length - 1];
+    arr.forEach((txt, i) => {
+      let el = els[i];
+      if (!el) { el = last.cloneNode(false); last.after(el); last = el; els.push(el); }
+      if (asHtml) el.innerHTML = txt; else el.textContent = txt;
+      el.hidden = false;
     });
+    // empty + hide any surplus static slots (copy shorter than the markup)
+    for (let i = arr.length; i < els.length; i++) { els[i].textContent = ""; els[i].hidden = true; }
   }
 
   function fillContent(boat) {
