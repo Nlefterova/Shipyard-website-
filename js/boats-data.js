@@ -578,7 +578,23 @@ const BOATS = [
     } },
   { id: "bandido",   family: "traulery", name: "Bandido", status: "sold", year: "2002", img: "boat-ph.jpg", tags: ["На заказ"] },
   // Гулянки
-  { id: "gulyanka-1",family: "gulyanki", name: "Гулянка №5", status: "sold", year: "2016", img: "gulyanka1.jpg", tags: ["На заказ"] },
+  { id: "gulyanka-1",family: "gulyanki", name: "Гулянка №5", status: "sold", year: "2016", img: "gulyanka5.jpg", cardImg: "gulyanka5-card.jpg", tags: ["На заказ"],
+    photos: { hero2: "gulyanka5-2.jpg", overview: "gulyanka5-overview.jpg", construction: "gulyanka5-story.jpg" },
+    content: {
+      eyebrow: "Моторная яхта",
+      desc: "Просторная моторная яхта с открытым флайбриджем — прогулочный катер для отдыха на Волге.",
+      heroSpecs: [["Тип","Моторная яхта"],["Палубы","2 + флайбридж"],["Год","2016"]],
+      overviewLead: "Просторная моторная яхта с открытым флайбриджем — для дневных прогулок и отдыха на воде.",
+      overviewBody: [
+        "Белый корпус с синим подзором, застеклённая рубка-салон и открытый флайбридж под жёстким тентом с постом управления. Просторная носовая палуба с тиковым настилом и кокпит на корме — много места для компании на воде."
+      ],
+      storyLead: "",
+      storyBody: ["",""],
+      specs: [
+        ["Тип","Моторная яхта"],["Палубы","2 + флайбридж"],["Год постройки","2016"]
+      ],
+      decks: []
+    } },
   { id: "l-1050",    family: "gulyanki", name: "L-1050",     status: "sold", year: "2015", img: "l1050.jpg", tags: ["На заказ"] },
   { id: "gulyanka-3",family: "gulyanki", name: "Гулянка №3", status: "sold", year: "2008", img: "gulyanka3.jpg?v=2", cardImg: "gulyanka3-card.jpg",
     photos: { hero2: "gulyanka3-2.jpg", overview: "gulyanka3-overview.jpg", construction: "gulyanka3-story.jpg",
