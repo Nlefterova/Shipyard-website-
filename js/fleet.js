@@ -1,6 +1,10 @@
 /* Флот — renders the fleet from BOATS (js/boats-data.js), grouped by family,
    with status filters. Each card links to the boat detail page. */
 
+/* Bump when a card image file is replaced in place (same filename) so browsers
+   re-fetch it instead of serving the cached old picture. */
+const IMG_V = 219;
+
 function boatCard(b) {
   const badge = `<span class="boat-card__badge boat-card__badge--${b.status}">${STATUS_LABEL[b.status]}</span>`;
   const tags = (b.tags || []).map((t) => `<span class="boat-card__tag">${t}</span>`).join("");
@@ -15,7 +19,7 @@ function boatCard(b) {
   const nolinkClass = b.noLink ? " boat-card--nolink" : "";
   return `
     <${tag} class="boat-card${nolinkClass}"${href} data-status="${b.status}" aria-label="${b.name}">
-      <img class="boat-card__img" src="assets/img/${b.cardImg || b.img}"${b.cardPos ? ` style="object-position:${b.cardPos}"` : ""} alt="${b.name}">
+      <img class="boat-card__img" src="assets/img/${b.cardImg || b.img}?v=${IMG_V}"${b.cardPos ? ` style="object-position:${b.cardPos}"` : ""} alt="${b.name}">
       <div class="boat-card__scrim"></div>
       <div class="boat-card__badges">${badge}${tags}</div>
       <div class="boat-card__meta">

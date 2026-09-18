@@ -94,7 +94,7 @@ const BOATS = [
         { name: "нижняя палуба", items: ["мастер-каюта","носовая каюта","детская каюта","два санузла","душевая"] }
       ]
     } },
-  { id: "trex-40", family: "trex", name: "T-Rex 40", status: "sold", year: "2020", img: "trex40-4.jpg",
+  { id: "trex-40", family: "trex", name: "T-Rex 40", status: "sold", year: "2020", img: "trex40-4.jpg", cardImg: "trex40-card.jpg",
     photos: {
       hero2: "trex40-2.jpg", hero2Pos: "center 28%", overview: "trex40-3.jpg", construction: "trex40-story2.jpg",
       thumbs: ["trex40-i1.jpg","trex40-i2.jpg","trex40-i3.jpg","trex40-i4.jpg","trex40-i5.jpg","trex40-i6.jpg"],
@@ -128,7 +128,7 @@ const BOATS = [
         { name: "вид спереди", items: [] }
       ]
     } },
-  { id: "trex-37", family: "trex", name: "T-Rex 37", status: "sold", year: "2018", img: "trex37-2.jpg", cardPos: "40% 50%",
+  { id: "trex-37", family: "trex", name: "T-Rex 37", status: "sold", year: "2018", img: "trex37-2.jpg", cardImg: "trex37-card.jpg", cardPos: "40% 50%",
     photos: {
       hero2: "trex37.jpg?v=2", overview: "trex37-overview.jpg", construction: "trex37-story.jpg",
       thumbs: ["trex37-i1.jpg","trex37-i2.jpg","trex37-i3.jpg","trex37-i4.jpg","trex37-i5.jpg","trex37-i6.jpg"],

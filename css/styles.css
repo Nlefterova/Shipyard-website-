@@ -365,28 +365,24 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 /* ============================================================
    FLEET PAGE  (hero + family sections of boat cards + filters)
    ============================================================ */
-.fleet-hero{position:relative;min-height:clamp(440px,60vh,640px);display:flex;flex-direction:column;justify-content:flex-end;color:var(--white);overflow:hidden}
-.fleet-hero__bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.62) saturate(1.12)}
-.fleet-hero__scrim{position:absolute;inset:0;background:
-  linear-gradient(180deg,rgba(0,0,0,.35),transparent 40%),
-  linear-gradient(0deg,rgba(0,0,0,.72),transparent 55%)}
-.fleet-hero__inner{position:relative;z-index:2;width:100%;max-width:var(--maxw);margin:0 auto;padding:clamp(2rem,5vw,4rem) var(--gutter)}
-.fleet-hero__title{font-family:var(--serif);font-weight:600;font-size:clamp(2.4rem,5vw,4rem);line-height:1;text-shadow:0 2px 24px rgba(0,0,0,.5)}
-.fleet-hero__sub{margin-top:1rem;max-width:46ch;font-size:clamp(1rem,1.3vw,1.15rem);line-height:1.5;color:rgba(255,255,255,.92);text-shadow:0 1px 12px rgba(0,0,0,.5)}
-/* filter band tucked into the bottom of the hero image */
+.fleet-hero{position:relative;display:flex;flex-direction:column;justify-content:flex-end;
+  color:var(--text);background:var(--white);overflow:hidden}
+.fleet-hero__inner{position:relative;z-index:2;width:100%;max-width:var(--maxw);margin:0 auto;
+  padding:clamp(2.25rem,5vw,3.75rem) var(--gutter) clamp(1.75rem,3.5vw,2.5rem)}
+.fleet-hero__title{font-family:var(--serif);font-weight:600;font-size:clamp(1.9rem,3.2vw,2.75rem);line-height:1.05;color:var(--navy)}
+.fleet-hero__sub{margin-top:1rem;max-width:46ch;font-size:clamp(1rem,1.3vw,1.15rem);line-height:1.5;color:var(--text-2)}
+/* filter band tucked at the base of the header */
 .fleet-hero__band{position:relative;z-index:3;
-  background:linear-gradient(0deg,rgba(11,15,40,.85),rgba(11,15,40,.42));
-  -webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);
-  border-top:1px solid rgba(255,255,255,.16)}
+  border-top:1px solid var(--grey-100)}
 .fleet-hero__band-inner{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter);
   display:flex;gap:.5rem}
 .fleet-tab{flex:1 1 0;position:relative;background:none;border:0;cursor:pointer;
   font-family:var(--sans);font-weight:600;font-size:clamp(13px,1.05vw,15px);letter-spacing:.01em;
-  color:rgba(255,255,255,.66);padding:1.35rem .5rem 1.5rem;transition:color .2s ease}
+  color:var(--grey-500);padding:1.35rem .5rem 1.5rem;transition:color .2s ease}
 .fleet-tab::after{content:"";position:absolute;left:.6rem;right:.6rem;bottom:1rem;height:2px;
-  border-radius:2px;background:rgba(255,255,255,.2);transition:background .2s ease}
-.fleet-tab:hover{color:#fff}
-.fleet-tab.is-active{color:#fff}
+  border-radius:2px;background:var(--grey-100);transition:background .2s ease}
+.fleet-tab:hover{color:var(--navy)}
+.fleet-tab.is-active{color:var(--navy)}
 .fleet-tab.is-active::after{background:var(--brass)}
 
 /* filter + quick-link bar */
