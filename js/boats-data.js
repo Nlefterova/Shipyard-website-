@@ -578,11 +578,33 @@ const BOATS = [
     } },
   { id: "bandido",   family: "traulery", name: "Bandido", status: "sold", year: "2002", img: "boat-ph.jpg", tags: ["На заказ"] },
   // Гулянки
-  { id: "gulyanka-1",family: "gulyanki", name: "Гулянка №1", status: "sold", year: "2016", img: "gulyanka1.jpg", tags: ["На заказ"] },
+  { id: "gulyanka-1",family: "gulyanki", name: "Гулянка №5", status: "sold", year: "2016", img: "gulyanka1.jpg", tags: ["На заказ"] },
   { id: "l-1050",    family: "gulyanki", name: "L-1050",     status: "sold", year: "2015", img: "l1050.jpg", tags: ["На заказ"] },
   { id: "gulyanka-3",family: "gulyanki", name: "Гулянка №3", status: "sold", year: "2008", img: "gulyanka3.jpg" },
   { id: "gulyanka-2",family: "gulyanki", name: "Гулянка №2", status: "sold", year: "2007", img: "boat-ph.jpg" },
-  { id: "gulyanka-2005", family: "gulyanki", name: "Гулянка", status: "sold", year: "2003", img: "boat-ph.jpg" },
+  { id: "gulyanka-2005", family: "gulyanki", name: "Гулянка №1", status: "sold", year: "2003", img: "gulyanka2003.jpg", cardImg: "gulyanka2003-card.jpg",
+    photos: { hero2: "gulyanka2003-2.jpg", overview: "gulyanka2003-overview.jpg", construction: "gulyanka2003-story.jpg",
+      thumbs: ["gulyanka2003-i1.jpg","gulyanka2003-i2.jpg","gulyanka2003-i3.jpg","gulyanka2003-i4.jpg","gulyanka2003-i5.jpg","gulyanka2003-i6.jpg"],
+      captions: ["Кокпит","Кают-компания","Камбуз","Салон","Носовая каюта","Санузел"],
+      gallery: ["gulyanka2003-i1.jpg","gulyanka2003-2.jpg","gulyanka2003-i2.jpg","gulyanka2003-i3.jpg","gulyanka2003-overview.jpg","gulyanka2003-i4.jpg","gulyanka2003-i5.jpg","gulyanka2003-story.jpg","gulyanka2003-i6.jpg"] },
+    content: {
+      eyebrow: "Прогулочный катер",
+      desc: "Компактная стальная моторная яхта 10 метров — экономичная, тёплая, для неспешных прогулок по Волге.",
+      heroSpecs: [["Длина","10 м"],["Мощность","25 л.с."],["Вместимость","8 человек"],["Скорость","10-12 км/ч"]],
+      overviewLead: "Компактная стальная моторная яхта 10 метров — экономичный дизель, автономный отопитель и всё для прогулок в любую погоду.",
+      overviewBody: [
+        "10 метров при ширине 2,9 и осадке всего 0,4 метра — стальной корпус, которому открыты любые мелководья и протоки. На борту холодильник на 75 литров (работает и как морозильник), автономный отопитель Webasto, береговое питание и музыка — комфортно и в прохладу.",
+        "Судовой дизель Vetus M3.09 (25 л.с., Голландия) с редуктором ZF держит крейсерские 10-12 км/ч при расходе меньше 2 литров в час — очень экономично. Два бака по 80 литров дают приличный запас хода для неспешных прогулок."
+      ],
+      storyLead: "",
+      storyBody: ["",""],
+      specs: [
+        ["Длина","10 м"],["Ширина","2,9 м"],["Осадка","0,4 м"],["Вместимость","8 человек"],
+        ["Двигатель","Vetus M3.09, 25 л.с."],["Редуктор","ZF"],["Скорость крейсерская","10-12 км/ч"],["Расход топлива","1,8-2 л/ч"],
+        ["Запас топлива","160 л"],["Отопитель","Webasto"],["Материал корпуса","сталь"],["Год постройки","2003"]
+      ],
+      decks: []
+    } },
 ];
 
 function familyName(key) {
