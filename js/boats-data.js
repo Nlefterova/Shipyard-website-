@@ -580,7 +580,30 @@ const BOATS = [
   // Гулянки
   { id: "gulyanka-1",family: "gulyanki", name: "Гулянка №5", status: "sold", year: "2016", img: "gulyanka1.jpg", tags: ["На заказ"] },
   { id: "l-1050",    family: "gulyanki", name: "L-1050",     status: "sold", year: "2015", img: "l1050.jpg", tags: ["На заказ"] },
-  { id: "gulyanka-3",family: "gulyanki", name: "Гулянка №3", status: "sold", year: "2008", img: "gulyanka3.jpg" },
+  { id: "gulyanka-3",family: "gulyanki", name: "Гулянка №3", status: "sold", year: "2008", img: "gulyanka3.jpg?v=2", cardImg: "gulyanka3-card.jpg",
+    photos: { hero2: "gulyanka3-2.jpg", overview: "gulyanka3-overview.jpg", construction: "gulyanka3-story.jpg",
+      plans: ["gulyanka3-plan-side.png","gulyanka3-plan-top.png","gulyanka3-plan-back.png"] },
+    content: {
+      eyebrow: "Прогулочный катер",
+      desc: "Компактный прогулочный катер 10 метров — лёгкий, экономичный, с малой осадкой для неспешных выходов на воду.",
+      heroSpecs: [["Длина","10 м"],["Мощность","16 л.с."],["Скорость","14 км/ч"],["Осадка","0,5 м"]],
+      overviewLead: "Компактный прогулочный катер 10 метров — малая осадка, экономичный дизель и запас хода до 300 км.",
+      overviewBody: [
+        "10 метров при ширине 2,6 и осадке всего 0,5 метра — лёгкий корпус водоизмещением 2,5 тонны, которому открыты любые мелководья и протоки. Компоновка дневного катера: каюта со спальными местами в носу, пост управления, санузел и открытый кокпит на корме.",
+        "Небольшой дизель на 16 л.с. держит крейсерские 14 км/ч, а запас хода до 300 км позволяет уходить далеко от причала на целый день. Простой, экономичный и неприхотливый катер для реки."
+      ],
+      storyLead: "",
+      storyBody: ["",""],
+      specs: [
+        ["Длина габаритная","10 м"],["Ширина","2,6 м"],["Осадка","0,5 м"],["Водоизмещение","2,5 т"],
+        ["Двигатель","дизель, 16 л.с."],["Скорость","14 км/ч"],["Запас хода","до 300 км"],["Год постройки","2008"]
+      ],
+      decks: [
+        { name: "вид сбоку", items: [] },
+        { name: "вид сверху", items: [] },
+        { name: "вид сзади", items: [] }
+      ]
+    } },
   { id: "gulyanka-2",family: "gulyanki", name: "Гулянка №2", status: "sold", year: "2007", img: "boat-ph.jpg" },
   { id: "gulyanka-2005", family: "gulyanki", name: "Гулянка №1", status: "sold", year: "2003", img: "gulyanka2003.jpg", cardImg: "gulyanka2003-card.jpg",
     photos: { hero2: "gulyanka2003-2.jpg", overview: "gulyanka2003-overview.jpg", construction: "gulyanka2003-story.jpg",
