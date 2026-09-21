@@ -51,7 +51,7 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 }
 /* primary — solid navy */
 .btn--primary{background:var(--navy);color:var(--white);border-color:var(--navy)}
-.btn--primary:hover{background:var(--ink);border-color:var(--ink)}
+.btn--primary:hover{background:var(--brass);border-color:var(--brass);color:var(--navy)}
 /* secondary — white with navy outline */
 .btn--secondary{background:var(--white);color:var(--navy);border-color:var(--navy)}
 .btn--secondary:hover{background:var(--navy);color:var(--white)}
@@ -96,8 +96,7 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 }
 .hero__slide.is-active{opacity:1}
 .hero__slide--flip{transform:scaleX(-1)}
-/* hero button hovers — primary navy → gold, secondary white → clear (on the dark photo) */
-.hero .btn--primary:hover{background:var(--brass);border-color:var(--brass);color:var(--navy)}
+/* hero secondary hover — white → clear (on the dark photo); primary → gold is global */
 .hero .btn--secondary:hover{background:transparent;color:var(--white);border-color:var(--white)}
 .hero__scrim{
   position:absolute;inset:0;z-index:1;

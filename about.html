@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=111">
+<link rel="stylesheet" href="css/styles.css?v=140">
 </head>
 <body>
 
@@ -111,7 +111,7 @@
     </section>
 
     <!-- SECTION 5: OUR STRATEGIC PARTNERSHIP -->
-    <section class="wf-sec ab-partner">
+    <section class="wf-sec ab-partner" id="partner">
       <header class="ab-partner__head">
         <h2 class="wf-sectitle">Наше стратегическое партнёрство</h2>
         <div class="wf-line wf-line--head"></div>
@@ -265,5 +265,25 @@
     </div>
   </footer>
 
+  <!-- deep-link (#partner from the landing "Наш партнёр"): genuine arrival from
+       another page scrolls to the section (re-scrolling after images settle);
+       a reload cleans the hash and returns to the top, no jolt. -->
+  <script>
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    (function () {
+      if (!location.hash) return;
+      var hash = location.hash, fromOther = false;
+      try { fromOther = !!document.referrer && new URL(document.referrer).pathname !== location.pathname; } catch (e) {}
+      history.replaceState(null, '', location.pathname + location.search);
+      if (fromOther) {
+        var toHash = function () { var t = document.querySelector(hash); if (t) t.scrollIntoView({ behavior: 'instant', block: 'start' }); };
+        toHash();
+        window.addEventListener('load', toHash);
+        setTimeout(toHash, 400);
+      } else {
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      }
+    })();
+  </script>
 </body>
 </html>
