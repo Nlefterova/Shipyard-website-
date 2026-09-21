@@ -173,7 +173,7 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 /* ============================================================
    ВЕРФЬ  (shipyard intro: photo collage + text)
    ============================================================ */
-.verf{padding:clamp(3.5rem,7vw,6rem) 0}
+.verf{padding:clamp(3.5rem,7vw,6rem) 0 clamp(3rem,6vw,5rem)}
 .verf__inner{
   max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter);
   display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(2rem,4vw,3.75rem);
