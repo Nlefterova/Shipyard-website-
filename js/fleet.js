@@ -83,3 +83,10 @@ function initFilters() {
 render();
 initFilters();
 applyFilter("all");
+
+// sections are rendered here (not in the HTML), so a family hash from another page
+// (e.g. fleet.html#fam-trex from the landing hero) needs a manual scroll after render.
+if (location.hash) {
+  const target = document.querySelector(location.hash);
+  if (target) requestAnimationFrame(() => target.scrollIntoView({ behavior: "smooth", block: "start" }));
+}

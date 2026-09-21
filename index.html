@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=17">
+<link rel="stylesheet" href="css/styles.css?v=137">
 </head>
 <body>
 
@@ -31,30 +31,52 @@
   <section class="hero">
     <!-- carousel slides — placeholder repeats of one photo until the hero set is ready -->
     <div class="hero__slides" id="heroSlides">
-      <div class="hero__slide is-active" style="background-image:url('assets/img/hero-shipyard.jpg')"></div>
-      <div class="hero__slide" style="background-image:url('assets/img/hero-shipyard.jpg')"></div>
-      <div class="hero__slide" style="background-image:url('assets/img/hero-shipyard.jpg')"></div>
-      <div class="hero__slide" style="background-image:url('assets/img/hero-shipyard.jpg')"></div>
+      <div class="hero__slide is-active" style="background-image:url('assets/img/hero-1-verf.jpg')"></div>
+      <div class="hero__slide" style="background-image:url('assets/img/hero-2-trex.jpg')"></div>
+      <div class="hero__slide hero__slide--flip" style="background-image:url('assets/img/hero-3-expedition.jpg')"></div>
+      <div class="hero__slide" style="background-image:url('assets/img/hero-4-ships.jpg')"></div>
     </div>
     <div class="hero__scrim"></div>
 
     <div class="hero__inner">
-      <h1 class="hero__title">Судостроительная верфь</h1>
-      <p class="hero__text">
-        Корабельная артель базируется в Саратове, на берегу Волги.
-        Строит суда из авиационного алюминия с 1992 года.
-      </p>
+      <div class="hero__headings" id="heroHeadings">
+        <h1 class="hero__title is-active">Судостроительная верфь</h1>
+        <h2 class="hero__title">Глиссирующие катера</h2>
+        <h2 class="hero__title">Экспедиционные суда</h2>
+        <h2 class="hero__title">Маломерные корабли</h2>
+      </div>
+      <div class="hero__descs" id="heroDescs">
+        <p class="hero__desc is-active">На берегу Волги в Саратове с 1992 года. Свои проекты, российские материалы, свои мастера.</p>
+        <p class="hero__desc">Глиссирующие катера от 37 до 44 футов. Среди владельцев — МЧС Казахстана и Служба спасения Саратова.</p>
+        <p class="hero__desc">«Сибирский исследователь» водит круизы по Сибири. По его мотивам построен большой хаусбот.</p>
+        <p class="hero__desc">Маломерные суда класса люкс, оборудованные для семьи и дальних путешествий.</p>
+      </div>
       <div class="hero__actions">
-        <a class="btn btn--primary" href="#fleet">Смотреть Флот</a>
-        <a class="btn btn--secondary" href="about.html">О верфи</a>
+        <a class="btn btn--primary" href="fleet.html">Смотреть Флот</a>
+        <a class="btn btn--secondary" href="#approach">Наш подход</a>
       </div>
     </div>
 
-    <div class="hero__trackers" id="heroTrackers" aria-label="Слайды галереи">
-      <button class="hero__track is-active" aria-label="Слайд 1"></button>
-      <button class="hero__track" aria-label="Слайд 2"></button>
-      <button class="hero__track" aria-label="Слайд 3"></button>
-      <button class="hero__track" aria-label="Слайд 4"></button>
+    <!-- bottom cluster: per-slide caption (one of four aspects) + segment trackers -->
+    <div class="hero__foot">
+      <div class="hero__trackers" id="heroTrackers" aria-label="Слайды галереи">
+        <div class="hero__track-item">
+          <span class="hero__eyebrow is-active">Верфь</span>
+          <button class="hero__track is-active" aria-label="Слайд 1"><span class="hero__track__fill"></span></button>
+        </div>
+        <div class="hero__track-item">
+          <span class="hero__eyebrow">Линейка T-Rex</span>
+          <button class="hero__track" aria-label="Слайд 2"><span class="hero__track__fill"></span></button>
+        </div>
+        <div class="hero__track-item">
+          <span class="hero__eyebrow">Экспедиционные суда</span>
+          <button class="hero__track" aria-label="Слайд 3"><span class="hero__track__fill"></span></button>
+        </div>
+        <div class="hero__track-item">
+          <span class="hero__eyebrow">Корабли</span>
+          <button class="hero__track" aria-label="Слайд 4"><span class="hero__track__fill"></span></button>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -393,7 +415,7 @@
     </div>
   </footer>
 
-  <script src="js/carousel.js"></script>
+  <script src="js/carousel.js?v=14"></script>
   <script src="js/features.js"></script>
 </body>
 </html>
