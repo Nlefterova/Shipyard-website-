@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=140">
+<link rel="stylesheet" href="css/styles.css?v=150">
 </head>
 <body>
 
@@ -117,31 +117,33 @@
   <section class="fleet" id="fleet">
     <div class="fleet__inner">
       <h2 class="fleet__title">Флот</h2>
+      <p class="fleet__lead"><strong>5</strong> типов судов, <strong>30</strong> построенных.<br>Среди заказчиков — <strong>РГО</strong>, <strong>МЧС</strong> Казахстана и <strong>Служба спасения</strong> Саратовской&nbsp;области.</p>
       <div class="fleet__grid">
-        <article class="fleet-card">
-          <img class="fleet-card__img" src="assets/img/fleet-katera.jpg" alt="Глиссирующие катера">
+        <a class="fleet-card" href="fleet.html#fam-trex">
+          <div class="fleet-card__media" data-family="trex" data-cover="assets/img/fleet-katera.jpg"><div class="fleet-card__track"></div></div>
           <h3 class="fleet-card__title">Глиссирующие катера</h3>
           <p class="fleet-card__sub">Катера линейки T-Rex</p>
-          <p class="fleet-card__sub">Для скорости, волн и приключений</p>
-        </article>
-        <article class="fleet-card">
-          <img class="fleet-card__img" src="assets/img/fleet-korabli.jpg" alt="Корабли">
-          <h3 class="fleet-card__title">Корабли</h3>
-          <p class="fleet-card__sub">Суда средних размеров</p>
-          <p class="fleet-card__sub">Для больших компаний и комфорта</p>
-        </article>
-        <article class="fleet-card">
-          <img class="fleet-card__img" src="assets/img/fleet-expedition.jpg" alt="Экспедиционные">
+        </a>
+        <a class="fleet-card" href="fleet.html#fam-expedition">
+          <div class="fleet-card__media" data-family="expedition" data-cover="assets/img/fleet-expedition.jpg"><div class="fleet-card__track"></div></div>
           <h3 class="fleet-card__title">Экспедиционные</h3>
           <p class="fleet-card__sub">Научно-исследовательские суда</p>
-          <p class="fleet-card__sub">Для экстремальных условий и адреналина</p>
-        </article>
-        <article class="fleet-card">
-          <img class="fleet-card__img" src="assets/img/fleet-traulery.jpg" alt="Траулеры">
+        </a>
+        <a class="fleet-card" href="fleet.html#fam-korabli">
+          <div class="fleet-card__media" data-family="korabli" data-cover="assets/img/fleet-korabli.jpg"><div class="fleet-card__track"></div></div>
+          <h3 class="fleet-card__title">Корабли</h3>
+          <p class="fleet-card__sub">Суда маломерных размеров</p>
+        </a>
+        <a class="fleet-card" href="fleet.html#fam-traulery">
+          <div class="fleet-card__media" data-family="traulery" data-cover="assets/img/fleet-traulery.jpg"><div class="fleet-card__track"></div></div>
           <h3 class="fleet-card__title">Траулеры</h3>
-          <p class="fleet-card__sub">Рыболовные суда</p>
-          <p class="fleet-card__sub">Для рыбалки и морских промыслов</p>
-        </article>
+          <p class="fleet-card__sub">Суда в голландском стиле</p>
+        </a>
+        <a class="fleet-card" href="fleet.html#fam-gulyanki">
+          <div class="fleet-card__media" data-family="gulyanki" data-cover="assets/img/gulyanka1.jpg"><div class="fleet-card__track"></div></div>
+          <h3 class="fleet-card__title">Гулянки</h3>
+          <p class="fleet-card__sub">Речные прогулочные лодки</p>
+        </a>
       </div>
     </div>
   </section>
@@ -415,7 +417,9 @@
     </div>
   </footer>
 
+  <script src="js/boats-data.js?v=218"></script>
   <script src="js/carousel.js?v=14"></script>
   <script src="js/features.js"></script>
+  <script src="js/fleet-hover.js?v=5"></script>
 </body>
 </html>

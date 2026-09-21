@@ -84,9 +84,15 @@ render();
 initFilters();
 applyFilter("all");
 
-// sections are rendered here (not in the HTML), so a family hash from another page
-// (e.g. fleet.html#fam-trex from the landing hero) needs a manual scroll after render.
+// Sections are rendered here (not in the HTML). A family hash from another page
+// (e.g. fleet.html#fam-trex from the landing) scrolls to the section; but a reload
+// cleans the hash and returns to the top, so it doesn't jump on refresh.
+if ("scrollRestoration" in history) history.scrollRestoration = "manual";
 if (location.hash) {
   const target = document.querySelector(location.hash);
-  if (target) requestAnimationFrame(() => target.scrollIntoView({ behavior: "smooth", block: "start" }));
+  let fromOther = false;
+  try { fromOther = !!document.referrer && new URL(document.referrer).pathname !== location.pathname; } catch (e) {}
+  history.replaceState(null, "", location.pathname + location.search);
+  if (fromOther && target) requestAnimationFrame(() => target.scrollIntoView({ behavior: "instant", block: "start" }));
+  else window.scrollTo({ top: 0, behavior: "instant" });
 }
