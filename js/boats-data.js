@@ -128,7 +128,7 @@ const BOATS = [
         { name: "вид спереди", items: [] }
       ]
     } },
-  { id: "trex-37", family: "trex", name: "T-Rex 37", status: "sold", year: "2018", img: "trex37-2.jpg", cardImg: "trex37-card.jpg", cardPos: "40% 50%",
+  { id: "trex-37", family: "trex", name: "T-Rex 37", status: "sold", year: "2016", img: "trex37-2.jpg", cardImg: "trex37-card.jpg", cardPos: "40% 50%",
     photos: {
       hero2: "trex37.jpg?v=2", overview: "trex37-overview.jpg", construction: "trex37-story.jpg",
       thumbs: ["trex37-i1.jpg","trex37-i2.jpg","trex37-i3.jpg","trex37-i4.jpg","trex37-i5.jpg","trex37-i6.jpg"],
@@ -162,7 +162,7 @@ const BOATS = [
       ]
     } },
   // Expedition
-  { id: "exp-65lux", family: "expedition", name: "Expedition 65 Lux", status: "available", year: "2025", img: "exp65lux.jpg", cardImg: "exp65lux-card.jpg",
+  { id: "exp-65lux", family: "expedition", name: "Expedition 65 Lux", status: "available", year: "2026", img: "exp65lux.jpg", cardImg: "exp65lux-card.jpg",
     photos: { hero2: "exp65lux-2.jpg", overview: "exp65lux-overview.jpg", construction: "exp65lux-story.jpg",
       thumbs: ["exp65lux-i1.jpg","exp65lux-i2.jpg","exp65lux-i3.jpg","exp65lux-i4.jpg","exp65lux-i5.jpg","exp65lux-i6.jpg"], captions: ["Мастер-каюта","Нижний зал","Зал","Кухня","Сауна","Детская каюта"],
       gallery: ["exp65lux-i3.jpg","exp65lux-i1.jpg","exp65lux.jpg","exp65lux-i2.jpg","exp65lux-i4.jpg","exp65lux-2.jpg","exp65lux-overview.jpg","exp65lux-i5.jpg","exp65lux-i6.jpg"],
@@ -227,7 +227,8 @@ const BOATS = [
       ]
     } },
   // Корабли
-  { id: "mius", family: "korabli", name: "Миус", status: "sold", year: "2019", img: "mius.jpg?v=2", cardImg: "mius-card.jpg?v=2", tags: ["На заказ"],
+  { id: "aleksandriya", family: "korabli", name: "Александрия", status: "sold", year: "2019", img: "boat-ph.jpg", tags: ["На заказ"] },
+  { id: "mius", family: "korabli", name: "Миус", status: "sold", year: "2018", img: "mius.jpg?v=2", cardImg: "mius-card.jpg?v=2", tags: ["На заказ"],
     photos: { hero2: "mius-2.jpg", hero2Pos: "center 64%", overview: "mius-overview.jpg", construction: "mius-story.jpg",
       thumbs: ["mius-i1.jpg","mius-i2.jpg?v=2","mius-i3.jpg?v=2","mius-i4.jpg","mius-i5.jpg","mius-i6.jpg"],
       captions: ["Ходовая рубка","Кают-компания","Салон","Камбуз","Каюта","Санузел"],
@@ -255,33 +256,6 @@ const BOATS = [
         { name: "верхняя палуба", items: [] },
         { name: "нижняя палуба", items: [] }
       ]
-    } },
-  { id: "kasatka", family: "korabli", name: "Касатка", status: "sold", year: "2017", img: "kasatka-2.jpg", cardImg: "kasatka-card.jpg", tags: ["На заказ"],
-    photos: { hero2: "kasatka-overview.jpg", overview: "kasatka.jpg?v=2", construction: "kasatka-story.jpg",
-      thumbs: ["kasatka-i4.jpg","kasatka-i5.jpg","kasatka-i3.jpg","kasatka-i2.jpg","kasatka-i6.jpg","kasatka-i1.jpg"],
-      captions: ["Камбуз и салон","Салон","Каюта","Ходовая рубка","Русская сауна","Кормовая палуба"],
-      gallery: ["kasatka-i4.jpg","kasatka-i1.jpg","kasatka-2.jpg","kasatka-i2.jpg","kasatka-i6.jpg","kasatka-overview.jpg","kasatka-i3.jpg","kasatka-i5.jpg","kasatka-story.jpg"] },
-    content: {
-      eyebrow: "Прогулочная яхта",
-      desc: "VIP-яхта для отдыха и праздников на Волге — три палубы, русская сауна, до 10 гостей.",
-      heroSpecs: [["Длина","18 м"],["Каюты","4"],["Вместимость","до 10 человек"],["Спальных мест","8"]],
-      overviewLead: "VIP-яхта для отдыха на воде — три палубы, четыре каюты, русская сауна.",
-      overviewBody: [
-        "18 метров, четыре каюты и восемь спальных мест: две каюты с двуспальными кроватями и своими санузлами, носовая каюта и детская с двухъярусными кроватями. Салон с кожаным диваном и камбузом, отдельная душевая.",
-        "Три палубы: верхний солярий с шезлонгами, средняя палуба с танцполом и главный салон. На борту — русская сауна на дровах, отопление и кондиционирование, профессиональная аудиосистема с караоке."
-      ],
-      storyLead: "Её вода — Волга у Саратова, а работа — праздник.",
-      storyBody: [
-        "С апреля по ноябрь Касатка выходит с причала в Энгельсе и возит компании по Волге: дни рождения, свадьбы, прогулки с друзьями. Три палубы, сауна, солярий и танцпол — всё для отдыха на воде.",
-        "Так и сложилась её история — не парадная, а живая: год за годом она служит людям и служит для радости."
-      ],
-      specs: [
-        ["Длина","18 м"],["Ширина","5 м"],["Вместимость","до 10 человек"],["Каюты","4"],
-        ["Спальных мест","8"],["Санузлы","2"],["Палубы","3 (солярий, танцпол, салон)"],
-        ["Сауна","русская, на дровах"],["Климат","отопление и кондиционирование"],["Аудио","система звука + караоке"],
-        ["Год постройки","2017"]
-      ],
-      decks: []
     } },
   { id: "natali-srt",family: "korabli", name: "Natali Srt", status: "sold", year: "2014", img: "natali.jpg", tags: ["На заказ"],
     photos: { hero2: "natali-2.jpg", overview: "natali-overview.jpg", construction: "natali-story.jpg",
@@ -316,7 +290,58 @@ const BOATS = [
         { name: "нижняя палуба", items: [] }
       ]
     } },
-  { id: "rusich",    family: "korabli", name: "Русич",      status: "sold", year: "2013", img: "rusich.jpg?v=2",
+  { id: "kasatka", family: "korabli", name: "Касатка", status: "sold", year: "2013", img: "kasatka-2.jpg", cardImg: "kasatka-card.jpg", tags: ["На заказ"],
+    photos: { hero2: "kasatka-overview.jpg", overview: "kasatka.jpg?v=2", construction: "kasatka-story.jpg",
+      thumbs: ["kasatka-i4.jpg","kasatka-i5.jpg","kasatka-i3.jpg","kasatka-i2.jpg","kasatka-i6.jpg","kasatka-i1.jpg"],
+      captions: ["Камбуз и салон","Салон","Каюта","Ходовая рубка","Русская сауна","Кормовая палуба"],
+      gallery: ["kasatka-i4.jpg","kasatka-i1.jpg","kasatka-2.jpg","kasatka-i2.jpg","kasatka-i6.jpg","kasatka-overview.jpg","kasatka-i3.jpg","kasatka-i5.jpg","kasatka-story.jpg"] },
+    content: {
+      eyebrow: "Прогулочная яхта",
+      desc: "VIP-яхта для отдыха и праздников на Волге — три палубы, русская сауна, до 10 гостей.",
+      heroSpecs: [["Длина","18 м"],["Каюты","4"],["Вместимость","до 10 человек"],["Спальных мест","8"]],
+      overviewLead: "VIP-яхта для отдыха на воде — три палубы, четыре каюты, русская сауна.",
+      overviewBody: [
+        "18 метров, четыре каюты и восемь спальных мест: две каюты с двуспальными кроватями и своими санузлами, носовая каюта и детская с двухъярусными кроватями. Салон с кожаным диваном и камбузом, отдельная душевая.",
+        "Три палубы: верхний солярий с шезлонгами, средняя палуба с танцполом и главный салон. На борту — русская сауна на дровах, отопление и кондиционирование, профессиональная аудиосистема с караоке."
+      ],
+      storyLead: "Её вода — Волга у Саратова, а работа — праздник.",
+      storyBody: [
+        "С апреля по ноябрь Касатка выходит с причала в Энгельсе и возит компании по Волге: дни рождения, свадьбы, прогулки с друзьями. Три палубы, сауна, солярий и танцпол — всё для отдыха на воде.",
+        "Так и сложилась её история — не парадная, а живая: год за годом она служит людям и служит для радости."
+      ],
+      specs: [
+        ["Длина","18 м"],["Ширина","5 м"],["Вместимость","до 10 человек"],["Каюты","4"],
+        ["Спальных мест","8"],["Санузлы","2"],["Палубы","3 (солярий, танцпол, салон)"],
+        ["Сауна","русская, на дровах"],["Климат","отопление и кондиционирование"],["Аудио","система звука + караоке"],
+        ["Год постройки","2017"]
+      ],
+      decks: []
+    } },
+  { id: "fiesta",    family: "korabli", name: "Fiesta",     status: "sold", year: "2012", img: "fiesta.jpg?v=2", cardImg: "fiesta-card.jpg?v=3", tags: ["На заказ"],
+    photos: { hero2: "fiesta-2.jpg?v=3", hero2Pos: "center 78%", overview: "fiesta-overview.jpg", construction: "fiesta-story.jpg", plans: ["fiesta-plan-side.png","fiesta-plan-main.png","fiesta-plan-lower.png"] },
+    content: {
+      eyebrow: "Моторная яхта",
+      desc: "Стальная моторная яхта 18 метров с флайбриджем — для дальних прогулок и отдыха на большой воде.",
+      heroSpecs: [["Длина","18 м"],["Ширина","5 м"],["Мощность","270 л.с."],["Осадка","0,9 м"]],
+      overviewLead: "Стальная моторная яхта 18 метров — два уровня с открытым флайбриджем, водоизмещающий корпус и малая осадка.",
+      overviewBody: [
+        "18 метров при ширине 5 — стальной корпус водоизмещающего типа с осадкой всего 0,9 метра, одинаково уверенный и на большой воде, и на мелких протоках. Два уровня плюс открытый флайбридж: салон с панорамным остеклением, камбуз, каюты и зоны отдыха на палубе.",
+        "Два дизельных двигателя по 135 л.с. — 270 сил суммарно. Запас топлива 3 тонны и полное водоизмещение 27 тонн рассчитаны на долгие переходы вдали от причала."
+      ],
+      storyLead: "",
+      storyBody: ["",""],
+      specs: [
+        ["Длина","18 м"],["Ширина","5 м"],["Осадка","0,9 м"],["Водоизмещение","27 т"],
+        ["Двигатели","2 × 135 л.с."],["Мощность","270 л.с."],["Запас топлива","3 т"],
+        ["Материал корпуса","сталь"],["Год постройки","2012"]
+      ],
+      decks: [
+        { name: "вид сбоку", items: [] },
+        { name: "главная палуба", items: [] },
+        { name: "нижняя палуба", items: [] }
+      ]
+    } },
+  { id: "rusich",    family: "korabli", name: "Русич",      status: "sold", year: "2011", img: "rusich.jpg?v=2",
     photos: { hero2: "rusich-2.jpg", overview: "rusich-overview.jpg", construction: "rusich-story.jpg",
       thumbs: ["rusich-i1.jpg","rusich-i2.jpg","rusich-i3.jpg","rusich-i4.jpg","rusich-i5.jpg","rusich-i6.jpg"],
       captions: ["Кают-компания","Ходовая рубка","Камбуз","Мастер-каюта","Камбуз","Санузел"],
@@ -344,53 +369,6 @@ const BOATS = [
         { name: "верхняя палуба", items: [] },
         { name: "главная палуба", items: [] },
         { name: "нижняя палуба", items: [] }
-      ]
-    } },
-  { id: "fiesta",    family: "korabli", name: "Fiesta",     status: "sold", year: "2012", img: "fiesta.jpg?v=2", cardImg: "fiesta-card.jpg?v=3", tags: ["На заказ"],
-    photos: { hero2: "fiesta-2.jpg?v=3", hero2Pos: "center 78%", overview: "fiesta-overview.jpg", construction: "fiesta-story.jpg", plans: ["fiesta-plan-side.png","fiesta-plan-main.png","fiesta-plan-lower.png"] },
-    content: {
-      eyebrow: "Моторная яхта",
-      desc: "Стальная моторная яхта 18 метров с флайбриджем — для дальних прогулок и отдыха на большой воде.",
-      heroSpecs: [["Длина","18 м"],["Ширина","5 м"],["Мощность","270 л.с."],["Осадка","0,9 м"]],
-      overviewLead: "Стальная моторная яхта 18 метров — два уровня с открытым флайбриджем, водоизмещающий корпус и малая осадка.",
-      overviewBody: [
-        "18 метров при ширине 5 — стальной корпус водоизмещающего типа с осадкой всего 0,9 метра, одинаково уверенный и на большой воде, и на мелких протоках. Два уровня плюс открытый флайбридж: салон с панорамным остеклением, камбуз, каюты и зоны отдыха на палубе.",
-        "Два дизельных двигателя по 135 л.с. — 270 сил суммарно. Запас топлива 3 тонны и полное водоизмещение 27 тонн рассчитаны на долгие переходы вдали от причала."
-      ],
-      storyLead: "",
-      storyBody: ["",""],
-      specs: [
-        ["Длина","18 м"],["Ширина","5 м"],["Осадка","0,9 м"],["Водоизмещение","27 т"],
-        ["Двигатели","2 × 135 л.с."],["Мощность","270 л.с."],["Запас топлива","3 т"],
-        ["Материал корпуса","сталь"],["Год постройки","2012"]
-      ],
-      decks: [
-        { name: "вид сбоку", items: [] },
-        { name: "главная палуба", items: [] },
-        { name: "нижняя палуба", items: [] }
-      ]
-    } },
-  { id: "yul",       family: "korabli", name: "Юл",         status: "sold", year: "2011", img: "yul.jpg?v=2",
-    photos: { hero2: "yul-2.jpg", overview: "yul-overview.jpg", construction: "yul-story.jpg",
-      plans: ["yul-plan-side.png","yul-plan-top.png"] },
-    content: {
-      eyebrow: "Прогулочный катер",
-      desc: "Компактный стальной катер 9,4 метра с малой осадкой и буксирным силуэтом — для неспешных прогулок по реке.",
-      heroSpecs: [["Длина","9,4 м"],["Ширина","3 м"],["Осадка","0,49 м"],["Материал","сталь"]],
-      overviewLead: "Компактный стальной катер 9,4 метра — малая осадка и классический буксирный силуэт для реки и мелкой воды.",
-      overviewBody: [
-        "9,4 метра в длину при ширине 3 — стальной корпус с осадкой всего 0,49 метра, которому открыты мелкие протоки и подходы к самому берегу. Компоновка дневного катера: рубка с постом управления, спальные места в носу и открытый кокпит для отдыха.",
-        "Небольшой водоизмещающий катер классической буксирной внешности — крепкий стальной корпус и простая, надёжная компоновка для спокойных выходов на воду."
-      ],
-      storyLead: "",
-      storyBody: ["",""],
-      specs: [
-        ["Длина","9,4 м"],["Ширина","3 м"],["Осадка","0,49 м"],["Высота","3,3 м"],
-        ["Материал корпуса","сталь"],["Год постройки","2011"]
-      ],
-      decks: [
-        { name: "вид сбоку", items: [] },
-        { name: "вид сверху", items: [] }
       ]
     } },
   { id: "volnyi",    family: "korabli", name: "Вольный",    status: "sold", year: "2010", img: "volnyi.jpg?v=2", cardPos: "center 65%", tags: ["На заказ"],
@@ -422,7 +400,55 @@ const BOATS = [
         { name: "вид сверху", items: [] }
       ]
     } },
-  { id: "piligrim",  family: "korabli", name: "Пилигрим",   status: "sold", year: "2009", img: "pilgrim.jpg?v=2", cardImg: "pilgrim-card.jpg?v=3", tags: ["На заказ"],
+  { id: "yeti",      family: "korabli", name: "Yeti",       status: "sold", year: "2009", img: "yeti.jpg?v=2", cardImg: "yeti-card.jpg", tags: ["На заказ"],
+    photos: { hero2: "yeti-2.jpg?v=3", overview: "yeti-overview.jpg", construction: "yeti-story.jpg",
+      thumbs: ["yeti-i1.jpg","yeti-i2.jpg","yeti-i3.jpg","yeti-i4.jpg","yeti-i5.jpg","yeti-i6.jpg"],
+      captions: ["Кают-компания","Ходовая рубка","Камбуз","Мастер-каюта","Носовая каюта","Гостевая каюта"],
+      gallery: ["yeti-i1.jpg","yeti-2.jpg?v=3","yeti-i4.jpg","yeti-i3.jpg","yeti-overview.jpg","yeti-i2.jpg","yeti-i5.jpg","yeti-story.jpg","yeti-i6.jpg"] },
+    content: {
+      eyebrow: "Прогулочная яхта",
+      desc: "Моторная яхта 18 метров для комфортного отдыха на воде — две каюты, баня, палуба с лежаками и мангалом.",
+      heroSpecs: [["Длина","18 м"],["Каюты","2"],["Баня","есть"],["Тип","моторная яхта"]],
+      overviewLead: "Моторная яхта 18 метров для отдыха на воде — две гостевые каюты, баня и просторная палуба.",
+      overviewBody: [
+        "18 метров: кают-компания с кожаным диваном, столом и телевизором, камбуз с электроплитой, холодильником и кондиционером. Две гостевые каюты — одна с двуспальной кроватью, носовая с отдельной кроватью — и все удобства на борту.",
+        "На верхней палубе — лежаки, шезлонги и мангал для отдыха на воде. И, конечно, баня — редкость для судна такого размера."
+      ],
+      storyLead: "Её вода — Волга у Саратова, а дело — чужие праздники.",
+      storyBody: [
+        "Она возит компании по Волге у Саратова — дни рождения, встречи, долгие летние прогулки. Несколько палуб на любую погоду: открытая тентованная палуба с мангалом, где накрывают праздничный стол, и кают-компания с кухней и панорамным видом на реку, чтобы и непогода не мешала веселью.",
+        "Но по-настоящему её любят за баньку — с отдельной палубой, банкетным столом и лесенкой прямо в Волгу: попарился с веником — и в воду. А когда день позади и эмоций через край, на борту ждут две гостевые каюты. Так и идёт её жизнь — не парадная, а живая: год за годом она возит людям радость."
+      ],
+      specs: [
+        ["Длина","18 м"],["Каюты","2 гостевые"],["Баня","есть"],["Камбуз","электроплита, холодильник"],
+        ["Климат","кондиционер"],["Палуба","лежаки, шезлонги, мангал"],["Год постройки","2005"]
+      ],
+      decks: []
+    } },
+  { id: "yul",       family: "korabli", name: "Юл",         status: "sold", year: "2008", img: "yul.jpg?v=2",
+    photos: { hero2: "yul-2.jpg", overview: "yul-overview.jpg", construction: "yul-story.jpg",
+      plans: ["yul-plan-side.png","yul-plan-top.png"] },
+    content: {
+      eyebrow: "Прогулочный катер",
+      desc: "Компактный стальной катер 9,4 метра с малой осадкой и буксирным силуэтом — для неспешных прогулок по реке.",
+      heroSpecs: [["Длина","9,4 м"],["Ширина","3 м"],["Осадка","0,49 м"],["Материал","сталь"]],
+      overviewLead: "Компактный стальной катер 9,4 метра — малая осадка и классический буксирный силуэт для реки и мелкой воды.",
+      overviewBody: [
+        "9,4 метра в длину при ширине 3 — стальной корпус с осадкой всего 0,49 метра, которому открыты мелкие протоки и подходы к самому берегу. Компоновка дневного катера: рубка с постом управления, спальные места в носу и открытый кокпит для отдыха.",
+        "Небольшой водоизмещающий катер классической буксирной внешности — крепкий стальной корпус и простая, надёжная компоновка для спокойных выходов на воду."
+      ],
+      storyLead: "",
+      storyBody: ["",""],
+      specs: [
+        ["Длина","9,4 м"],["Ширина","3 м"],["Осадка","0,49 м"],["Высота","3,3 м"],
+        ["Материал корпуса","сталь"],["Год постройки","2011"]
+      ],
+      decks: [
+        { name: "вид сбоку", items: [] },
+        { name: "вид сверху", items: [] }
+      ]
+    } },
+  { id: "piligrim",  family: "korabli", name: "Пилигрим",   status: "sold", year: "2007", img: "pilgrim.jpg?v=2", cardImg: "pilgrim-card.jpg?v=3", tags: ["На заказ"],
     photos: { hero2: "pilgrim-2.jpg", overview: "pilgrim-overview.jpg", construction: "pilgrim-story.jpg",
       plans: ["pilgrim-plan-side.png","pilgrim-plan-main.png","pilgrim-plan-lower.png"] },
     content: {
@@ -449,33 +475,7 @@ const BOATS = [
         { name: "нижняя палуба", items: [] }
       ]
     } },
-  { id: "yeti",      family: "korabli", name: "Yeti",       status: "sold", year: "2005", img: "yeti.jpg?v=2", cardImg: "yeti-card.jpg", tags: ["На заказ"],
-    photos: { hero2: "yeti-2.jpg?v=3", overview: "yeti-overview.jpg", construction: "yeti-story.jpg",
-      thumbs: ["yeti-i1.jpg","yeti-i2.jpg","yeti-i3.jpg","yeti-i4.jpg","yeti-i5.jpg","yeti-i6.jpg"],
-      captions: ["Кают-компания","Ходовая рубка","Камбуз","Мастер-каюта","Носовая каюта","Гостевая каюта"],
-      gallery: ["yeti-i1.jpg","yeti-2.jpg?v=3","yeti-i4.jpg","yeti-i3.jpg","yeti-overview.jpg","yeti-i2.jpg","yeti-i5.jpg","yeti-story.jpg","yeti-i6.jpg"] },
-    content: {
-      eyebrow: "Прогулочная яхта",
-      desc: "Моторная яхта 18 метров для комфортного отдыха на воде — две каюты, баня, палуба с лежаками и мангалом.",
-      heroSpecs: [["Длина","18 м"],["Каюты","2"],["Баня","есть"],["Тип","моторная яхта"]],
-      overviewLead: "Моторная яхта 18 метров для отдыха на воде — две гостевые каюты, баня и просторная палуба.",
-      overviewBody: [
-        "18 метров: кают-компания с кожаным диваном, столом и телевизором, камбуз с электроплитой, холодильником и кондиционером. Две гостевые каюты — одна с двуспальной кроватью, носовая с отдельной кроватью — и все удобства на борту.",
-        "На верхней палубе — лежаки, шезлонги и мангал для отдыха на воде. И, конечно, баня — редкость для судна такого размера."
-      ],
-      storyLead: "Её вода — Волга у Саратова, а дело — чужие праздники.",
-      storyBody: [
-        "Она возит компании по Волге у Саратова — дни рождения, встречи, долгие летние прогулки. Несколько палуб на любую погоду: открытая тентованная палуба с мангалом, где накрывают праздничный стол, и кают-компания с кухней и панорамным видом на реку, чтобы и непогода не мешала веселью.",
-        "Но по-настоящему её любят за баньку — с отдельной палубой, банкетным столом и лесенкой прямо в Волгу: попарился с веником — и в воду. А когда день позади и эмоций через край, на борту ждут две гостевые каюты. Так и идёт её жизнь — не парадная, а живая: год за годом она возит людям радость."
-      ],
-      specs: [
-        ["Длина","18 м"],["Каюты","2 гостевые"],["Баня","есть"],["Камбуз","электроплита, холодильник"],
-        ["Климат","кондиционер"],["Палуба","лежаки, шезлонги, мангал"],["Год постройки","2005"]
-      ],
-      decks: []
-    } },
-  { id: "dundukovsky-1", family: "korabli", name: "Дундуковский 1", status: "sold", year: "2001", img: "boat-ph.jpg", tags: ["На заказ"] },
-  { id: "laita",     family: "korabli", name: "Лайта",      status: "sold", year: "2000", img: "laita.jpg?v=2", tags: ["На заказ"],
+  { id: "laita",     family: "korabli", name: "Лайта",      status: "sold", year: "2002", img: "laita.jpg?v=2", tags: ["На заказ"],
     photos: { hero2: "laita-2.jpg", hero2Pos: "center 62%", overview: "laita-overview.jpg", construction: "laita-story.jpg" },
     content: {
       eyebrow: "Моторная яхта",
@@ -492,7 +492,8 @@ const BOATS = [
       ],
       decks: []
     } },
-  { id: "mara",      family: "korabli", name: "Мара",       status: "sold", year: "1999", img: "mara.jpg?v=3", cardImg: "mara-card.jpg",
+  { id: "dundukovsky-1", family: "korabli", name: "Дундуковский 1", status: "sold", year: "1999", img: "boat-ph.jpg", tags: ["На заказ"] },
+  { id: "mara",      family: "korabli", name: "Мара",       status: "sold", year: "1998", img: "mara.jpg?v=3", cardImg: "mara-card.jpg",
     photos: { hero2: "mara-2.jpg", overview: "mara-overview.jpg", construction: "mara-story.jpg",
       thumbs: ["mara-i1.jpg","mara-i2.jpg","mara-i3.jpg","mara-i4.jpg","mara-i5.jpg","mara-i6.jpg"],
       captions: ["Кают-компания","Мастер-каюта","Носовая каюта","Камбуз","Санузел","Душевая"],
@@ -543,7 +544,7 @@ const BOATS = [
         { name: "нижняя палуба", items: [] }
       ]
     } },
-  { id: "sapfir",    family: "traulery", name: "Сапфир",  status: "sold", year: "2004", img: "sapfir.jpg", cardImg: "sapfir-card.jpg", tags: ["На заказ"],
+  { id: "sapfir",    family: "traulery", name: "Сапфир",  status: "sold", year: "2005", img: "sapfir.jpg", cardImg: "sapfir-card.jpg", tags: ["На заказ"],
     photos: { hero2: "sapfir-2.jpg", overview: "sapfir-overview.jpg", construction: "sapfir-story.jpg",
       thumbs: ["sapfir-i1.jpg","sapfir-i2.jpg","sapfir-i3.jpg","sapfir-i4.jpg","sapfir-i5.jpg","sapfir-i6.jpg"],
       captions: ["Ходовая рубка","Кают-компания","Камбуз","Флайбридж","Каюта","Гостевая каюта"],
@@ -576,9 +577,9 @@ const BOATS = [
         { name: "нижняя палуба", items: [] }
       ]
     } },
-  { id: "bandido",   family: "traulery", name: "Bandido", status: "sold", year: "2002", img: "boat-ph.jpg", tags: ["На заказ"] },
+  { id: "bandido",   family: "traulery", name: "Bandido", status: "sold", year: "2001", img: "boat-ph.jpg", tags: ["На заказ"] },
   // Гулянки
-  { id: "gulyanka-1",family: "gulyanki", name: "Гулянка №5", status: "sold", year: "2016", img: "gulyanka5.jpg", cardImg: "gulyanka5-card.jpg", tags: ["На заказ"],
+  { id: "gulyanka-1",family: "gulyanki", name: "Гулянка №5", status: "sold", year: "2017", img: "gulyanka5.jpg", cardImg: "gulyanka5-card.jpg", tags: ["На заказ"],
     photos: { hero2: "gulyanka5-2.jpg", overview: "gulyanka5-overview.jpg", construction: "gulyanka5-story.jpg" },
     content: {
       eyebrow: "Моторная яхта",
@@ -624,7 +625,8 @@ const BOATS = [
         { name: "вид спереди", items: [] }
       ]
     } },
-  { id: "gulyanka-3",family: "gulyanki", name: "Гулянка №3", status: "sold", year: "2008", img: "gulyanka3.jpg?v=2", cardImg: "gulyanka3-card.jpg",
+  { id: "gulyanka-2",family: "gulyanki", name: "Гулянка №2", status: "sold", year: "2004", img: "boat-ph.jpg" },
+  { id: "gulyanka-3",family: "gulyanki", name: "Гулянка №3", status: "sold", year: "2003", img: "gulyanka3.jpg?v=2", cardImg: "gulyanka3-card.jpg",
     photos: { hero2: "gulyanka3-2.jpg", overview: "gulyanka3-overview.jpg", construction: "gulyanka3-story.jpg",
       plans: ["gulyanka3-plan-side.png","gulyanka3-plan-top.png","gulyanka3-plan-back.png"] },
     content: {
@@ -648,8 +650,7 @@ const BOATS = [
         { name: "вид сзади", items: [] }
       ]
     } },
-  { id: "gulyanka-2",family: "gulyanki", name: "Гулянка №2", status: "sold", year: "2007", img: "boat-ph.jpg" },
-  { id: "gulyanka-2005", family: "gulyanki", name: "Гулянка №1", status: "sold", year: "2003", img: "gulyanka2003.jpg", cardImg: "gulyanka2003-card.jpg",
+  { id: "gulyanka-2005", family: "gulyanki", name: "Гулянка №1", status: "sold", year: "2000", img: "gulyanka2003.jpg", cardImg: "gulyanka2003-card.jpg",
     photos: { hero2: "gulyanka2003-2.jpg", overview: "gulyanka2003-overview.jpg", construction: "gulyanka2003-story.jpg",
       thumbs: ["gulyanka2003-i1.jpg","gulyanka2003-i2.jpg","gulyanka2003-i3.jpg","gulyanka2003-i4.jpg","gulyanka2003-i5.jpg","gulyanka2003-i6.jpg"],
       captions: ["Кокпит","Кают-компания","Камбуз","Салон","Носовая каюта","Санузел"],
