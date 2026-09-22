@@ -367,7 +367,15 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
   font-family:var(--serif);font-weight:600;color:var(--near-black);
   font-size:clamp(2rem,4vw,3.125rem);line-height:1.1;margin-bottom:clamp(1.25rem,2.5vw,2rem);
 }
-.loc__items{display:flex;flex-direction:column;gap:clamp(1.5rem,3vw,2.25rem)}
+/* locations in a thin-line rectangle with a divider between each; hours + contacts sit outside.
+   Each location is a button that swaps the map square on the right. */
+.loc__box{border:1px solid var(--grey-300);border-radius:4px;overflow:hidden}
+.loc__box .loc__item{display:block;width:100%;text-align:left;background:none;border:0;
+  font:inherit;color:inherit;cursor:pointer;padding:clamp(1.15rem,2.2vw,1.75rem);transition:background .2s ease}
+.loc__box .loc__item + .loc__item{border-top:1px solid var(--grey-300)}
+.loc__box .loc__item:hover{background:#F7F5F0}
+.loc__box .loc__item.is-active{background:var(--grey-100)}
+.loc__extra{margin-top:clamp(1.5rem,3vw,2.25rem);display:flex;flex-direction:column;gap:clamp(1.5rem,3vw,2.25rem)}
 .loc__name{
   font-family:var(--serif);font-weight:600;color:var(--near-black);
   font-size:1.375rem;line-height:1.2;
@@ -377,10 +385,36 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 .loc__actions{margin-top:.9rem;display:flex;gap:.6rem;flex-wrap:wrap}
 .loc__btn{font-size:14px;padding:.5rem 1.1rem}
 .loc__map{
+  position:relative;
   width:100%;aspect-ratio:823/725;background:var(--grey-100);border-radius:4px;
+  background-size:cover;background-position:center;overflow:hidden;
   display:flex;align-items:center;justify-content:center;
   color:var(--grey-500);font-family:var(--sans);font-size:1rem;
 }
+.loc__map-bar{
+  position:absolute;left:0;right:0;bottom:0;z-index:1;
+  min-height:clamp(64px,10vw,92px);background:rgba(23,28,70,.7);color:var(--white);
+  display:flex;align-items:center;justify-content:space-between;gap:clamp(1rem,2.5vw,2rem);
+  padding:clamp(.75rem,1.6vw,1.1rem) clamp(1rem,2vw,1.6rem);
+  font-family:var(--sans);
+}
+.loc__map-contacts{display:flex;flex-direction:column;gap:.5rem;flex:0 0 auto}
+.loc__map-hours{display:flex;flex-direction:column;gap:.15rem;font-size:14px;font-weight:600;text-align:center}
+.loc__map-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;opacity:.7}
+.loc__map-excursion{font-size:14px;font-weight:600;text-align:right;max-width:20ch;line-height:1.35;flex:0 0 auto}
+.loc__map-ico{display:inline-flex;align-items:center;gap:.55rem;color:var(--white);
+  text-decoration:none;font-family:var(--sans);font-weight:600;font-size:14px;transition:color .2s ease}
+.loc__map-ico svg{flex:0 0 auto}
+.loc__map-ico:hover{color:var(--brass)}
+.loc__map-btn{
+  position:absolute;top:12px;right:12px;z-index:2;
+  display:inline-flex;align-items:center;gap:.4rem;
+  background:var(--white);color:var(--navy);text-decoration:none;
+  font-family:var(--sans);font-weight:600;font-size:13px;line-height:1;
+  padding:.55rem .85rem;border-radius:20px;box-shadow:0 2px 10px rgba(0,0,0,.14);
+  transition:background .2s ease,color .2s ease;
+}
+.loc__map-btn:hover{background:var(--navy);color:var(--white)}
 
 /* ============================================================
    KARTEL BOATS  (cross-link — same company, the sales arm)
