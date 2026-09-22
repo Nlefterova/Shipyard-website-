@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=185">
+<link rel="stylesheet" href="css/styles.css?v=189">
 </head>
 <body>
 
@@ -202,18 +202,18 @@
         <a class="btn btn--secondary" href="#gallery">Все фотографии</a>
       </div>
       <div class="gallery__grid">
-        <div class="gallery__cell gallery__big" style="background-image:url('assets/img/trex44cr-beach.jpg')"></div>
-        <div class="gallery__cell" style="background-image:url('assets/img/rusich-i1.jpg')"></div>
-        <div class="gallery__cell" style="background-image:url('assets/img/sibirsky-i1.jpg')"></div>
-        <div class="gallery__cell" style="background-image:url('assets/img/exp65lux-i1.jpg')"></div>
-        <div class="gallery__cell" style="background-image:url('assets/img/trex40-3.jpg')"></div>
-        <div class="gallery__cell" style="background-image:url('assets/img/mara-i1.jpg')"></div>
-        <div class="gallery__cell" style="background-image:url('assets/img/exp65lux-2.jpg')"></div>
-        <div class="gallery__cell" style="background-image:url('assets/img/kasatka-i1.jpg')"></div>
-        <div class="gallery__cell" style="background-image:url('assets/img/trex44fly-3.jpg')"></div>
-        <div class="gallery__cell" style="background-image:url('assets/img/natali-i1.jpg')"></div>
-        <div class="gallery__cell" style="background-image:url('assets/img/gulyanka1.jpg')"></div>
-        <div class="gallery__cell" style="background-image:url('assets/img/trex44cr-dock.jpg')"></div>
+        <div class="gallery__cell gallery__big" data-name="T-Rex 44 CR" style="background-image:url('assets/img/trex44cr-beach.jpg')"></div>
+        <div class="gallery__cell" data-name="Русич" style="background-image:url('assets/img/rusich-i1.jpg')"></div>
+        <div class="gallery__cell" data-name="Сибирский исследователь" style="background-image:url('assets/img/sibirsky-i1.jpg')"></div>
+        <div class="gallery__cell" data-name="Expedition 65 Lux" style="background-image:url('assets/img/exp65lux-i1.jpg')"></div>
+        <div class="gallery__cell" data-name="T-Rex 40" style="background-image:url('assets/img/trex40-3.jpg')"></div>
+        <div class="gallery__cell" data-name="Мара" style="background-image:url('assets/img/mara-i1.jpg')"></div>
+        <div class="gallery__cell" data-name="Expedition 65 Lux" style="background-image:url('assets/img/exp65lux-2.jpg')"></div>
+        <div class="gallery__cell" data-name="Касатка" style="background-image:url('assets/img/kasatka-i1.jpg')"></div>
+        <div class="gallery__cell" data-name="T-Rex 44 Fly" style="background-image:url('assets/img/trex44fly-3.jpg')"></div>
+        <div class="gallery__cell" data-name="Natali Srt" style="background-image:url('assets/img/natali-i1.jpg')"></div>
+        <div class="gallery__cell" data-name="Гулянка №3" style="background-image:url('assets/img/gulyanka3.jpg')"></div>
+        <div class="gallery__cell" data-name="T-Rex 44 CR" style="background-image:url('assets/img/trex44cr-dock.jpg')"></div>
         <div class="gallery__logo"><img src="assets/logo/seal-white.svg" alt="Корабельная артель"></div>
       </div>
     </div>
@@ -316,6 +316,23 @@
       </div>
     </div>
   </section>
+
+  <!-- ===================== LIGHTBOX (gallery) ===================== -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Просмотр фотографии">
+    <button class="lightbox__close" id="lbClose" aria-label="Закрыть">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M5 5l14 14M19 5 5 19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Предыдущая">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M15 4 7 12l8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <figure class="lightbox__fig">
+      <img class="lightbox__img" id="lbImg" src="" alt="">
+      <figcaption class="lightbox__caption" id="lbCaption"></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Следующая">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M9 4 17 12l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
 
   <!-- ===================== FOOTER ===================== -->
   <footer class="foot">
@@ -425,5 +442,6 @@
   <script src="js/carousel.js?v=14"></script>
   <script src="js/features.js?v=4"></script>
   <script src="js/fleet-hover.js?v=5"></script>
+  <script src="js/gallery.js?v=2"></script>
 </body>
 </html>
