@@ -234,11 +234,11 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 .fleet__grid{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(1.25rem,2.4vw,2.4rem)}
 .fleet-card{display:flex;flex-direction:column;color:inherit;text-decoration:none}
 .fleet-card__img{
-  width:100%;aspect-ratio:290/226;object-fit:cover;border-radius:4px;
+  width:100%;aspect-ratio:290/300;object-fit:cover;border-radius:4px;
   background:var(--grey-100);display:block;
 }
 /* hover mini-gallery — swipes left through the family's boat photos */
-.fleet-card__media{position:relative;width:100%;aspect-ratio:290/226;border-radius:4px;
+.fleet-card__media{position:relative;width:100%;aspect-ratio:290/300;border-radius:4px;
   overflow:hidden;background:var(--grey-100)}
 .fleet-card__track{display:flex;height:100%;transition:transform .55s cubic-bezier(.22,.61,.36,1)}
 .fleet-card__slide{flex:0 0 100%;height:100%;background-size:cover;background-position:center}
