@@ -734,18 +734,18 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 
 /* HERO — full-bleed image, dark scrim on the left, overlaid title + CTA */
 .about-hero{position:relative;width:100vw;margin-left:calc(50% - 50vw);
-  min-height:calc(100svh - 94px);display:flex;align-items:center;
-  background:#5f5f61 url('../assets/img/hero-shipyard.jpg') center/cover no-repeat;overflow:hidden}
+  min-height:calc(100svh - 93px);display:flex;align-items:center;
+  background:#5f5f61 url('../assets/img/hero-about.jpg') center/cover no-repeat;overflow:hidden}
 /* clean split: flat dark overlay on the LEFT half, clean image on the right */
 .about-hero__scrim{position:absolute;inset:0;
-  background:linear-gradient(90deg,rgba(0,0,0,.62) 0,rgba(0,0,0,.62) 38%,transparent 54%)}
+  background:linear-gradient(90deg,rgba(0,0,0,.55) 0,rgba(0,0,0,.55) 52%,transparent 52%)}
 .about-hero__inner{position:relative;z-index:2;width:100%;
   padding:0 var(--gutter);padding-left:clamp(2.5rem,5.5vw,6rem)}
-.about-hero__content{max-width:540px}
+.about-hero__content{max-width:760px}
 .about-hero__title{display:flex;flex-direction:column;gap:1rem;margin-bottom:1.75rem}
 .about-hero__logo{height:clamp(42px,5.5vw,74px);width:auto;display:block;max-width:100%;align-self:flex-start}
 .about-hero__text{color:var(--cream);font-family:var(--sans);font-size:clamp(1rem,1.35vw,1.15rem);
-  line-height:1.6;max-width:38ch;margin:0 0 2.25rem}
+  line-height:1.6;max-width:66ch;margin:0 0 2.25rem}
 
 /* WHERE IT ALL BEGAN — text left (aligned to content), image full-bleed right */
 .ab-began.wf-sec{margin-top:0}
