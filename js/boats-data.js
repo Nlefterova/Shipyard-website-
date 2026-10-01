@@ -625,8 +625,8 @@ const BOATS = [
         { name: "вид спереди", items: [] }
       ]
     } },
-  { id: "gulyanka-2",family: "gulyanki", name: "Гулянка №2", status: "sold", year: "2004", img: "boat-ph.jpg" },
-  { id: "gulyanka-3",family: "gulyanki", name: "Гулянка №3", status: "sold", year: "2003", img: "gulyanka3.jpg?v=2", cardImg: "gulyanka3-card.jpg",
+  { id: "gulyanka-2",family: "gulyanki", name: "Гулянка №2", status: "sold", year: "2003", img: "boat-ph.jpg" },
+  { id: "gulyanka-3",family: "gulyanki", name: "Гулянка №3", status: "sold", year: "2004", img: "gulyanka3.jpg?v=2", cardImg: "gulyanka3-card.jpg",
     photos: { hero2: "gulyanka3-2.jpg", overview: "gulyanka3-overview.jpg", construction: "gulyanka3-story.jpg",
       plans: ["gulyanka3-plan-side.png","gulyanka3-plan-top.png","gulyanka3-plan-back.png"] },
     content: {
@@ -642,7 +642,7 @@ const BOATS = [
       storyBody: ["",""],
       specs: [
         ["Длина габаритная","10 м"],["Ширина","2,6 м"],["Осадка","0,5 м"],["Водоизмещение","2,5 т"],
-        ["Двигатель","дизель, 16 л.с."],["Скорость","14 км/ч"],["Запас хода","до 300 км"],["Год постройки","2003"]
+        ["Двигатель","дизель, 16 л.с."],["Скорость","14 км/ч"],["Запас хода","до 300 км"],["Год постройки","2004"]
       ],
       decks: [
         { name: "вид сбоку", items: [] },
