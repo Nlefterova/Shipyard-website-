@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=219">
+<link rel="stylesheet" href="css/styles.css?v=226">
 </head>
 <body>
 
@@ -68,16 +68,40 @@
     <!-- SECTION 3: OUR PROJECTS -->
     <section class="wf-sec ab-proj">
       <header class="ab-proj__head">
-        <div class="wf-sechead">
-          <h2 class="wf-sectitle">Наши проекты</h2>
-          <div class="wf-line wf-line--head"></div>
+        <div class="ab-proj__headleft">
+          <div class="wf-sechead">
+            <h2 class="wf-sectitle">Наши проекты</h2>
+            <div class="wf-line wf-line--head"></div>
+          </div>
+          <p class="fleet__lead"><strong>5</strong> типов судов, <strong>30</strong> построенных.<br>Среди клиентов — <strong>РГО</strong>, <strong>МЧС</strong> Казахстана и <strong>Служба спасения</strong> Саратовской&nbsp;области.</p>
         </div>
         <a class="btn btn--tertiary" href="fleet.html">Смотреть флот</a>
       </header>
       <div class="ab-proj__grid">
-        <div class="wf-box ab-proj__card"></div>
-        <div class="wf-box ab-proj__card"></div>
-        <div class="wf-box ab-proj__card"></div>
+        <a class="boat-card" href="boat.html?id=sibirsky" aria-label="Сибирский исследователь">
+          <img class="boat-card__img" src="assets/img/sibirsky-card.jpg?v=219" alt="Сибирский исследователь">
+          <div class="boat-card__scrim"></div>
+          <div class="boat-card__meta">
+            <div class="boat-card__name">Сибирский исследователь</div>
+            <div class="boat-card__year">Экспедиционное судно · 2022</div>
+          </div>
+        </a>
+        <a class="boat-card" href="boat.html?id=exp-65lux" aria-label="Expedition 65 Lux">
+          <img class="boat-card__img" src="assets/img/exp65lux-card.jpg?v=219" alt="Expedition 65 Lux">
+          <div class="boat-card__scrim"></div>
+          <div class="boat-card__meta">
+            <div class="boat-card__name">Expedition 65 Lux</div>
+            <div class="boat-card__year">Дом на воде · 2026</div>
+          </div>
+        </a>
+        <a class="boat-card" href="boat.html?id=trex-44cr" aria-label="T-Rex 44 CR">
+          <img class="boat-card__img" src="assets/img/trex44cr-card.jpg?v=219" alt="T-Rex 44 CR">
+          <div class="boat-card__scrim"></div>
+          <div class="boat-card__meta">
+            <div class="boat-card__name">T-Rex 44 CR</div>
+            <div class="boat-card__year">Катер · 2023</div>
+          </div>
+        </a>
       </div>
     </section>
 
