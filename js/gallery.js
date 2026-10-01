@@ -1,64 +1,221 @@
-/* Галерея — click a tile to open it full-size in a lightbox.
-   Supports prev/next (buttons + arrow keys), Esc / click-outside to close. */
+/* Gallery page — theme toggle (Интерьеры / Экстерьеры) + tetris mosaic + lightbox.
+   Photo lists are a rough auto-sort by filename; curate by editing these arrays. */
 (function () {
-  const grid = document.querySelector('.gallery__grid');
-  const box = document.getElementById('lightbox');
-  const img = document.getElementById('lbImg');
-  const caption = document.getElementById('lbCaption');
-  const btnClose = document.getElementById('lbClose');
-  const btnPrev = document.getElementById('lbPrev');
-  const btnNext = document.getElementById('lbNext');
-  if (!grid || !box || !img) return;
+  var IMG_V = 220;
 
-  // collect the picture tiles (skip the seal logo tile)
-  const cells = Array.from(grid.querySelectorAll('.gallery__cell'));
-  const urls = cells.map((c) => {
-    const bg = getComputedStyle(c).backgroundImage;
-    const m = bg.match(/url\((['"]?)(.*?)\1\)/);
-    return m ? m[2] : '';
-  });
-  const names = cells.map((c) => c.dataset.name || '');
+  /* filename prefix -> boat name + year (prefixes differ from data ids) */
+  var META = {
+    exp65lux: { name: "Expedition 65 Lux", year: 2026 },
+    gulyanka2003: { name: "Гулянка №2", year: 2003 },
+    gulyanka3: { name: "Гулянка №3", year: 2004 },
+    gulyanka5: { name: "Гулянка №5", year: 2017 },
+    kasatka: { name: "Касатка", year: 2013 },
+    l1050: { name: "L-1050", year: 2015 },
+    mara: { name: "Мара", year: 1998 },
+    mius: { name: "Миус", year: 2018 },
+    natali: { name: "Natali SRT", year: 2014 },
+    rusich: { name: "Русич", year: 2011 },
+    sapfir: { name: "Сапфир", year: 2005 },
+    sibirsky: { name: "Сибирский исследователь", year: 2022 },
+    trex37: { name: "T-Rex 37", year: 2016 },
+    trex40: { name: "T-Rex 40", year: 2020 },
+    trex44cr: { name: "T-Rex 44 CR", year: 2023 },
+    trex44fly: { name: "T-Rex 44 Fly", year: 2025 },
+    volnyi: { name: "Вольный", year: 2010 },
+    yeti: { name: "Yeti", year: 2009 },
+    fiesta: { name: "Fiesta", year: 2012 },
+    frank: { name: "Frenk", year: 2006 },
+    laita: { name: "Лайта", year: 2002 },
+    pilgrim: { name: "Пилигрим", year: 2007 },
+    yul: { name: "Юл", year: 2008 }
+  };
 
-  let i = 0;
-
-  function show(n) {
-    i = (n + cells.length) % cells.length;
-    img.src = urls[i];
-    img.alt = names[i];
-    if (caption) caption.textContent = names[i];
+  function prefixOf(f) {
+    return f.replace(/\.(jpg|png)$/i, "").replace(/-(i?\d+|beach|dock)$/i, "");
   }
-  function open(n) {
-    show(n);
-    box.classList.add('is-open');
-    box.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  }
-  function close() {
-    box.classList.remove('is-open');
-    box.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-    img.src = '';
+  function meta(f) { return META[prefixOf(f)] || null; }
+
+  /* room tag per interior photo (classified by viewing each image) */
+  var ROOM_ORDER = ["salon", "kitchen", "bedroom", "captain", "sauna", "outdoor", "bathroom"];
+  var ROOMS = {
+    "exp65lux-i1.jpg": "bedroom", "exp65lux-i2.jpg": "salon", "exp65lux-i3.jpg": "salon", "exp65lux-i4.jpg": "kitchen", "exp65lux-i5.jpg": "sauna", "exp65lux-i6.jpg": "bedroom",
+    "gulyanka2003-i1.jpg": "outdoor", "gulyanka2003-i2.jpg": "salon", "gulyanka2003-i3.jpg": "kitchen", "gulyanka2003-i4.jpg": "salon", "gulyanka2003-i5.jpg": "bedroom", "gulyanka2003-i6.jpg": "bathroom",
+    "kasatka-i1.jpg": "outdoor", "kasatka-i2.jpg": "captain", "kasatka-i3.jpg": "bedroom", "kasatka-i4.jpg": "kitchen", "kasatka-i5.jpg": "salon", "kasatka-i6.jpg": "sauna",
+    "l1050-i1.jpg": "salon", "l1050-i2.jpg": "captain", "l1050-i3.jpg": "kitchen", "l1050-i4.jpg": "bedroom", "l1050-i6.jpg": "bathroom",
+    "mara-i1.jpg": "salon", "mara-i2.jpg": "bedroom", "mara-i3.jpg": "bedroom", "mara-i4.jpg": "kitchen", "mara-i5.jpg": "bathroom", "mara-i6.jpg": "bathroom",
+    "mius-i1.jpg": "captain", "mius-i2.jpg": "salon", "mius-i3.jpg": "salon", "mius-i4.jpg": "kitchen", "mius-i5.jpg": "bedroom", "mius-i6.jpg": "bathroom",
+    "natali-i1.jpg": "salon", "natali-i2.jpg": "salon", "natali-i3.jpg": "kitchen", "natali-i4.jpg": "captain", "natali-i5.jpg": "bedroom", "natali-i6.jpg": "bedroom",
+    "rusich-i1.jpg": "salon", "rusich-i2.jpg": "captain", "rusich-i3.jpg": "kitchen", "rusich-i4.jpg": "bedroom", "rusich-i5.jpg": "kitchen", "rusich-i6.jpg": "bathroom",
+    "sapfir-i1.jpg": "captain", "sapfir-i2.jpg": "salon", "sapfir-i3.jpg": "kitchen", "sapfir-i4.jpg": "outdoor", "sapfir-i5.jpg": "bedroom", "sapfir-i6.jpg": "bedroom",
+    "sibirsky-i1.jpg": "captain", "sibirsky-i2.jpg": "salon", "sibirsky-i3.jpg": "kitchen", "sibirsky-i4.jpg": "bedroom", "sibirsky-i5.jpg": "bedroom", "sibirsky-i6.jpg": "bathroom",
+    "trex37-i1.jpg": "captain", "trex37-i2.jpg": "salon", "trex37-i3.jpg": "salon", "trex37-i4.jpg": "bedroom", "trex37-i5.jpg": "kitchen",
+    "trex40-i1.jpg": "captain", "trex40-i2.jpg": "salon", "trex40-i3.jpg": "salon", "trex40-i4.jpg": "bedroom", "trex40-i5.jpg": "kitchen",
+    "trex44cr-i1.jpg": "salon", "trex44cr-i2.jpg": "salon", "trex44cr-i3.jpg": "salon", "trex44cr-i4.jpg": "bedroom", "trex44cr-i5.jpg": "bathroom", "trex44cr-i6.jpg": "bathroom",
+    "trex44fly-i1.jpg": "salon", "trex44fly-i2.jpg": "salon", "trex44fly-i3.jpg": "kitchen", "trex44fly-i4.jpg": "bedroom", "trex44fly-i5.jpg": "bedroom", "trex44fly-i6.jpg": "bathroom",
+    "volnyi-i1.jpg": "salon", "volnyi-i2.jpg": "captain", "volnyi-i3.jpg": "salon", "volnyi-i4.jpg": "bedroom", "volnyi-i5.jpg": "bedroom", "volnyi-i6.jpg": "salon",
+    "yeti-i1.jpg": "salon", "yeti-i2.jpg": "captain", "yeti-i3.jpg": "salon", "yeti-i4.jpg": "bedroom", "yeti-i5.jpg": "bedroom", "yeti-i6.jpg": "bedroom"
+  };
+
+  var GALLERY = {
+    interior: [
+      "exp65lux-i1.jpg", "exp65lux-i2.jpg", "exp65lux-i3.jpg", "exp65lux-i4.jpg", "exp65lux-i5.jpg", "exp65lux-i6.jpg",
+      "gulyanka2003-i1.jpg", "gulyanka2003-i2.jpg", "gulyanka2003-i3.jpg", "gulyanka2003-i4.jpg", "gulyanka2003-i5.jpg", "gulyanka2003-i6.jpg",
+      "kasatka-i1.jpg", "kasatka-i2.jpg", "kasatka-i3.jpg", "kasatka-i4.jpg", "kasatka-i5.jpg", "kasatka-i6.jpg",
+      "l1050-i1.jpg", "l1050-i2.jpg", "l1050-i3.jpg", "l1050-i4.jpg", "l1050-i6.jpg",
+      "mara-i1.jpg", "mara-i2.jpg", "mara-i3.jpg", "mara-i4.jpg", "mara-i5.jpg", "mara-i6.jpg",
+      "mius-i1.jpg", "mius-i2.jpg", "mius-i3.jpg", "mius-i4.jpg", "mius-i5.jpg", "mius-i6.jpg",
+      "natali-i1.jpg", "natali-i2.jpg", "natali-i3.jpg", "natali-i4.jpg", "natali-i5.jpg", "natali-i6.jpg",
+      "rusich-i1.jpg", "rusich-i2.jpg", "rusich-i3.jpg", "rusich-i4.jpg", "rusich-i5.jpg", "rusich-i6.jpg",
+      "sapfir-i1.jpg", "sapfir-i2.jpg", "sapfir-i3.jpg", "sapfir-i4.jpg", "sapfir-i5.jpg", "sapfir-i6.jpg",
+      "sibirsky-i1.jpg", "sibirsky-i2.jpg", "sibirsky-i3.jpg", "sibirsky-i4.jpg", "sibirsky-i5.jpg", "sibirsky-i6.jpg",
+      "trex37-i1.jpg", "trex37-i2.jpg", "trex37-i3.jpg", "trex37-i4.jpg", "trex37-i5.jpg",
+      "trex40-i1.jpg", "trex40-i2.jpg", "trex40-i3.jpg", "trex40-i4.jpg", "trex40-i5.jpg",
+      "trex44cr-i1.jpg", "trex44cr-i2.jpg", "trex44cr-i3.jpg", "trex44cr-i4.jpg", "trex44cr-i5.jpg", "trex44cr-i6.jpg",
+      "trex44fly-i1.jpg", "trex44fly-i2.jpg", "trex44fly-i3.jpg", "trex44fly-i4.jpg", "trex44fly-i5.jpg", "trex44fly-i6.jpg",
+      "volnyi-i1.jpg", "volnyi-i2.jpg", "volnyi-i3.jpg", "volnyi-i4.jpg", "volnyi-i5.jpg", "volnyi-i6.jpg",
+      "yeti-i1.jpg", "yeti-i2.jpg", "yeti-i3.jpg", "yeti-i4.jpg", "yeti-i5.jpg", "yeti-i6.jpg"
+    ],
+    exterior: [
+      "exp65lux-2.jpg", "fiesta-2.jpg", "frank-2.jpg", "gulyanka2003-2.jpg", "gulyanka3-2.jpg", "gulyanka5-2.jpg",
+      "kasatka-2.jpg", "l1050-2.jpg", "laita-2.jpg", "mara-2.jpg", "mius-2.jpg", "natali-2.jpg", "pilgrim-2.jpg",
+      "rusich-2.jpg", "sapfir-2.jpg", "sibirsky-2.jpg", "trex37-2.jpg", "trex40-2.jpg", "trex40-3.jpg", "trex40-4.jpg",
+      "trex44cr-2.jpg", "trex44cr-beach.jpg", "trex44cr-dock.jpg", "trex44fly-2.jpg", "trex44fly-3.jpg", "volnyi-2.jpg",
+      "yeti-2.jpg", "yul-2.jpg"
+    ]
+  };
+
+  var grid = document.getElementById("galGrid");
+  var tabs = document.querySelectorAll(".gal-tab");
+  var current = [];
+  var currentTheme = "interior";
+
+  function src(f) { return "assets/img/" + f + "?v=" + IMG_V; }
+
+  /* ---- Sorting ---- */
+  var activeSort = "year";   // 'year' | 'boat' | 'room'
+  var reversed = false;
+
+  var SORTS = [
+    { key: "year", label: "По году" },
+    { key: "boat", label: "По судну" },
+    { key: "room", label: "По помещению" }   // interiors only
+  ];
+
+  function sortList(list, theme) {
+    var arr = list.slice();
+    var tie = function (a, b) { return a.localeCompare(b); };
+    if (activeSort === "boat") {
+      arr.sort(function (a, b) {
+        var c = ((meta(a) || {}).name || "").localeCompare((meta(b) || {}).name || "", "ru");
+        return c || tie(a, b);
+      });
+    } else if (activeSort === "room" && theme === "interior") {
+      arr.sort(function (a, b) {
+        var ra = ROOM_ORDER.indexOf(ROOMS[a]); if (ra < 0) ra = 99;
+        var rb = ROOM_ORDER.indexOf(ROOMS[b]); if (rb < 0) rb = 99;
+        return (ra - rb) || tie(a, b);
+      });
+    } else { // year (newest first)
+      arr.sort(function (a, b) {
+        var ya = (meta(a) || {}).year || 0, yb = (meta(b) || {}).year || 0;
+        return (yb - ya) || tie(a, b);
+      });
+    }
+    return arr;
   }
 
-  cells.forEach((c, n) => {
-    c.setAttribute('role', 'button');
-    c.setAttribute('tabindex', '0');
-    c.addEventListener('click', () => open(n));
-    c.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(n); }
+  function render(theme) {
+    currentTheme = theme;
+    if (activeSort === "room" && theme !== "interior") activeSort = "year";
+    var list = sortList(GALLERY[theme] || [], theme);
+    if (reversed) list.reverse();
+    current = list;
+    grid.innerHTML = current.map(function (f, i) {
+      return '<button class="gal-cell" type="button" data-idx="' + i + '" ' +
+        'style="background-image:url(\'' + src(f) + '\')" aria-label="Открыть фото"></button>';
+    }).join("");
+  }
+
+  tabs.forEach(function (t) {
+    t.addEventListener("click", function () {
+      tabs.forEach(function (x) { x.classList.remove("is-active"); });
+      t.classList.add("is-active");
+      render(t.dataset.theme);
     });
   });
 
-  btnClose.addEventListener('click', close);
-  btnPrev.addEventListener('click', () => show(i - 1));
-  btnNext.addEventListener('click', () => show(i + 1));
-  // click the dark backdrop (not the image or a button) to close
-  box.addEventListener('click', (e) => { if (e.target === box) close(); });
-
-  document.addEventListener('keydown', (e) => {
-    if (!box.classList.contains('is-open')) return;
-    if (e.key === 'Escape') close();
-    else if (e.key === 'ArrowLeft') show(i - 1);
-    else if (e.key === 'ArrowRight') show(i + 1);
+  var dirBtn = document.getElementById("galDirBtn");
+  dirBtn.addEventListener("click", function () {
+    reversed = !reversed;
+    dirBtn.classList.toggle("is-active", reversed);
+    render(currentTheme);
   });
+
+  /* ---- Sort dropdown ---- */
+  var filterBtn = document.getElementById("galFilterBtn");
+  var filterMenu = document.getElementById("galFilterMenu");
+
+  function buildMenu() {
+    filterMenu.innerHTML = SORTS
+      .filter(function (s) { return s.key !== "room" || currentTheme === "interior"; })
+      .map(function (s) {
+        var act = (s.key === activeSort) ? " is-active" : "";
+        return '<button type="button" class="gal-filter__item' + act + '" data-sort="' + s.key + '">' + s.label + "</button>";
+      }).join("");
+  }
+  function openMenu() { buildMenu(); filterMenu.hidden = false; filterBtn.setAttribute("aria-expanded", "true"); }
+  function closeMenu() { filterMenu.hidden = true; filterBtn.setAttribute("aria-expanded", "false"); }
+
+  filterBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    if (filterMenu.hidden) openMenu(); else closeMenu();
+  });
+  filterMenu.addEventListener("click", function (e) {
+    var it = e.target.closest(".gal-filter__item");
+    if (!it) return;
+    activeSort = it.dataset.sort;
+    closeMenu();
+    render(currentTheme);
+  });
+  document.addEventListener("click", function (e) {
+    if (!filterMenu.hidden && !e.target.closest(".gal-filter")) closeMenu();
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeMenu();
+  });
+
+  /* ---- Lightbox ---- */
+  var lb = document.getElementById("galLb");
+  var lbImg = document.getElementById("galLbImg");
+  var lbCap = document.getElementById("galLbCap");
+  var idx = 0;
+
+  function caption(f) {
+    var m = meta(f);
+    lbCap.innerHTML = m
+      ? '<span class="gal-lb__name">' + m.name + '</span><span class="gal-lb__year">' + m.year + '</span>'
+      : "";
+  }
+  function show() { lbImg.src = src(current[idx]); caption(current[idx]); }
+  function open(i) { idx = i; show(); lb.classList.add("is-open"); document.body.style.overflow = "hidden"; }
+  function close() { lb.classList.remove("is-open"); lbImg.src = ""; document.body.style.overflow = ""; }
+  function step(d) { idx = (idx + d + current.length) % current.length; show(); }
+
+  grid.addEventListener("click", function (e) {
+    var cell = e.target.closest(".gal-cell");
+    if (cell) open(parseInt(cell.dataset.idx, 10));
+  });
+  lb.addEventListener("click", function (e) {
+    if (e.target.dataset.act === "close" || e.target === lb) close();
+    if (e.target.dataset.act === "prev") step(-1);
+    if (e.target.dataset.act === "next") step(1);
+  });
+  document.addEventListener("keydown", function (e) {
+    if (!lb.classList.contains("is-open")) return;
+    if (e.key === "Escape") close();
+    if (e.key === "ArrowLeft") step(-1);
+    if (e.key === "ArrowRight") step(1);
+  });
+
+  render("interior");
 })();
