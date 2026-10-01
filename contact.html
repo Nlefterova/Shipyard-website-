@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=105">
+<link rel="stylesheet" href="css/styles.css?v=164">
 </head>
 <body>
 
@@ -32,57 +32,29 @@
 
     <!-- SECTION 1: SPLIT HERO — locations + form -->
     <section class="ct-hero">
-      <div class="ct-hero__left">
+      <div class="ct-hero__left"></div>
+      <div class="ct-hero__right">
         <div class="ct-loc">
           <header class="ct-loc__head">
-            <h2 class="ct-title">Наши локации</h2>
-            <div class="ct-line"></div>
-          </header>
-          <div class="ct-loc__quick">
-            <span class="ct-chip"><span class="ct-chip__ico"></span>Телефон</span>
-            <span class="ct-chip"><span class="ct-chip__ico"></span>Email</span>
-          </div>
-          <div class="ct-tabs">
-            <span class="ct-tab is-active">Верфь</span>
-            <span class="ct-tab">Офис</span>
-            <span class="ct-tab">Шоурум</span>
-          </div>
-          <div class="ct-loc__addr"><span></span><span></span></div>
-          <div class="wf-box ct-loc__map"></div>
-        </div>
-      </div>
-      <div class="ct-hero__right">
-        <div class="ct-form">
-          <header class="ct-form__head">
             <h2 class="ct-title">Напишите нам</h2>
-            <div class="ct-line"></div>
           </header>
-          <div class="ct-form__fields">
-            <div class="ct-input"></div>
-            <div class="ct-input"></div>
-            <div class="ct-input"></div>
-            <div class="ct-input ct-input--area"></div>
-            <div class="ct-form__btn"></div>
+          <p class="ct-lead">Позвоните, напишите или приезжайте на верфь — покажем, как рождаются наши корабли.</p>
+          <div class="ct-tabs">
+            <button type="button" class="ct-tab is-active" data-loc="verf">Верфь</button>
+            <button type="button" class="ct-tab" data-loc="showroom">Шоурум</button>
+            <button type="button" class="ct-tab" data-loc="ofis">Офис</button>
           </div>
+          <div class="ct-loc__quick">
+            <a class="ct-chip" id="ctPhone" href="tel:+79272231097"><span class="ct-chip__ico ct-chip__ico--svg"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 4h3l2 4-2 2c1.5 3.5 3 5 6.5 6.5l2-2 4 2v3c0 1.5-1 2.5-2.5 2.5C10 22 2 14 2 6 2 4.5 3 4 4 4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span><span class="ct-chip__txt">+7 927 223-10-97</span></a>
+            <a class="ct-chip" id="ctEmail" href="mailto:info@k-artel.pro"><span class="ct-chip__ico ct-chip__ico--svg"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="1" stroke="currentColor" stroke-width="1.6"/><path d="M2 6l10 7 10-7" stroke="currentColor" stroke-width="1.6"/></svg></span><span class="ct-chip__txt">info@k-artel.pro</span></a>
+          </div>
+          <div class="ct-loc__addr" id="ctAddr">
+            <p>г. Саратов, ул. Огородная, 3</p>
+            <p>Пн – Пт 8:00 – 17:00</p>
+            <p>Экскурсии по верфи — по записи</p>
+          </div>
+          <a class="ct-loc__map" id="ctMap" href="https://yandex.ru/maps/194/saratov/?ll=45.975715%2C51.514432&mode=poi&poi%5Bpoint%5D=45.975110%2C51.514426&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D194729155833&z=18.88" target="_blank" rel="noopener" aria-label="Открыть на Яндекс.Картах" style="background-image:url('assets/img/map-verf.png')"></a>
         </div>
-      </div>
-    </section>
-
-    <!-- SECTION 2: FAQs -->
-    <section class="wf-sec ct-faq">
-      <header class="wf-sechead">
-        <h2 class="wf-sectitle">Частые вопросы</h2>
-        <div class="wf-line wf-line--head"></div>
-      </header>
-      <div class="ct-faq__grid">
-        <div class="ct-faq__list">
-          <div class="wf-box ct-faq__item"></div>
-          <div class="wf-box ct-faq__item"></div>
-          <div class="wf-box ct-faq__item"></div>
-          <div class="wf-box ct-faq__item"></div>
-          <div class="wf-box ct-faq__item"></div>
-        </div>
-        <div class="wf-box ct-faq__map"></div>
       </div>
     </section>
 
@@ -186,6 +158,33 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var data = {
+        verf: { map: 'assets/img/map-verf.png', yandex: 'https://yandex.ru/maps/194/saratov/?ll=45.975715%2C51.514432&mode=poi&poi%5Bpoint%5D=45.975110%2C51.514426&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D194729155833&z=18.88', phone: '+7 927 223-10-97', tel: '+79272231097', email: 'info@k-artel.pro', lines: ['г. Саратов, ул. Огородная, 3', 'Пн – Пт 8:00 – 17:00', 'Экскурсии по верфи — по записи'] },
+        ofis: { map: 'assets/img/map-office.png', yandex: 'https://yandex.ru/maps/org/kartel_boats/22422353256/?ll=37.556388%2C55.754203&z=17.13', phone: '+7 (495) 741-82-58', tel: '+74957418258', email: 'office@kartelboats.ru', lines: ['г. Москва, Краснопресненская наб. 12, офис 1148', 'Пн – Пт 10:00 – 18:00', 'Посетить офис продаж только по записи'] },
+        showroom: { map: 'assets/img/map-showroom.png', yandex: 'https://yandex.ru/maps/org/pristan/169654831303/?ll=46.082849%2C51.543943&z=18.8', phone: '+7 927 223-10-97', tel: '+79272231097', email: 'info@k-artel.pro', lines: ['г. Саратов, ул. Большая Затонская', 'Пн – Пт 8:00 – 17:00', 'Посетить шоурум только по записи'] }
+      };
+      var addr = document.getElementById('ctAddr');
+      var map = document.getElementById('ctMap');
+      var phoneEl = document.getElementById('ctPhone');
+      var emailEl = document.getElementById('ctEmail');
+      var tabs = document.querySelectorAll('.ct-tab');
+      tabs.forEach(function (t) {
+        t.addEventListener('click', function () {
+          tabs.forEach(function (x) { x.classList.remove('is-active'); });
+          t.classList.add('is-active');
+          var d = data[t.dataset.loc] || { lines: [] };
+          addr.innerHTML = (d.lines || []).map(function (l) { return '<p>' + l + '</p>'; }).join('');
+          if (d.map && map) map.style.backgroundImage = "url('" + d.map + "')";
+          if (d.yandex && map) map.href = d.yandex;
+          if (d.tel && phoneEl) { phoneEl.href = 'tel:' + d.tel; phoneEl.querySelector('.ct-chip__txt').textContent = d.phone; }
+          if (d.email && emailEl) { emailEl.href = 'mailto:' + d.email; emailEl.querySelector('.ct-chip__txt').textContent = d.email; }
+        });
+      });
+    })();
+  </script>
 
 </body>
 </html>
