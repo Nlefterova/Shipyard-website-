@@ -754,12 +754,13 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 .ab-began__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.45fr);
   align-items:center;gap:clamp(2rem,4vw,4.5rem)}
 .ab-began__text{max-width:520px}
+.ab-began__text .wf-line--head{display:none}
 .ab-began__media{position:relative}
-.ab-began__img{width:100%;aspect-ratio:809/872}
-.ab-began__card{position:absolute;left:-9%;top:26%;width:57%;height:47%;
-  background:#333338;border-radius:2px}
-.ab-began__btn{width:340px;max-width:70%;height:64px;border-radius:4px;
-  margin-top:clamp(1.75rem,3.5vw,2.5rem)}
+.ab-began__img{width:100%;aspect-ratio:809/800;
+  background:#ececec url('../assets/img/about-began-img.jpg') top center/cover no-repeat}
+.ab-began__card{position:absolute;left:-9%;top:12%;width:63%;height:52%;
+  background:#333338 url('../assets/img/about-began-card2.jpg') center/cover no-repeat;border-radius:2px}
+.ab-began__btn{margin-top:clamp(1.75rem,3.5vw,2.5rem)}
 
 /* OUR PROJECTS — title + link, row of 3 portrait cards */
 .ab-proj__head{display:flex;justify-content:space-between;align-items:flex-end;
