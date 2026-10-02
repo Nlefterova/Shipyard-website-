@@ -18,7 +18,7 @@
               '<span>info@k-artel.pro</span></a></li>' +
           '</ul>' +
           '<div class="cmodal__social">' +
-            '<a class="cmodal__soc" href="https://t.me/kartelboats" target="_blank" rel="noopener" aria-label="Telegram">' +
+            '<a class="cmodal__soc" href="https://t.me/KARTELBOATS_RU" target="_blank" rel="noopener" aria-label="Telegram">' +
               '<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21.5 4 2 9.5 9 12l3 7 3-5 4.5 3L21.5 4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>' +
             '</a>' +
           '</div>' +
