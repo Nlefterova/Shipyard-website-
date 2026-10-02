@@ -227,7 +227,8 @@ const BOATS = [
       ]
     } },
   // Корабли
-  { id: "aleksandriya", family: "korabli", name: "Александрия", status: "sold", year: "2019", img: "boat-ph.jpg", tags: ["На заказ"] },
+  { id: "aleksandriya", family: "korabli", name: "Александрия", status: "sold", year: "2019", img: "aleksandriya.jpg", cardImg: "aleksandriya.jpg", tags: ["На заказ"],
+    photos: { hero2: "aleksandriya-2.jpg", overview: "aleksandriya-3.jpg", construction: "aleksandriya-4.jpg" } },
   { id: "mius", family: "korabli", name: "Миус", status: "sold", year: "2018", img: "mius.jpg?v=2", cardImg: "mius-card.jpg?v=2", tags: ["На заказ"],
     photos: { hero2: "mius-2.jpg", hero2Pos: "center 64%", overview: "mius-overview.jpg", construction: "mius-story.jpg",
       thumbs: ["mius-i1.jpg","mius-i2.jpg?v=2","mius-i3.jpg?v=2","mius-i4.jpg","mius-i5.jpg","mius-i6.jpg"],
