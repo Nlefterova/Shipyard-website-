@@ -125,11 +125,11 @@
   }
 
   /* ---- Editorial content ------------------------------------------------
-     If the boat carries a `content` block in js/boats-data.js, fill the page
-     from it (this scales to any boat). Otherwise fall back to wireframe. The
-     static markup in boat.html is just the default (currently T-Rex 44 CR). */
-  if (boat && boat.content) { fillContent(boat); return; }
+     Wireframe is the base layer (so a partially-filled boat never leaks the
+     static T-Rex 44 CR defaults). A `content` block in js/boats-data.js then
+     overrides whichever fields it provides; anything it omits stays wireframe. */
   fillWireframe();
+  if (boat && boat.content) fillContent(boat);
 
   // tiny DOM helpers
   function setText(sel, txt) { const el = document.querySelector(sel); if (el && txt != null) el.textContent = txt; }
