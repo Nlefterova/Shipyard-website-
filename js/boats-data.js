@@ -481,7 +481,10 @@ const BOATS = [
       ]
     } },
   { id: "laita",     family: "korabli", name: "Лайта",      status: "sold", year: "2002", img: "laita.jpg?v=2", tags: ["На заказ"],
-    photos: { hero2: "laita-2.jpg", hero2Pos: "center 62%", overview: "laita-overview.jpg", construction: "laita-story.jpg" },
+    photos: { hero2: "laita-2.jpg", hero2Pos: "center 62%", overview: "laita-overview.jpg", construction: "laita-story.jpg",
+      thumbs: ["laita-i1.jpg", "laita-i2.jpg", "laita-i3.jpg", "laita-i4.jpg"],
+      captions: ["Салон", "Рубка", "Каюта", "Каюта"],
+      gallery: ["laita-2.jpg", "laita-i1.jpg", "laita.jpg", "laita-i2.jpg", "laita-i3.jpg", "laita-overview.jpg", "laita-i4.jpg", "laita-story.jpg"] },
     content: {
       eyebrow: "Моторная яхта",
       desc: "Стальная моторная яхта с флайбриджем — водоизмещающий корпус для неспешных прогулок и походов по большой воде.",

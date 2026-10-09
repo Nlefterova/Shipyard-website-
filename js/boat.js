@@ -37,6 +37,7 @@
       setPhoto(".wf-overview__img", boat.photos.overview);
       setPhoto(".wf-story__img", boat.photos.construction);
       if (Array.isArray(boat.photos.thumbs)) {
+        const strip = document.querySelector(".wf-thumbs");
         const boxes = document.querySelectorAll(".wf-thumbs .wf-box");
         boat.photos.thumbs.forEach((f, i) => {
           const el = boxes[i];
@@ -47,9 +48,13 @@
             el.classList.add("is-photo");
           }
         });
+        // fewer than 6 interiors: drop the empty slots and tighten the grid
+        boxes.forEach((el) => { if (!el.classList.contains("is-photo")) el.remove(); });
+        const n = document.querySelectorAll(".wf-thumbs .wf-box").length;
+        if (strip && n && n < 6) strip.style.gridTemplateColumns = "repeat(" + n + ",1fr)";
         initLightbox(document.querySelectorAll(".wf-thumbs .wf-box"), boat.photos.thumbs, boat.photos.captions);
       }
-      // "На борту" gallery grid — fill boxes in order; unfilled ones stay empty
+      // "На борту" gallery grid — fill boxes in order, then drop any unfilled slots
       if (Array.isArray(boat.photos.gallery)) {
         const gboxes = document.querySelectorAll(".wf-gallery .wf-box");
         boat.photos.gallery.forEach((f, i) => {
@@ -61,6 +66,7 @@
             el.classList.add("is-photo");
           }
         });
+        gboxes.forEach((el) => { if (!el.classList.contains("is-photo")) el.remove(); });
       }
       // (floor plans are rendered in fillContent, so the box count follows the data)
     }
