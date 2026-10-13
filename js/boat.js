@@ -48,10 +48,14 @@
             el.classList.add("is-photo");
           }
         });
-        // fewer than 6 interiors: drop the empty slots and tighten the grid
-        boxes.forEach((el) => { if (!el.classList.contains("is-photo")) el.remove(); });
-        const n = document.querySelectorAll(".wf-thumbs .wf-box").length;
-        if (strip && n && n < 6) strip.style.gridTemplateColumns = "repeat(" + n + ",1fr)";
+        // OPT-IN ONLY (boat.fitMedia): drop empty slots + tighten the grid.
+        // By default the empty placeholders stay — Natalia often sends photos
+        // incrementally, so never collapse on our own. (feedback_photo_placeholders_ask)
+        if (boat.fitMedia) {
+          boxes.forEach((el) => { if (!el.classList.contains("is-photo")) el.remove(); });
+          const n = document.querySelectorAll(".wf-thumbs .wf-box").length;
+          if (strip && n && n < 6) strip.style.gridTemplateColumns = "repeat(" + n + ",1fr)";
+        }
         initLightbox(document.querySelectorAll(".wf-thumbs .wf-box"), boat.photos.thumbs, boat.photos.captions);
       }
       // "На борту" gallery grid — fill boxes in order, then drop any unfilled slots
@@ -66,7 +70,7 @@
             el.classList.add("is-photo");
           }
         });
-        gboxes.forEach((el) => { if (!el.classList.contains("is-photo")) el.remove(); });
+        if (boat.fitMedia) gboxes.forEach((el) => { if (!el.classList.contains("is-photo")) el.remove(); });
       }
       // (floor plans are rendered in fillContent, so the box count follows the data)
     }
@@ -125,6 +129,15 @@
   if (boat && boat.heroOnly) {
     [".wf-overview", ".wf-story", ".wf-gallery-sec", ".wf-specsheet",
      ".wf-hero__img2", ".wf-specs", ".wf-thumbs"].forEach((sel) => {
+      const el = document.querySelector(sel);
+      if (el) el.remove();
+    });
+  }
+
+  /* ---- Drop the sections below the hero (Overview / Construction / Gallery /
+     Specsheet) but keep the ENTIRE hero intact and the footer. */
+  if (boat && boat.dropSections) {
+    [".wf-overview", ".wf-story", ".wf-gallery-sec", ".wf-specsheet"].forEach((sel) => {
       const el = document.querySelector(sel);
       if (el) el.remove();
     });

@@ -486,7 +486,7 @@ const BOATS = [
         { name: "нижняя палуба", items: [] }
       ]
     } },
-  { id: "laita",     family: "korabli", name: "Лайта",      status: "sold", year: "2002", img: "laita.jpg?v=2", tags: ["На заказ"],
+  { id: "laita",     family: "korabli", name: "Лайта",      status: "sold", year: "2002", img: "laita.jpg?v=2", tags: ["На заказ"], fitMedia: true,
     photos: { hero2: "laita-2.jpg", hero2Pos: "center 62%", overview: "laita-overview.jpg", construction: "laita-story.jpg",
       thumbs: ["laita-i1.jpg", "laita-i2.jpg", "laita-i3.jpg", "laita-i4.jpg"],
       captions: ["Салон", "Рубка", "Каюта", "Каюта"],
@@ -506,7 +506,11 @@ const BOATS = [
       ],
       decks: []
     } },
-  { id: "dundukovsky-1", family: "korabli", name: "Дундуковский 1", status: "sold", year: "1999", img: "boat-ph.jpg", tags: ["На заказ"] },
+  { id: "dundukovsky-1", family: "korabli", name: "Дундуковский 1", status: "sold", year: "1999", img: "dundukovsky.jpg", tags: ["На заказ"], dropSections: true,
+    photos: { hero2: "dundukovsky-2.jpg",
+      thumbs: ["dundukovsky-3.jpg", "dundukovsky-4.jpg", "dundukovsky-5.jpg", "dundukovsky-6.jpg", "dundukovsky-7.jpg", "dundukovsky-8.jpg"],
+      captions: ["У причала", "Нос", "Вид сверху", "На Волге", "Корма", "На якоре"] },
+    content: { eyebrow: "Моторная яхта", desc: "Белая моторная яхта водоизмещающего типа — построена на заказ для походов по большой воде." } },
   { id: "mara",      family: "korabli", name: "Мара",       status: "sold", year: "1998", img: "mara.jpg?v=3", cardImg: "mara-card.jpg",
     photos: { hero2: "mara-2.jpg", overview: "mara-overview.jpg", construction: "mara-story.jpg",
       thumbs: ["mara-i1.jpg","mara-i2.jpg","mara-i3.jpg","mara-i4.jpg","mara-i5.jpg","mara-i6.jpg"],
