@@ -506,7 +506,7 @@ const BOATS = [
       ],
       decks: []
     } },
-  { id: "dundukovsky-1", family: "korabli", name: "Дундуковский 1", status: "sold", year: "1999", img: "dundukovsky.jpg", tags: ["На заказ"], dropSections: true,
+  { id: "dundukovsky-1", family: "korabli", name: "Дундуковский 1", status: "sold", year: "1999", img: "dundukovsky.jpg", cardScale: 1.4, cardPos: "center 85%", tags: ["На заказ"], dropSections: true,
     photos: { hero2: "dundukovsky-2.jpg",
       thumbs: ["dundukovsky-3.jpg", "dundukovsky-4.jpg", "dundukovsky-5.jpg", "dundukovsky-6.jpg", "dundukovsky-7.jpg", "dundukovsky-8.jpg"],
       captions: ["У причала", "Нос", "Вид сверху", "На Волге", "Корма", "На якоре"] },

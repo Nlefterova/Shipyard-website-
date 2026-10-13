@@ -5,6 +5,16 @@
    re-fetch it instead of serving the cached old picture. */
 const IMG_V = 219;
 
+/* Card image style: cardScale zooms (transform), cardPos sets the anchor —
+   as transform-origin when zoomed (to pan the zoom), else as object-position. */
+function cardImgStyle(b) {
+  if (b.cardScale) {
+    return ` style="transform:scale(${b.cardScale});transform-origin:${b.cardPos || "center"}"`;
+  }
+  if (b.cardPos) return ` style="object-position:${b.cardPos}"`;
+  return "";
+}
+
 function boatCard(b) {
   const badge = `<span class="boat-card__badge boat-card__badge--${b.status}">${STATUS_LABEL[b.status]}</span>`;
   const tags = (b.tags || []).map((t) => `<span class="boat-card__tag">${t}</span>`).join("");
@@ -19,7 +29,7 @@ function boatCard(b) {
   const nolinkClass = b.noLink ? " boat-card--nolink" : "";
   return `
     <${tag} class="boat-card${nolinkClass}"${href} data-status="${b.status}" aria-label="${b.name}">
-      <img class="boat-card__img" src="assets/img/${b.cardImg || b.img}?v=${IMG_V}"${b.cardPos ? ` style="object-position:${b.cardPos}"` : ""} alt="${b.name}">
+      <img class="boat-card__img" src="assets/img/${b.cardImg || b.img}?v=${IMG_V}"${cardImgStyle(b)} alt="${b.name}">
       <div class="boat-card__scrim"></div>
       <div class="boat-card__badges">${badge}${tags}</div>
       <div class="boat-card__meta">
