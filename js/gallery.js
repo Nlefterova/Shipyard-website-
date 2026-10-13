@@ -29,7 +29,8 @@
     pilgrim: { name: "Пилигрим", year: 2007 },
     yul: { name: "Юл", year: 2008 },
     aleksandriya: { name: "Александрия", year: 2019 },
-    dundukovsky: { name: "Дундуковский", year: 1999 }
+    dundukovsky: { name: "Дундуковский", year: 1999 },
+    proekt1: { name: "Проект №1", year: 1995 }
   };
 
   function prefixOf(f) {
@@ -82,13 +83,32 @@
       "laita-i1.jpg", "laita-i2.jpg", "laita-i3.jpg", "laita-i4.jpg"
     ],
     exterior: [
-      "exp65lux-2.jpg", "fiesta-2.jpg", "frank-2.jpg", "gulyanka2003-2.jpg", "gulyanka3-2.jpg", "gulyanka5-2.jpg",
-      "kasatka-2.jpg", "l1050-2.jpg", "laita-2.jpg", "mara-2.jpg", "mius-2.jpg", "natali-2.jpg", "pilgrim-2.jpg",
-      "rusich-2.jpg", "sapfir-2.jpg", "sibirsky-2.jpg", "trex37-2.jpg", "trex40-2.jpg", "trex40-3.jpg", "trex40-4.jpg",
-      "trex44cr-2.jpg", "trex44cr-beach.jpg", "trex44cr-dock.jpg", "trex44fly-2.jpg", "trex44fly-3.jpg", "volnyi-2.jpg",
-      "yeti-2.jpg", "yul-2.jpg",
+      "trex44fly-2.jpg", "trex44fly-3.jpg", "trex44fly-overview.jpg", "trex44fly-story.jpg",
+      "trex44cr.jpg", "trex44cr-2.jpg", "trex44cr-beach.jpg", "trex44cr-dock.jpg",
+      "trex40.jpg", "trex40-2.jpg", "trex40-3.jpg", "trex40-4.jpg", "trex40-overview.jpg", "trex40-story.jpg", "trex40-story2.jpg", "trex40-i6.jpg",
+      "trex37.jpg", "trex37-2.jpg", "trex37-overview.jpg", "trex37-story.jpg", "trex37-i6.jpg",
+      "exp65lux.jpg", "exp65lux-2.jpg", "exp65lux-overview.jpg", "exp65lux-story.jpg",
+      "sibirsky.jpg", "sibirsky-2.jpg", "sibirsky-overview.jpg", "sibirsky-story.jpg",
       "aleksandriya.jpg", "aleksandriya-2.jpg", "aleksandriya-3.jpg", "aleksandriya-4.jpg",
-      "dundukovsky.jpg", "dundukovsky-3.jpg", "dundukovsky-4.jpg", "dundukovsky-8.jpg"
+      "mius.jpg", "mius-2.jpg", "mius-overview.jpg", "mius-story.jpg",
+      "natali.jpg", "natali-2.jpg", "natali-overview.jpg", "natali-story.jpg",
+      "kasatka.jpg", "kasatka-2.jpg", "kasatka-overview.jpg", "kasatka-story.jpg",
+      "fiesta.jpg", "fiesta-2.jpg", "fiesta-overview.jpg", "fiesta-story.jpg",
+      "rusich.jpg", "rusich-2.jpg", "rusich-overview.jpg", "rusich-story.jpg",
+      "volnyi.jpg", "volnyi-2.jpg", "volnyi-overview.jpg", "volnyi-story.jpg",
+      "yeti.jpg", "yeti-2.jpg", "yeti-overview.jpg", "yeti-story.jpg",
+      "yul.jpg", "yul-2.jpg", "yul-overview.jpg", "yul-story.jpg",
+      "pilgrim.jpg", "pilgrim-2.jpg", "pilgrim-overview.jpg", "pilgrim-story.jpg",
+      "laita.jpg", "laita-2.jpg", "laita-overview.jpg", "laita-story.jpg",
+      "dundukovsky.jpg", "dundukovsky-2.jpg", "dundukovsky-3.jpg", "dundukovsky-4.jpg", "dundukovsky-5.jpg", "dundukovsky-6.jpg", "dundukovsky-7.jpg", "dundukovsky-8.jpg",
+      "mara.jpg", "mara-2.jpg", "mara-overview.jpg", "mara-story.jpg",
+      "proekt1.jpg", "proekt1-2.jpg", "proekt1-3.jpg", "proekt1-4.jpg", "proekt1-5.jpg", "proekt1-6.jpg", "proekt1-7.jpg", "proekt1-8.jpg",
+      "sapfir.jpg", "sapfir-2.jpg", "sapfir-overview.jpg", "sapfir-story.jpg",
+      "frank.jpg", "frank-2.jpg", "frank-overview.jpg", "frank-story.jpg",
+      "gulyanka5.jpg", "gulyanka5-2.jpg", "gulyanka5-overview.jpg", "gulyanka5-story.jpg",
+      "l1050.jpg", "l1050-2.jpg", "l1050-overview.jpg", "l1050-story.jpg", "l1050-i5.jpg",
+      "gulyanka3.jpg", "gulyanka3-2.jpg", "gulyanka3-overview.jpg", "gulyanka3-story.jpg",
+      "gulyanka2003.jpg", "gulyanka2003-2.jpg", "gulyanka2003-overview.jpg", "gulyanka2003-story.jpg"
     ]
   };
 
