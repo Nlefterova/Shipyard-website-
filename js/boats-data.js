@@ -639,7 +639,6 @@ const BOATS = [
         { name: "вид спереди", items: [] }
       ]
     } },
-  { id: "gulyanka-2",family: "gulyanki", name: "Гулянка №2", status: "sold", year: "2003", img: "boat-ph.jpg" },
   { id: "gulyanka-3",family: "gulyanki", name: "Гулянка №3", status: "sold", year: "2004", img: "gulyanka3.jpg?v=2", cardImg: "gulyanka3-card.jpg",
     photos: { hero2: "gulyanka3-2.jpg", overview: "gulyanka3-overview.jpg", construction: "gulyanka3-story.jpg",
       plans: ["gulyanka3-plan-side.png","gulyanka3-plan-top.png","gulyanka3-plan-back.png"] },
@@ -664,6 +663,7 @@ const BOATS = [
         { name: "вид сзади", items: [] }
       ]
     } },
+  { id: "gulyanka-2",family: "gulyanki", name: "Гулянка №2", status: "sold", year: "2003", img: "boat-ph.jpg" },
   { id: "gulyanka-2005", family: "gulyanki", name: "Гулянка №1", status: "sold", year: "2000", img: "gulyanka2003.jpg", cardImg: "gulyanka2003-card.jpg",
     photos: { hero2: "gulyanka2003-2.jpg", overview: "gulyanka2003-overview.jpg", construction: "gulyanka2003-story.jpg",
       thumbs: ["gulyanka2003-i1.jpg","gulyanka2003-i2.jpg","gulyanka2003-i3.jpg","gulyanka2003-i4.jpg","gulyanka2003-i5.jpg","gulyanka2003-i6.jpg"],
