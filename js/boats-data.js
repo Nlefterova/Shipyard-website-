@@ -667,7 +667,8 @@ const BOATS = [
     photos: { hero2: "gulyanka2003-2.jpg", overview: "gulyanka2003-overview.jpg", construction: "gulyanka2003-story.jpg",
       thumbs: ["gulyanka2003-i1.jpg","gulyanka2003-i2.jpg","gulyanka2003-i3.jpg","gulyanka2003-i4.jpg","gulyanka2003-i5.jpg","gulyanka2003-i6.jpg"],
       captions: ["Кокпит","Кают-компания","Камбуз","Салон","Носовая каюта","Санузел"],
-      gallery: ["gulyanka2003-i1.jpg","gulyanka2003-2.jpg","gulyanka2003-i2.jpg","gulyanka2003-i3.jpg","gulyanka2003-overview.jpg","gulyanka2003-i4.jpg","gulyanka2003-i5.jpg","gulyanka2003-story.jpg","gulyanka2003-i6.jpg"] },
+      gallery: ["gulyanka2003-i1.jpg","gulyanka2003-2.jpg","gulyanka2003-i2.jpg","gulyanka2003-i3.jpg","gulyanka2003-overview.jpg","gulyanka2003-i4.jpg","gulyanka2003-i5.jpg","gulyanka2003-story.jpg","gulyanka2003-i6.jpg"],
+      plans: ["gulyanka1-plan-side.png","gulyanka1-plan-top.png"] },
     content: {
       eyebrow: "Прогулочный катер",
       desc: "Компактная стальная моторная яхта 10 метров — экономичная, тёплая, для неспешных прогулок по Волге.",
@@ -684,7 +685,10 @@ const BOATS = [
         ["Двигатель","Vetus M3.09, 25 л.с."],["Редуктор","ZF"],["Скорость крейсерская","10-12 км/ч"],["Расход топлива","1,8-2 л/ч"],
         ["Запас топлива","160 л"],["Отопитель","Webasto"],["Материал корпуса","сталь"],["Год постройки","2000"]
       ],
-      decks: []
+      decks: [
+        { name: "вид сбоку", items: [] },
+        { name: "вид сверху", items: [] }
+      ]
     } },
 ];
 
