@@ -594,7 +594,8 @@ const BOATS = [
   { id: "bandido",   family: "traulery", name: "Bandido", status: "sold", year: "2001", img: "boat-ph.jpg", tags: ["На заказ"] },
   // Гулянки
   { id: "gulyanka-1",family: "gulyanki", name: "Гулянка №5", status: "sold", year: "2017", img: "gulyanka5.jpg", cardImg: "gulyanka5-card.jpg", tags: ["На заказ"],
-    photos: { hero2: "gulyanka5-2.jpg", overview: "gulyanka5-overview.jpg", construction: "gulyanka5-story.jpg" },
+    photos: { hero2: "gulyanka5-2.jpg", overview: "gulyanka5-overview.jpg", construction: "gulyanka5-story.jpg",
+      plans: ["gulyanka5-plan-side.png"] },
     content: {
       eyebrow: "Моторная яхта",
       desc: "Просторная моторная яхта с открытым флайбриджем — прогулочный катер для отдыха на Волге.",
@@ -608,14 +609,16 @@ const BOATS = [
       specs: [
         ["Тип","Моторная яхта"],["Палубы","2 + флайбридж"],["Год постройки","2017"]
       ],
-      decks: []
+      decks: [
+        { name: "вид сбоку", items: [] }
+      ]
     } },
   { id: "l-1050",    family: "gulyanki", name: "L-1050",     status: "sold", year: "2015", img: "l1050.jpg?v=2", cardImg: "l1050-card.jpg", tags: ["На заказ"],
     photos: { hero2: "l1050-2.jpg", overview: "l1050-overview.jpg", construction: "l1050-story.jpg",
       thumbs: ["l1050-i1.jpg","l1050-i2.jpg","l1050-i3.jpg","l1050-i4.jpg","l1050-i5.jpg","l1050-i6.jpg"],
       captions: ["Кают-компания","Ходовая рубка","Камбуз","Носовая каюта","Кокпит","Санузел"],
       gallery: ["l1050-i1.jpg","l1050-2.jpg","l1050-i2.jpg","l1050-i3.jpg","l1050-overview.jpg","l1050-i4.jpg","l1050-i5.jpg","l1050-story.jpg","l1050-i6.jpg"],
-      plans: ["l1050-plan-side.png","l1050-plan-front.png"] },
+      plans: ["l1050-plan-side.png"] },
     content: {
       eyebrow: "Моторная яхта",
       desc: "Стальная моторная яхта 12,8 метра с флайбриджем — две каюты, салон и камбуз, полная автономность для прогулок и походов.",
@@ -635,8 +638,7 @@ const BOATS = [
         ["Материал корпуса","сталь 5-4-3"],["Год постройки","2015"]
       ],
       decks: [
-        { name: "вид сбоку", items: [] },
-        { name: "вид спереди", items: [] }
+        { name: "вид сбоку", items: [] }
       ]
     } },
   { id: "gulyanka-3",family: "gulyanki", name: "Гулянка №3", status: "sold", year: "2004", img: "gulyanka3.jpg?v=2", cardImg: "gulyanka3-card.jpg",
