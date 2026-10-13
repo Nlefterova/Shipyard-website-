@@ -58,7 +58,8 @@
     "volnyi-i1.jpg": "salon", "volnyi-i2.jpg": "captain", "volnyi-i3.jpg": "salon", "volnyi-i4.jpg": "bedroom", "volnyi-i5.jpg": "bedroom", "volnyi-i6.jpg": "salon",
     "yeti-i1.jpg": "salon", "yeti-i2.jpg": "captain", "yeti-i3.jpg": "salon", "yeti-i4.jpg": "bedroom", "yeti-i5.jpg": "bedroom", "yeti-i6.jpg": "bedroom",
     "aleksandriya-i1.jpg": "salon", "aleksandriya-i2.jpg": "salon", "aleksandriya-i3.jpg": "kitchen", "aleksandriya-i4.jpg": "bedroom", "aleksandriya-i5.jpg": "bedroom", "aleksandriya-i6.jpg": "bathroom",
-    "laita-i1.jpg": "salon", "laita-i2.jpg": "captain", "laita-i3.jpg": "bedroom", "laita-i4.jpg": "bedroom"
+    "laita-i1.jpg": "salon", "laita-i2.jpg": "captain", "laita-i3.jpg": "bedroom", "laita-i4.jpg": "bedroom",
+    "frank-i1.jpg": "salon", "frank-i2.jpg": "kitchen", "frank-i3.jpg": "bedroom", "frank-i4.jpg": "bedroom", "frank-i5.jpg": "bathroom", "frank-i6.jpg": "captain"
   };
 
   var GALLERY = {
@@ -80,7 +81,8 @@
       "volnyi-i1.jpg", "volnyi-i2.jpg", "volnyi-i3.jpg", "volnyi-i4.jpg", "volnyi-i5.jpg", "volnyi-i6.jpg",
       "yeti-i1.jpg", "yeti-i2.jpg", "yeti-i3.jpg", "yeti-i4.jpg", "yeti-i5.jpg", "yeti-i6.jpg",
       "aleksandriya-i1.jpg", "aleksandriya-i2.jpg", "aleksandriya-i3.jpg", "aleksandriya-i4.jpg", "aleksandriya-i5.jpg", "aleksandriya-i6.jpg",
-      "laita-i1.jpg", "laita-i2.jpg", "laita-i3.jpg", "laita-i4.jpg"
+      "laita-i1.jpg", "laita-i2.jpg", "laita-i3.jpg", "laita-i4.jpg",
+      "frank-i1.jpg", "frank-i2.jpg", "frank-i3.jpg", "frank-i4.jpg", "frank-i5.jpg", "frank-i6.jpg"
     ],
     exterior: [
       "trex44fly-2.jpg", "trex44fly-3.jpg", "trex44fly-overview.jpg", "trex44fly-story.jpg",

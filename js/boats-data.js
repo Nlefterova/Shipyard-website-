@@ -542,7 +542,11 @@ const BOATS = [
     content: { eyebrow: "Моторная яхта", desc: "Моторная яхта с флайбриджем — построена на заказ для прогулок и походов по большой воде." } },
   // Траулеры
   { id: "frank",     family: "traulery", name: "Frenk",   status: "sold", year: "2006", img: "frank.jpg?v=2", tags: ["На заказ"],
-    photos: { hero2: "frank-2.jpg", overview: "frank-overview.jpg", construction: "frank-story.jpg", plans: ["frank-plan-side.png","frank-plan-upper.png","frank-plan-main.png","frank-plan-lower.png"] },
+    photos: { hero2: "frank-2.jpg", overview: "frank-overview.jpg", construction: "frank-story.jpg",
+      thumbs: ["frank-i1.jpg", "frank-i2.jpg", "frank-i3.jpg", "frank-i4.jpg", "frank-i5.jpg", "frank-i6.jpg"],
+      captions: ["Салон", "Камбуз", "Мастер-каюта", "Гостевая каюта", "Санузел", "Рубка"],
+      gallery: ["frank-i1.jpg", "frank-2.jpg", "frank-i3.jpg", "frank-i2.jpg", "frank-overview.jpg", "frank-i6.jpg", "frank-i4.jpg", "frank.jpg?v=2", "frank-i5.jpg"],
+      plans: ["frank-plan-side.png","frank-plan-upper.png","frank-plan-main.png","frank-plan-lower.png"] },
     content: {
       eyebrow: "Траулер",
       desc: "Стальной траулер-яхта с флайбриджем — крепкий водоизмещающий корпус для дальних походов по большой воде.",
