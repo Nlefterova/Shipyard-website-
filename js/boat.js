@@ -26,6 +26,11 @@
   // Large hero photo (left) = the boat's fleet profile photo — applies to every boat.
   if (boat) {
     setPhoto(".wf-hero__img", boat.img);
+    // optional per-boat crop position for the main hero photo
+    if (boat.heroPos) {
+      const h = document.querySelector(".wf-hero__img");
+      if (h) h.style.backgroundPosition = boat.heroPos;
+    }
     // extra per-boat photos (secondary hero image, thumbnail squares, etc.)
     if (boat.photos) {
       setPhoto(".wf-hero__img2", boat.photos.hero2);

@@ -535,7 +535,11 @@ const BOATS = [
       ],
       decks: []
     } },
-  { id: "proekt-1",  family: "korabli", name: "Проект №1",  status: "sold", year: "1995", img: "boat-ph.jpg" },
+  { id: "proekt-1",  family: "korabli", name: "Проект №1",  status: "sold", year: "1995", img: "proekt1.jpg", tags: ["На заказ"], dropSections: true, heroPos: "70% center",
+    photos: { hero2: "proekt1-2.jpg",
+      thumbs: ["proekt1-3.jpg", "proekt1-4.jpg", "proekt1-5.jpg", "proekt1-6.jpg", "proekt1-7.jpg", "proekt1-8.jpg"],
+      captions: ["У берега", "Нос", "На ходу", "На Волге", "Вид сверху", "Простор"] },
+    content: { eyebrow: "Моторная яхта", desc: "Моторная яхта с флайбриджем — построена на заказ для прогулок и походов по большой воде." } },
   // Траулеры
   { id: "frank",     family: "traulery", name: "Frenk",   status: "sold", year: "2006", img: "frank.jpg?v=2", tags: ["На заказ"],
     photos: { hero2: "frank-2.jpg", overview: "frank-overview.jpg", construction: "frank-story.jpg", plans: ["frank-plan-side.png","frank-plan-upper.png","frank-plan-main.png","frank-plan-lower.png"] },
