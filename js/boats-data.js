@@ -641,7 +641,7 @@ const BOATS = [
     } },
   { id: "gulyanka-3",family: "gulyanki", name: "Гулянка №3", status: "sold", year: "2004", img: "gulyanka3.jpg?v=2", cardImg: "gulyanka3-card.jpg",
     photos: { hero2: "gulyanka3-2.jpg", overview: "gulyanka3-overview.jpg", construction: "gulyanka3-story.jpg",
-      plans: ["gulyanka3-plan-side.png","gulyanka3-plan-top.png","gulyanka3-plan-back.png"] },
+      plans: ["gulyanka3-plan-side.png","gulyanka3-plan-top.png"] },
     content: {
       eyebrow: "Прогулочный катер",
       desc: "Компактный прогулочный катер 10 метров — лёгкий, экономичный, с малой осадкой для неспешных выходов на воду.",
@@ -659,8 +659,7 @@ const BOATS = [
       ],
       decks: [
         { name: "вид сбоку", items: [] },
-        { name: "вид сверху", items: [] },
-        { name: "вид сзади", items: [] }
+        { name: "вид сверху", items: [] }
       ]
     } },
   { id: "gulyanka-2",family: "gulyanki", name: "Гулянка №2", status: "sold", year: "2003", img: "boat-ph.jpg" },
