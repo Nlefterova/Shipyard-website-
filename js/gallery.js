@@ -28,7 +28,8 @@
     laita: { name: "Лайта", year: 2002 },
     pilgrim: { name: "Пилигрим", year: 2007 },
     yul: { name: "Юл", year: 2008 },
-    aleksandriya: { name: "Александрия", year: 2019 }
+    aleksandriya: { name: "Александрия", year: 2019 },
+    dundukovsky: { name: "Дундуковский", year: 1999 }
   };
 
   function prefixOf(f) {
@@ -55,7 +56,8 @@
     "trex44fly-i1.jpg": "salon", "trex44fly-i2.jpg": "salon", "trex44fly-i3.jpg": "kitchen", "trex44fly-i4.jpg": "bedroom", "trex44fly-i5.jpg": "bedroom", "trex44fly-i6.jpg": "bathroom",
     "volnyi-i1.jpg": "salon", "volnyi-i2.jpg": "captain", "volnyi-i3.jpg": "salon", "volnyi-i4.jpg": "bedroom", "volnyi-i5.jpg": "bedroom", "volnyi-i6.jpg": "salon",
     "yeti-i1.jpg": "salon", "yeti-i2.jpg": "captain", "yeti-i3.jpg": "salon", "yeti-i4.jpg": "bedroom", "yeti-i5.jpg": "bedroom", "yeti-i6.jpg": "bedroom",
-    "aleksandriya-i1.jpg": "salon", "aleksandriya-i2.jpg": "salon", "aleksandriya-i3.jpg": "kitchen", "aleksandriya-i4.jpg": "bedroom", "aleksandriya-i5.jpg": "bedroom", "aleksandriya-i6.jpg": "bathroom"
+    "aleksandriya-i1.jpg": "salon", "aleksandriya-i2.jpg": "salon", "aleksandriya-i3.jpg": "kitchen", "aleksandriya-i4.jpg": "bedroom", "aleksandriya-i5.jpg": "bedroom", "aleksandriya-i6.jpg": "bathroom",
+    "laita-i1.jpg": "salon", "laita-i2.jpg": "captain", "laita-i3.jpg": "bedroom", "laita-i4.jpg": "bedroom"
   };
 
   var GALLERY = {
@@ -76,7 +78,8 @@
       "trex44fly-i1.jpg", "trex44fly-i2.jpg", "trex44fly-i3.jpg", "trex44fly-i4.jpg", "trex44fly-i5.jpg", "trex44fly-i6.jpg",
       "volnyi-i1.jpg", "volnyi-i2.jpg", "volnyi-i3.jpg", "volnyi-i4.jpg", "volnyi-i5.jpg", "volnyi-i6.jpg",
       "yeti-i1.jpg", "yeti-i2.jpg", "yeti-i3.jpg", "yeti-i4.jpg", "yeti-i5.jpg", "yeti-i6.jpg",
-      "aleksandriya-i1.jpg", "aleksandriya-i2.jpg", "aleksandriya-i3.jpg", "aleksandriya-i4.jpg", "aleksandriya-i5.jpg", "aleksandriya-i6.jpg"
+      "aleksandriya-i1.jpg", "aleksandriya-i2.jpg", "aleksandriya-i3.jpg", "aleksandriya-i4.jpg", "aleksandriya-i5.jpg", "aleksandriya-i6.jpg",
+      "laita-i1.jpg", "laita-i2.jpg", "laita-i3.jpg", "laita-i4.jpg"
     ],
     exterior: [
       "exp65lux-2.jpg", "fiesta-2.jpg", "frank-2.jpg", "gulyanka2003-2.jpg", "gulyanka3-2.jpg", "gulyanka5-2.jpg",
@@ -84,7 +87,8 @@
       "rusich-2.jpg", "sapfir-2.jpg", "sibirsky-2.jpg", "trex37-2.jpg", "trex40-2.jpg", "trex40-3.jpg", "trex40-4.jpg",
       "trex44cr-2.jpg", "trex44cr-beach.jpg", "trex44cr-dock.jpg", "trex44fly-2.jpg", "trex44fly-3.jpg", "volnyi-2.jpg",
       "yeti-2.jpg", "yul-2.jpg",
-      "aleksandriya.jpg", "aleksandriya-2.jpg", "aleksandriya-3.jpg", "aleksandriya-4.jpg"
+      "aleksandriya.jpg", "aleksandriya-2.jpg", "aleksandriya-3.jpg", "aleksandriya-4.jpg",
+      "dundukovsky.jpg", "dundukovsky-3.jpg", "dundukovsky-4.jpg", "dundukovsky-8.jpg"
     ]
   };
 
