@@ -607,7 +607,12 @@ const BOATS = [
         { name: "нижняя палуба", items: [] }
       ]
     } },
-  { id: "bandido",   family: "traulery", name: "Bandido", status: "sold", year: "2001", img: "boat-ph.jpg", tags: ["На заказ"] },
+  { id: "bandido",   family: "traulery", name: "Bandido", status: "sold", year: "2001", img: "bandido.jpg?v=4", cardScale: 1.1, cardPos: "center top", tags: ["На заказ"], dropSections: true,
+    photos: { hero2: "bandido-2.jpg?v=2",
+      thumbs: ["bandido-3.jpg", "bandido-4.jpg", "bandido-5.jpg", "bandido-6.jpg", "bandido-7.jpg", "bandido-8.jpg"],
+      captions: ["С высоты", "На ходу", "У берега", "Корма", "На якоре", "Профиль"] },
+    content: { eyebrow: "Траулер", desc: "Стальной траулер-яхта с флайбриджем — водоизмещающий корпус для дальних походов по большой воде.",
+      heroSpecs: [["Длина","16,8 м"],["Мощность","274 л.с."],["Дальность","3500+ миль"],["Каюты","3"]] } },
   // Гулянки
   { id: "gulyanka-1",family: "gulyanki", name: "Гулянка №5", status: "sold", year: "2017", img: "gulyanka5.jpg", cardImg: "gulyanka5-card.jpg", tags: ["На заказ"],
     photos: { hero2: "gulyanka5-2.jpg", overview: "gulyanka5-overview.jpg", construction: "gulyanka5-story.jpg",
