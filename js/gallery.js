@@ -30,7 +30,8 @@
     yul: { name: "Юл", year: 2008 },
     aleksandriya: { name: "Александрия", year: 2019 },
     dundukovsky: { name: "Дундуковский", year: 1999 },
-    proekt1: { name: "Проект №1", year: 1995 }
+    proekt1: { name: "Проект №1", year: 1995 },
+    bandido: { name: "Bandido", year: 2001 }
   };
 
   function prefixOf(f) {
@@ -107,6 +108,7 @@
       "proekt1.jpg", "proekt1-2.jpg", "proekt1-3.jpg", "proekt1-4.jpg", "proekt1-5.jpg", "proekt1-6.jpg", "proekt1-7.jpg", "proekt1-8.jpg",
       "sapfir.jpg", "sapfir-2.jpg", "sapfir-overview.jpg", "sapfir-story.jpg",
       "frank.jpg", "frank-2.jpg", "frank-overview.jpg", "frank-story.jpg",
+      "bandido.jpg", "bandido-2.jpg", "bandido-3.jpg", "bandido-4.jpg", "bandido-5.jpg", "bandido-6.jpg", "bandido-7.jpg", "bandido-8.jpg",
       "gulyanka5.jpg", "gulyanka5-2.jpg", "gulyanka5-overview.jpg", "gulyanka5-story.jpg",
       "l1050.jpg", "l1050-2.jpg", "l1050-overview.jpg", "l1050-story.jpg", "l1050-i5.jpg",
       "gulyanka3.jpg", "gulyanka3-2.jpg", "gulyanka3-overview.jpg", "gulyanka3-story.jpg",
