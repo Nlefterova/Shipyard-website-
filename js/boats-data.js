@@ -685,7 +685,12 @@ const BOATS = [
         { name: "вид сверху", items: [] }
       ]
     } },
-  { id: "gulyanka-2",family: "gulyanki", name: "Гулянка №2", status: "sold", year: "2003", img: "boat-ph.jpg" },
+  { id: "gulyanka-2",family: "gulyanki", name: "Гулянка №2", status: "sold", year: "2003", img: "gulyanka2.jpg?v=5", cardImg: "gulyanka2-card.jpg", tags: ["На заказ"], dropSections: true,
+    photos: { hero2: "gulyanka2-2.jpg",
+      thumbs: ["gulyanka2-3.jpg", "gulyanka2-4.jpg", "gulyanka2-5.jpg", "gulyanka2-6.jpg", "gulyanka2-7.jpg", "gulyanka2-8.jpg"],
+      captions: ["С высоты", "На закате", "Кокпит", "В протоке", "На Волге", "На стоянке"] },
+    content: { eyebrow: "Прогулочный катер", desc: "Компактный прогулочный катер с каютой — с малой осадкой, для неспешных выходов на большую воду.",
+      heroSpecs: [["Длина","10 м"],["Мощность","25 л.с."],["Вместимость","8 человек"],["Скорость","10-12 км/ч"]] } },
   { id: "gulyanka-2005", family: "gulyanki", name: "Гулянка №1", status: "sold", year: "2000", img: "gulyanka2003.jpg", cardImg: "gulyanka2003-card.jpg",
     photos: { hero2: "gulyanka2003-2.jpg", overview: "gulyanka2003-overview.jpg", construction: "gulyanka2003-story.jpg",
       thumbs: ["gulyanka2003-i1.jpg","gulyanka2003-i2.jpg","gulyanka2003-i3.jpg","gulyanka2003-i4.jpg","gulyanka2003-i5.jpg","gulyanka2003-i6.jpg"],
