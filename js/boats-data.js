@@ -240,7 +240,7 @@ const BOATS = [
         { name: "Боковой вид", items: [] }
       ] } },
   { id: "mius", family: "korabli", name: "Миус", status: "sold", year: "2018", img: "mius.jpg?v=2", cardImg: "mius-card.jpg?v=2", tags: ["На заказ"],
-    photos: { hero2: "mius-2.jpg", hero2Pos: "center 64%", overview: "mius-overview.jpg", construction: "mius-story.jpg",
+    photos: { hero2: "mius-2.jpg", hero2Pos: "center 64%", overview: "mius-overview.jpg", construction: "mius-story.jpg?v=2",
       thumbs: ["mius-i1.jpg","mius-i2.jpg?v=2","mius-i3.jpg?v=2","mius-i4.jpg","mius-i5.jpg","mius-i6.jpg"],
       captions: ["Ходовая рубка","Кают-компания","Салон","Камбуз","Каюта","Санузел"],
       gallery: ["mius-i2.jpg?v=2","mius-2.jpg","mius-i5.jpg","mius-i4.jpg","mius-overview.jpg","mius-i3.jpg?v=2","mius-i6.jpg","mius-story.jpg","mius-i1.jpg"],
@@ -451,7 +451,7 @@ const BOATS = [
       ],
       decks: []
     } },
-  { id: "yul",       family: "korabli", name: "Юл",         status: "sold", year: "2008", img: "yul.jpg?v=2",
+  { id: "yul",       family: "korabli", name: "Юл",         status: "sold", year: "2008", img: "yul.jpg?v=2", noInteriors: true,
     photos: { hero2: "yul-2.jpg", overview: "yul-overview.jpg", construction: "yul-story.jpg",
       plans: ["yul-plan-side.png","yul-plan-top.png"] },
     content: {
