@@ -59,7 +59,7 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 .btn--tertiary{background:transparent;border-color:transparent;color:var(--navy);padding-left:.25rem;padding-right:.25rem}
 .btn--tertiary:hover{background:transparent;border-color:transparent;color:var(--brass)}
 /* header CTA — brass */
-.nav__cta{background:var(--brass);color:var(--navy);border-color:var(--brass)}
+.nav__cta{background:var(--brass);color:var(--navy);border-color:var(--brass);margin-right:calc(clamp(1.5rem,4vw,3rem) + 104px)}
 .nav__cta:hover{background:#b0977a;border-color:#b0977a}
 
 /* ============================================================
@@ -67,12 +67,15 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
    ============================================================ */
 .nav{
   position:absolute;inset:0 0 auto 0;z-index:10;
-  display:flex;align-items:center;justify-content:space-between;gap:2rem;
+  display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:2rem;
   padding:1.5rem var(--gutter);
 }
-.nav__logo img{height:34px;width:auto}
+.nav__logo{justify-self:start}
+.nav__links{justify-self:center}
+.nav__cta{justify-self:end}
+.nav__logo img{height:42px;width:auto;margin-left:clamp(1.5rem,4vw,3rem)}
 .nav__links{
-  display:flex;align-items:center;gap:clamp(1.5rem,2.6vw,2.75rem);
+  display:flex;align-items:center;justify-content:center;gap:clamp(1.5rem,2.6vw,2.75rem);
   font-size:20px;font-weight:500;color:var(--white);
 }
 .nav__links a{opacity:.94;transition:color .2s ease,opacity .2s ease}
