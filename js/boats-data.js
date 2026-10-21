@@ -474,8 +474,8 @@ const BOATS = [
         { name: "вид сверху", items: [] }
       ]
     } },
-  { id: "piligrim",  family: "korabli", name: "Пилигрим",   status: "sold", year: "2007", img: "pilgrim.jpg?v=2", cardImg: "pilgrim-card.jpg?v=3", tags: ["На заказ"],
-    photos: { hero2: "pilgrim-2.jpg", overview: "pilgrim-overview.jpg", construction: "pilgrim-story.jpg",
+  { id: "piligrim",  family: "korabli", name: "Пилигрим",   status: "sold", year: "2007", img: "pilgrim.jpg?v=3", cardImg: "pilgrim-card.jpg?v=3", tags: ["На заказ"], noInteriors: true,
+    photos: { hero2: "pilgrim-2.jpg?v=2", overview: "pilgrim-overview.jpg", construction: "pilgrim-story.jpg?v=2",
       plans: ["pilgrim-plan-side.png","pilgrim-plan-main.png","pilgrim-plan-lower.png"] },
     content: {
       eyebrow: "Моторная яхта",
