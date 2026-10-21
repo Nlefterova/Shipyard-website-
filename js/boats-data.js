@@ -301,7 +301,7 @@ const BOATS = [
         { name: "нижняя палуба", items: [] }
       ]
     } },
-  { id: "kasatka", family: "korabli", name: "Касатка", status: "sold", year: "2013", img: "kasatka-2.jpg", cardImg: "kasatka-card.jpg", tags: ["На заказ"],
+  { id: "kasatka", family: "korabli", name: "Касатка", status: "sold", year: "2013", img: "kasatka-2.jpg", cardImg: "kasatka-card.jpg", tags: ["На заказ"], specsWide: true,
     photos: { hero2: "kasatka-overview.jpg", overview: "kasatka.jpg?v=2", construction: "kasatka-story.jpg",
       thumbs: ["kasatka-i4.jpg","kasatka-i5.jpg","kasatka-i3.jpg","kasatka-i2.jpg","kasatka-i6.jpg","kasatka-i1.jpg"],
       captions: ["Камбуз и салон","Салон","Каюта","Ходовая рубка","Русская сауна","Кормовая палуба"],

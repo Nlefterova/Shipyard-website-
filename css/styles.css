@@ -712,6 +712,11 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
   border-bottom:1px solid rgba(0,0,0,.12);font-family:var(--sans);font-size:.95rem}
 .wf-spectable li>span:first-child{color:var(--charcoal)}
 .wf-spectable li>span:last-child{color:var(--near-black);font-weight:500;text-align:right}
+/* no floor plans → spec table spans full width in two columns */
+.wf-specsheet__grid.wf-specsheet--wide{grid-template-columns:1fr}
+.wf-specsheet--wide .wf-specsheet__right{display:none}
+.wf-specsheet--wide .wf-spectable{display:block;columns:2;column-gap:clamp(3rem,6vw,6rem)}
+.wf-specsheet--wide .wf-spectable li{break-inside:avoid}
 .wf-specsheet__btn{margin-top:clamp(1.5rem,3vw,2.25rem)}
 .wf-plans__label{font-family:var(--serif);font-weight:600;color:var(--near-black);
   font-size:clamp(1.1rem,1.8vw,1.35rem);margin-bottom:clamp(.75rem,1.5vw,1.1rem)}
@@ -957,6 +962,7 @@ a.ct-chip:hover{color:var(--brass)}
   .wf-overview__grid,.wf-story__grid{grid-template-columns:1fr;grid-template-areas:none}
   .wf-gallery{grid-template-columns:1fr;aspect-ratio:auto;width:100%}
   .wf-specsheet__grid{grid-template-columns:1fr}
+  .wf-specsheet--wide .wf-spectable{columns:1}
   .ab-began{width:auto;margin-left:0;padding-left:0;padding-right:0}
   .ab-began__grid{grid-template-columns:1fr}
   .ab-began__media{order:-1}

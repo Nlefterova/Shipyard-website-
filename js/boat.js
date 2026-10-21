@@ -204,6 +204,9 @@
     if (Array.isArray(c.specs)) {
       const st = document.querySelector(".wf-spectable");
       if (st) st.innerHTML = c.specs.map((r) => "<li><span>" + r[0] + "</span><span>" + r[1] + "</span></li>").join("");
+      // boats with no floor plans: let the spec table span full width in two columns
+      const grid = document.querySelector(".wf-specsheet__grid");
+      if (grid) grid.classList.toggle("wf-specsheet--wide", !!boat.specsWide);
     }
     // FLOOR PLANS — build one box per deck (2 for CR, 3 for Fly, …); drop in
     // the line-art drawing where one exists (boat.photos.plans[i]).
