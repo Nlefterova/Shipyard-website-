@@ -106,3 +106,17 @@ if (location.hash) {
   if (fromOther && target) requestAnimationFrame(() => target.scrollIntoView({ behavior: "instant", block: "start" }));
   else window.scrollTo({ top: 0, behavior: "instant" });
 }
+
+/* Back to top — same button as the gallery page */
+(function () {
+  var topBtn = document.getElementById("galTop");
+  if (!topBtn) return;
+  function onScroll() {
+    var past = (window.pageYOffset || document.documentElement.scrollTop) > window.innerHeight * 0.6;
+    topBtn.classList.toggle("is-visible", past);
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
+  onScroll();
+  topBtn.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: "smooth" }); });
+})();

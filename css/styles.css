@@ -27,11 +27,11 @@
 }
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{-webkit-text-size-adjust:100%;overflow-x:hidden;scroll-behavior:smooth}
+html{-webkit-text-size-adjust:100%;overflow-x:clip;scroll-behavior:smooth}
 body{
   font-family:var(--sans);color:var(--text);background:var(--white);
   line-height:1.55;-webkit-font-smoothing:antialiased;font-synthesis:none;
-  overflow-x:hidden;max-width:100%;
+  overflow-x:clip;max-width:100%;
 }
 img,svg{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
@@ -82,6 +82,12 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 .nav__links a:hover{color:var(--brass);opacity:1}
 /* solid nav for interior pages (no dark hero behind it) */
 .nav--solid{position:static;background:var(--ink)}
+/* sticky nav: fixed, with a frosted navy background that fades in on scroll */
+.nav--sticky{position:fixed;left:0;right:0;top:0;transition:background .3s ease,backdrop-filter .3s ease,padding .3s ease}
+/* solid (blue) nav that stays in flow as before, but sticks on scroll */
+.nav--solid.nav--sticky{position:sticky}
+.nav--sticky.is-scrolled{background:rgba(23,28,70,.85);
+  backdrop-filter:blur(10px) saturate(1.1);-webkit-backdrop-filter:blur(10px) saturate(1.1)}
 
 /* ============================================================
    HERO  (photo carousel + trackers)
