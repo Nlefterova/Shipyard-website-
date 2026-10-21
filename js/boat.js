@@ -91,9 +91,9 @@
     const lb = document.createElement("div");
     lb.className = "lb" + (lbClass ? " " + lbClass : "");
     lb.innerHTML =
-      '<button class="lb__close" aria-label="Закрыть">×</button>' +
       '<button class="lb__nav lb__prev" aria-label="Назад">‹</button>' +
       '<figure class="lb__figure">' +
+        '<button class="lb__close" aria-label="Закрыть">×</button>' +
         '<img class="lb__img" alt="">' +
         '<figcaption class="lb__caption"><span class="lb__count"></span><span class="lb__room"></span></figcaption>' +
       '</figure>' +
@@ -127,6 +127,111 @@
       else if (e.key === "ArrowLeft") show(idx - 1);
       else if (e.key === "ArrowRight") show(idx + 1);
     });
+  }
+
+  /* Spotlight — an annotated photo in a frosted modal. Markers sit over the
+     photo (positioned by %); hover/tap a marker to reveal a technical callout
+     with that boat's photo, name and year (pulled from the BOATS record). */
+  function initSpotlight(triggers, cfg) {
+    const markers = (cfg.markers || []).map((m) => {
+      const b = (typeof BOATS !== "undefined") ? BOATS.find((x) => x.id === m.id) : null;
+      if (!b) return null;
+      return { x: m.x, y: m.y, size: m.size, shape: m.shape, color: m.color,
+               name: b.name, year: b.year || "", img: (m.img || b.cardImg || b.img) };
+    }).filter(Boolean);
+
+    function callout(m) {
+      return '<span class="spot__callout">' +
+          '<span class="spot__thumb" style="background-image:url(\'assets/img/' + m.img + '\')"></span>' +
+          '<span class="spot__meta"><span class="spot__name">' + m.name + "</span>" +
+          '<span class="spot__year">' + m.year + "</span></span>" +
+        "</span>";
+    }
+    function markerHTML(m, i) {
+      // shape marker: a boat-silhouette hotspot (clip-path polygon over the stage)
+      if (Array.isArray(m.shape) && m.shape.length) {
+        const poly = m.shape.map((p) => p[0] + "% " + p[1] + "%").join(", ");
+        const ax = (m.x != null ? m.x : 50), ay = (m.y != null ? m.y : 50);
+        return '<div class="spot__hot" data-i="' + i + '"' + (m.color ? ' style="--mk:' + m.color + '"' : "") + ">" +
+            '<button class="spot__shape" style="clip-path:polygon(' + poly + ')" aria-label="' + m.name + '"></button>' +
+            '<div class="spot__anchor" style="left:' + ax + "%;top:" + ay + '%">' + callout(m) + "</div>" +
+          "</div>";
+      }
+      // dot marker
+      const sz = m.size ? ";width:" + m.size + "px;height:" + m.size + "px" : "";
+      return '<button class="spot__marker" data-i="' + i + '" style="left:' + m.x + "%;top:" + m.y + "%" + sz + '" aria-label="' + m.name + '">' +
+          '<span class="spot__dot"' + (m.size ? ' style="width:' + m.size + "px;height:" + m.size + 'px"' : "") + "></span>" +
+          callout(m) +
+        "</button>";
+    }
+
+    const sp = document.createElement("div");
+    sp.className = "spot";
+    sp.innerHTML =
+      '<div class="spot__plate">' +
+        '<button class="spot__close" aria-label="Закрыть">×</button>' +
+        ((cfg.date || cfg.title) ? '<header class="spot__head">' +
+          (cfg.date ? '<span class="spot__date">' + cfg.date + "</span>" : "") +
+          (cfg.title ? '<span class="spot__title">' + cfg.title + "</span>" : "") +
+        "</header>" : "") +
+        '<div class="spot__stage">' +
+          '<img class="spot__img" src="assets/img/' + cfg.photo + '" alt="">' +
+          markers.map(markerHTML).join("") +
+        "</div>" +
+        (cfg.hint ? '<p class="spot__hint">' + cfg.hint + "</p>" : "") +
+      "</div>";
+    document.body.appendChild(sp);
+
+    function open() { sp.classList.add("is-open"); document.body.style.overflow = "hidden"; }
+    function clearActive() { sp.querySelectorAll(".is-active").forEach((el) => el.classList.remove("is-active")); }
+    function close() { sp.classList.remove("is-open"); document.body.style.overflow = ""; clearActive(); }
+    triggers.forEach((t) => t.addEventListener("click", open));
+    sp.querySelector(".spot__close").addEventListener("click", close);
+    sp.addEventListener("click", function (e) { if (e.target === sp) close(); });
+    document.addEventListener("keydown", function (e) {
+      if (sp.classList.contains("is-open") && e.key === "Escape") close();
+    });
+    // tap to toggle a callout (one open at a time) — dot markers and shape hotspots
+    function wireToggle(trigger, host) {
+      trigger.addEventListener("click", function (e) {
+        e.stopPropagation();
+        const was = host.classList.contains("is-active");
+        clearActive();
+        if (!was) host.classList.add("is-active");
+      });
+    }
+    sp.querySelectorAll(".spot__marker").forEach((mk) => wireToggle(mk, mk));
+    sp.querySelectorAll(".spot__hot").forEach((hot) => {
+      const shape = hot.querySelector(".spot__shape");
+      shape.addEventListener("mouseenter", () => hot.classList.add("is-hover"));
+      shape.addEventListener("mouseleave", () => hot.classList.remove("is-hover"));
+      wireToggle(shape, hot);
+    });
+
+    // dev helper: open with ?coords to trace polygons by clicking the photo.
+    // Each click adds a point; the badge shows the running [x,y],… list to copy.
+    // Press "n" to start a new shape, "z" to undo the last point.
+    if (/[?&]coords/.test(location.search)) {
+      const stage = sp.querySelector(".spot__stage");
+      const badge = document.createElement("div");
+      badge.className = "spot__coords";
+      badge.textContent = "click to add points · n = new · z = undo";
+      stage.appendChild(badge);
+      let pts = [];
+      function render() { badge.textContent = pts.length ? pts.map((p) => "[" + p[0] + "," + p[1] + "]").join(",") : "(empty) · n = new · z = undo"; }
+      stage.addEventListener("click", function (e) {
+        if (e.target.closest(".spot__coords")) return;
+        const r = stage.getBoundingClientRect();
+        pts.push([Math.round(((e.clientX - r.left) / r.width) * 1000) / 10,
+                  Math.round(((e.clientY - r.top) / r.height) * 1000) / 10]);
+        render(); console.log("shape:", "[" + pts.map((p) => "[" + p[0] + "," + p[1] + "]").join(",") + "]");
+      });
+      document.addEventListener("keydown", function (e) {
+        if (!sp.classList.contains("is-open")) return;
+        if (e.key === "n") { pts = []; render(); }
+        else if (e.key === "z") { pts.pop(); render(); }
+      });
+    }
   }
 
   /* ---- Hero-only boats (e.g. under construction) — show just the hero and
@@ -209,6 +314,11 @@
     if (c.storyTitle) setText(".wf-story .wf-sectitle", c.storyTitle);
     setText(".wf-story .wf-lead", c.storyLead);
     fillBodies(".wf-story__text .wf-body", c.storyBody, true);
+    // Inline story pop-up: a highlighted phrase opens an annotated photo
+    if (c.storyPop && c.storyPop.photo) {
+      const triggers = document.querySelectorAll(c.storyPop.sel || ".story-pop");
+      if (triggers.length) initSpotlight(triggers, c.storyPop);
+    }
     // SPEC TABLE
     if (Array.isArray(c.specs)) {
       const st = document.querySelector(".wf-spectable");
