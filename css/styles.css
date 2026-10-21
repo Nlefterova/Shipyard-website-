@@ -59,8 +59,8 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 .btn--tertiary{background:transparent;border-color:transparent;color:var(--navy);padding-left:.25rem;padding-right:.25rem}
 .btn--tertiary:hover{background:transparent;border-color:transparent;color:var(--brass)}
 /* header CTA — brass */
-.nav__cta{background:var(--brass);color:var(--navy);border-color:var(--brass);margin-right:calc(clamp(1.5rem,4vw,3rem) + 104px)}
-.nav__cta:hover{background:#b0977a;border-color:#b0977a}
+.nav__cta{background:#b79d80;color:#fff;border-color:#b79d80;font-weight:700;margin-right:calc(clamp(1.5rem,4vw,3rem) + 104px)}
+.nav__cta:hover{background:#fff;color:var(--navy);border-color:#fff}
 
 /* ============================================================
    NAV
