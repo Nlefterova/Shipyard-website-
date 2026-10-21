@@ -426,7 +426,7 @@ const BOATS = [
         { name: "вид сверху", items: [] }
       ]
     } },
-  { id: "yeti",      family: "korabli", name: "Yeti",       status: "sold", year: "2009", img: "yeti.jpg?v=2", cardImg: "yeti-card.jpg", tags: ["На заказ"],
+  { id: "yeti",      family: "korabli", name: "Yeti",       status: "sold", year: "2009", img: "yeti.jpg?v=2", cardImg: "yeti-card.jpg", tags: ["На заказ"], specsWide: true,
     photos: { hero2: "yeti-2.jpg?v=3", overview: "yeti-overview.jpg", construction: "yeti-story.jpg",
       thumbs: ["yeti-i1.jpg","yeti-i2.jpg","yeti-i3.jpg","yeti-i4.jpg","yeti-i5.jpg","yeti-i6.jpg"],
       captions: ["Кают-компания","Ходовая рубка","Камбуз","Мастер-каюта","Носовая каюта","Гостевая каюта"],
