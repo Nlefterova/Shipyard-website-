@@ -535,7 +535,7 @@ const BOATS = [
       ],
       decks: []
     } },
-  { id: "proekt-1",  family: "korabli", name: "Проект №1",  status: "sold", year: "1995", img: "proekt1.jpg", tags: ["На заказ"], dropSections: true, heroPos: "70% center",
+  { id: "proekt-1",  family: "korabli", name: "Проект №1",  status: "sold", year: "1995", img: "proekt1.jpg", cardImg: "proekt1-card.jpg", cardScale: 1.45, cardPos: "56% 44%", tags: ["На заказ"], dropSections: true, heroPos: "70% center",
     photos: { hero2: "proekt1-2.jpg",
       thumbs: ["proekt1-3.jpg", "proekt1-4.jpg", "proekt1-5.jpg", "proekt1-6.jpg", "proekt1-7.jpg", "proekt1-8.jpg"],
       captions: ["У берега", "Нос", "На ходу", "На Волге", "Вид сверху", "Простор"] },
@@ -686,8 +686,8 @@ const BOATS = [
       ]
     } },
   { id: "gulyanka-2",family: "gulyanki", name: "Гулянка №2", status: "sold", year: "2003", img: "gulyanka2.jpg?v=5", cardImg: "gulyanka2-card.jpg", tags: ["На заказ"], dropSections: true,
-    photos: { hero2: "gulyanka2-2.jpg",
-      thumbs: ["gulyanka2-3.jpg", "gulyanka2-4.jpg", "gulyanka2-5.jpg", "gulyanka2-6.jpg", "gulyanka2-7.jpg", "gulyanka2-8.jpg"],
+    photos: { hero2: "gulyanka2-2.jpg?v=3", hero2Pos: "center 70%",
+      thumbs: ["gulyanka2-3.jpg", "gulyanka2-4.jpg?v=2", "gulyanka2-5.jpg", "gulyanka2-6.jpg?v=2", "gulyanka2-7.jpg", "gulyanka2-8.jpg"],
       captions: ["С высоты", "На закате", "Кокпит", "В протоке", "На Волге", "На стоянке"] },
     content: { eyebrow: "Прогулочный катер", desc: "Компактный прогулочный катер с каютой — с малой осадкой, для неспешных выходов на большую воду.",
       heroSpecs: [["Длина","10 м"],["Мощность","25 л.с."],["Вместимость","8 человек"],["Скорость","10-12 км/ч"]] } },
