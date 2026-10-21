@@ -139,6 +139,15 @@
     });
   }
 
+  /* ---- No interior photos: drop the hero thumbnail strip and the "На борту"
+     gallery section, but keep Overview / Construction / Specsheet. */
+  if (boat && boat.noInteriors) {
+    [".wf-thumbs", ".wf-gallery-sec"].forEach((sel) => {
+      const el = document.querySelector(sel);
+      if (el) el.remove();
+    });
+  }
+
   /* ---- Drop the sections below the hero (Overview / Construction / Gallery /
      Specsheet) but keep the ENTIRE hero intact and the footer. */
   if (boat && boat.dropSections) {
