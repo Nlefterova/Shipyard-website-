@@ -28,7 +28,7 @@ function boatCard(b) {
   const href = b.noLink ? "" : ` href="boat.html?id=${b.id}"`;
   const nolinkClass = b.noLink ? " boat-card--nolink" : "";
   return `
-    <${tag} class="boat-card${nolinkClass}"${href} data-status="${b.status}" aria-label="${b.name}">
+    <${tag} id="card-${b.id}" class="boat-card${nolinkClass}"${href} data-status="${b.status}" aria-label="${b.name}">
       <img class="boat-card__img" src="assets/img/${b.cardImg || b.img}?v=${IMG_V}"${cardImgStyle(b)} alt="${b.name}">
       <div class="boat-card__scrim"></div>
       <div class="boat-card__badges">${badge}${tags}</div>
@@ -100,10 +100,12 @@ applyFilter("all");
 if ("scrollRestoration" in history) history.scrollRestoration = "manual";
 if (location.hash) {
   const target = document.querySelector(location.hash);
+  // a boat card (fleet.html#card-<id>) centers in view; a family section lands at the top
+  const block = location.hash.indexOf("#card-") === 0 ? "center" : "start";
   let fromOther = false;
   try { fromOther = !!document.referrer && new URL(document.referrer).pathname !== location.pathname; } catch (e) {}
   history.replaceState(null, "", location.pathname + location.search);
-  if (fromOther && target) requestAnimationFrame(() => target.scrollIntoView({ behavior: "instant", block: "start" }));
+  if (fromOther && target) requestAnimationFrame(() => target.scrollIntoView({ behavior: "instant", block: block }));
   else window.scrollTo({ top: 0, behavior: "instant" });
 }
 

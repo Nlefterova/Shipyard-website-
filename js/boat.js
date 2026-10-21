@@ -25,6 +25,9 @@
 
   // Large hero photo (left) = the boat's fleet profile photo — applies to every boat.
   if (boat) {
+    // "Назад" arrow → back to this boat's card on the fleet page (not the top)
+    const back = document.querySelector(".wf-hero__fleet");
+    if (back) back.href = "fleet.html#card-" + boat.id;
     setPhoto(".wf-hero__img", boat.img);
     // optional per-boat crop position for the main hero photo
     if (boat.heroPos) {
