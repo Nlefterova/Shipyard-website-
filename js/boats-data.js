@@ -677,7 +677,7 @@ const BOATS = [
         { name: "вид сбоку", items: [] }
       ]
     } },
-  { id: "gulyanka-3",family: "gulyanki", name: "Гулянка №3", status: "sold", year: "2004", img: "gulyanka3.jpg?v=2", cardImg: "gulyanka3-card.jpg",
+  { id: "gulyanka-3",family: "gulyanki", name: "Гулянка №3", status: "sold", year: "2004", img: "gulyanka3.jpg?v=2", cardImg: "gulyanka3-card.jpg", noInteriors: true,
     photos: { hero2: "gulyanka3-2.jpg", overview: "gulyanka3-overview.jpg", construction: "gulyanka3-story.jpg",
       plans: ["gulyanka3-plan-side.png","gulyanka3-plan-top.png"] },
     content: {
