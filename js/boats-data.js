@@ -630,7 +630,7 @@ const BOATS = [
       heroSpecs: [["Длина","16,8 м"],["Мощность","274 л.с."],["Дальность","3500+ миль"],["Каюты","3"]] } },
   // Гулянки
   { id: "gulyanka-1",family: "gulyanki", name: "Гулянка №5", status: "sold", year: "2017", img: "gulyanka5.jpg", cardImg: "gulyanka5-card.jpg", tags: ["На заказ"], noInteriors: true,
-    photos: { hero2: "gulyanka5-2.jpg", overview: "gulyanka5-overview.jpg", construction: "gulyanka5-story.jpg",
+    photos: { hero2: "gulyanka5-2.jpg?v=2", overview: "gulyanka5-overview.jpg", construction: "gulyanka5-story.jpg",
       plans: ["gulyanka5-plan-side.png"] },
     content: {
       eyebrow: "Моторная яхта",
