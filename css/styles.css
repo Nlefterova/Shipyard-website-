@@ -1115,6 +1115,15 @@ a.ct-chip:hover{color:var(--brass)}
 .gal-cell:nth-child(8n+6){grid-column:span 2}
 
 /* lightbox */
+/* back-to-top button */
+.gal-top{position:fixed;bottom:clamp(1.2rem,3vw,2rem);right:clamp(1.2rem,3vw,2rem);z-index:60;
+  width:52px;height:52px;border-radius:50%;border:0;background:rgba(23,28,70,.82);
+  color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  opacity:0;visibility:hidden;transform:translateY(10px);
+  transition:opacity .25s ease,transform .25s ease,background .2s ease}
+.gal-top.is-visible{opacity:1;visibility:visible;transform:none}
+.gal-top:hover{background:rgba(23,28,70,1)}
+.gal-top svg{width:22px;height:22px;display:block}
 .gal-lb{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;
   background:rgba(10,12,18,.93)}
 .gal-lb.is-open{display:flex}

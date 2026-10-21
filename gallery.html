@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=197">
+<link rel="stylesheet" href="css/styles.css?v=210">
 </head>
 <body>
 
@@ -32,7 +32,8 @@
     <div class="gal-wrap">
       <div class="gal-tabs">
         <div class="gal-toggle">
-          <button type="button" class="gal-tab is-active" data-theme="interior">Интерьеры</button>
+          <button type="button" class="gal-tab is-active" data-theme="all">Все</button>
+          <button type="button" class="gal-tab" data-theme="interior">Интерьеры</button>
           <button type="button" class="gal-tab" data-theme="exterior">Экстерьеры</button>
         </div>
         <div class="gal-controls">
@@ -70,6 +71,14 @@
       <button class="gal-lb__nav gal-lb__nav--next" type="button" data-act="next" aria-label="Вперёд">&#8250;</button>
     </div>
   </main>
+
+  <!-- back to top -->
+  <button type="button" class="gal-top" id="galTop" aria-label="Наверх">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 19V5"></path>
+      <path d="M6 11l6-6 6 6"></path>
+    </svg>
+  </button>
 
   <!-- ===================== FOOTER ===================== -->
   <footer class="foot">
@@ -170,7 +179,7 @@
     </div>
   </footer>
 
-  <script src="js/gallery.js?v=13"></script>
+  <script src="js/gallery.js?v=18"></script>
   <script src="js/contact-modal.js?v=2"></script>
 
 </body>

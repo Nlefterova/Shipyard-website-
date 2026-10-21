@@ -1,12 +1,13 @@
 /* Gallery page — theme toggle (Интерьеры / Экстерьеры) + tetris mosaic + lightbox.
    Photo lists are a rough auto-sort by filename; curate by editing these arrays. */
 (function () {
-  var IMG_V = 220;
+  var IMG_V = 221;
 
   /* filename prefix -> boat name + year (prefixes differ from data ids) */
   var META = {
     exp65lux: { name: "Expedition 65 Lux", year: 2026 },
-    gulyanka2003: { name: "Гулянка №2", year: 2003 },
+    gulyanka2003: { name: "Гулянка №1", year: 2000 },
+    gulyanka2: { name: "Гулянка №2", year: 2003 },
     gulyanka3: { name: "Гулянка №3", year: 2004 },
     gulyanka5: { name: "Гулянка №5", year: 2017 },
     kasatka: { name: "Касатка", year: 2013 },
@@ -112,14 +113,15 @@
       "gulyanka5.jpg", "gulyanka5-2.jpg", "gulyanka5-overview.jpg", "gulyanka5-story.jpg",
       "l1050.jpg", "l1050-2.jpg", "l1050-overview.jpg", "l1050-story.jpg", "l1050-i5.jpg",
       "gulyanka3.jpg", "gulyanka3-2.jpg", "gulyanka3-overview.jpg", "gulyanka3-story.jpg",
-      "gulyanka2003.jpg", "gulyanka2003-2.jpg", "gulyanka2003-overview.jpg", "gulyanka2003-story.jpg"
+      "gulyanka2003.jpg", "gulyanka2003-2.jpg", "gulyanka2003-overview.jpg", "gulyanka2003-story.jpg",
+      "gulyanka2.jpg", "gulyanka2-2.jpg", "gulyanka2-3.jpg", "gulyanka2-4.jpg", "gulyanka2-5.jpg", "gulyanka2-6.jpg", "gulyanka2-7.jpg", "gulyanka2-8.jpg"
     ]
   };
 
   var grid = document.getElementById("galGrid");
   var tabs = document.querySelectorAll(".gal-tab");
   var current = [];
-  var currentTheme = "interior";
+  var currentTheme = "all";
 
   function src(f) { return "assets/img/" + f + "?v=" + IMG_V; }
 
@@ -159,7 +161,8 @@
   function render(theme) {
     currentTheme = theme;
     if (activeSort === "room" && theme !== "interior") activeSort = "year";
-    var list = sortList(GALLERY[theme] || [], theme);
+    var base = (theme === "all") ? GALLERY.interior.concat(GALLERY.exterior) : (GALLERY[theme] || []);
+    var list = sortList(base, theme);
     if (reversed) list.reverse();
     current = list;
     grid.innerHTML = current.map(function (f, i) {
@@ -249,5 +252,20 @@
     if (e.key === "ArrowRight") step(1);
   });
 
-  render("interior");
+  /* ---- Back to top ---- */
+  var topBtn = document.getElementById("galTop");
+  if (topBtn) {
+    function onScroll() {
+      var past = (window.pageYOffset || document.documentElement.scrollTop) > window.innerHeight * 0.6;
+      topBtn.classList.toggle("is-visible", past);
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    onScroll();
+    topBtn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  render("all");
 })();
