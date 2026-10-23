@@ -12,6 +12,19 @@
 (function () {
   const id = new URLSearchParams(location.search).get("id");
   const boat = (typeof BOATS !== "undefined") ? BOATS.find((b) => b.id === id) : null;
+  // per-boat hook so a single boat can be styled without touching the others
+  if (boat && boat.id) document.body.setAttribute("data-boat", boat.id);
+
+  // lock BOTH <html> (the real scroll element here) and <body> so the page
+  // behind a pop-up can't scroll or scroll-chain. Counted, so nested pop-ups
+  // (e.g. gallery grid → photo lightbox) only unlock once the last one closes.
+  let scrollLocks = 0;
+  function lockScroll(on) {
+    scrollLocks = Math.max(0, scrollLocks + (on ? 1 : -1));
+    const locked = scrollLocks > 0 ? "hidden" : "";
+    document.documentElement.style.overflow = locked;
+    document.body.style.overflow = locked;
+  }
 
   // fill a boxed photo slot from a filename
   function setPhoto(sel, file) {
@@ -141,8 +154,8 @@
       countEl.textContent = (idx + 1) + " из " + files.length;
       roomEl.textContent = captions[idx] || "";
     }
-    function open(i) { show(i); lb.classList.add("is-open"); document.body.style.overflow = "hidden"; }
-    function close() { lb.classList.remove("is-open"); document.body.style.overflow = ""; }
+    function open(i) { show(i); lb.classList.add("is-open"); lockScroll(true); }
+    function close() { lb.classList.remove("is-open"); lockScroll(false); }
 
     boxes.forEach((b, i) => {
       if (files[i]) b.addEventListener("click", () => open(i));
@@ -193,14 +206,50 @@
     // reuse the lightbox for the expand view, layered above the modal
     initLightbox(cells, files, captions, "lb--over");
 
-    function open() { modal.hidden = false; document.body.style.overflow = "hidden"; }
-    function close() { modal.hidden = true; document.body.style.overflow = ""; }
+    function open() { modal.hidden = false; lockScroll(true); }
+    function close() { modal.hidden = true; lockScroll(false); }
     btn.addEventListener("click", (e) => { e.preventDefault(); open(); });
     modal.addEventListener("click", (e) => { if (e.target.hasAttribute("data-gmodal-close")) close(); });
     document.addEventListener("keydown", (e) => {
       // Esc closes the lightbox first (if open), then the modal
       if (e.key === "Escape" && !modal.hidden && !document.querySelector(".lb.is-open")) close();
     });
+  }
+
+  /* Full-spec pop-up — the "Полная спецификация" button opens a modal with the
+     complete, grouped spec sheet. Data is per-boat (content.fullSpecs), so the
+     button only appears for boats that supply it. */
+  function initSpecModal(btn, groups) {
+    if (!btn || !Array.isArray(groups)) return;
+    const modal = document.createElement("div");
+    modal.className = "smodal";
+    modal.hidden = true;
+    modal.innerHTML =
+      '<div class="smodal__overlay" data-smodal-close></div>' +
+      '<div class="smodal__box" role="dialog" aria-modal="true" aria-label="Полная спецификация">' +
+        '<div class="smodal__head">' +
+          '<h2 class="smodal__title">Полная спецификация</h2>' +
+          '<button class="smodal__close" type="button" data-smodal-close aria-label="Закрыть">&times;</button>' +
+        '</div>' +
+        '<div class="smodal__body">' +
+          groups.map((g) =>
+            '<div class="smodal__group"><h3 class="smodal__grouptitle">' + g[0] + "</h3>" +
+              '<ul class="smodal__list">' +
+                g[1].map((r) => "<li><span>" + r[0] + "</span><span>" + r[1] + "</span></li>").join("") +
+              "</ul></div>"
+          ).join("") +
+        "</div>" +
+      "</div>";
+    document.body.appendChild(modal);
+
+    let openedAt = 0;
+    function open() { modal.hidden = false; lockScroll(true); openedAt = Date.now(); }
+    function close() { modal.hidden = true; lockScroll(false); }
+    btn.addEventListener("click", (e) => { e.preventDefault(); open(); });
+    modal.addEventListener("click", (e) => {
+      if (e.target.hasAttribute("data-smodal-close") && Date.now() - openedAt > 300) close();
+    });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !modal.hidden) close(); });
   }
 
   /* Spotlight — an annotated photo in a frosted modal. Markers sit over the
@@ -256,9 +305,9 @@
       "</div>";
     document.body.appendChild(sp);
 
-    function open() { sp.classList.add("is-open"); document.body.style.overflow = "hidden"; }
+    function open() { sp.classList.add("is-open"); lockScroll(true); }
     function clearActive() { sp.querySelectorAll(".is-active").forEach((el) => el.classList.remove("is-active")); }
-    function close() { sp.classList.remove("is-open"); document.body.style.overflow = ""; clearActive(); }
+    function close() { sp.classList.remove("is-open"); lockScroll(false); clearActive(); }
     triggers.forEach((t) => t.addEventListener("click", open));
     sp.querySelector(".spot__close").addEventListener("click", close);
     sp.addEventListener("click", function (e) { if (e.target === sp) close(); });
@@ -421,6 +470,15 @@
       // boats with no floor plans: let the spec table span full width in two columns
       const grid = document.querySelector(".wf-specsheet__grid");
       if (grid) grid.classList.toggle("wf-specsheet--wide", !!boat.specsWide);
+      // "Полная спецификация" button + pop-up — only for boats that supply fullSpecs
+      if (st && Array.isArray(c.fullSpecs)) {
+        const sb = document.createElement("a");
+        sb.className = "btn btn--secondary wf-specsheet__btn js-spec-open";
+        sb.href = "#";
+        sb.textContent = "Полная спецификация";
+        st.parentNode.appendChild(sb);
+        initSpecModal(sb, c.fullSpecs);
+      }
     }
     // FLOOR PLANS — build one box per deck (2 for CR, 3 for Fly, …); drop in
     // the line-art drawing where one exists (boat.photos.plans[i]).

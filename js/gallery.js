@@ -245,8 +245,8 @@
     if (lbImg.complete) applyOrient();
     caption(current[idx]);
   }
-  function open(i) { idx = i; show(); lb.classList.add("is-open"); document.body.style.overflow = "hidden"; }
-  function close() { lb.classList.remove("is-open"); lbImg.src = ""; document.body.style.overflow = ""; }
+  function open(i) { idx = i; show(); lb.classList.add("is-open"); document.documentElement.style.overflow = "hidden"; document.body.style.overflow = "hidden"; }
+  function close() { lb.classList.remove("is-open"); lbImg.src = ""; document.documentElement.style.overflow = ""; document.body.style.overflow = ""; }
   function step(d) { idx = (idx + d + current.length) % current.length; show(); }
 
   grid.addEventListener("click", function (e) {

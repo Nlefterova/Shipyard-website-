@@ -811,6 +811,9 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 .wf-plan__label li:not(:first-child)::before{content:"";flex:none;
   width:3px;height:3px;border:.5px solid currentColor;border-radius:50%}
 .wf-plan__deck{font-weight:700;color:var(--near-black)}
+/* T-Rex 44 CR only: tighter gap between the wrapped label lines + dropped lower,
+   leaving more space between the drawing and the text */
+body[data-boat="trex-44cr"] .wf-plan__label{gap:.1rem .5rem;bottom:clamp(.3rem,.8vw,.45rem);line-height:1.2}
 
 /* ============================================================
    ABOUT PAGE — low-fi wireframe
@@ -1240,7 +1243,7 @@ a.ct-chip:hover{color:var(--brass)}
 .gmodal__head{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.3rem;border-bottom:1px solid var(--grey-100);flex:0 0 auto}
 .gmodal__title{font-family:var(--serif);color:var(--navy);font-size:1.3rem;margin:0}
 .gmodal__close{background:none;border:0;font-size:1.9rem;line-height:1;color:var(--navy);cursor:pointer;padding:0 .25rem}
-.gmodal__grid{flex:1;overflow-y:auto;padding:1.1rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.8rem;grid-auto-rows:170px;align-content:start}
+.gmodal__grid{flex:1;overflow-y:auto;overscroll-behavior:contain;padding:1.1rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.8rem;grid-auto-rows:170px;align-content:start}
 .gmodal__cell{border:0;padding:0;cursor:pointer;height:100%;background-size:cover;background-position:center;border-radius:8px;overflow:hidden;transition:transform .15s ease,box-shadow .15s ease}
 .gmodal__cell:hover{transform:scale(1.02);box-shadow:0 10px 24px rgba(0,0,0,.25)}
 .lb.lb--over{z-index:360}
@@ -1249,3 +1252,20 @@ a.ct-chip:hover{color:var(--brass)}
 .lb .lb__figure.is-portrait{height:min(86vh,900px);aspect-ratio:2/3;max-width:92vw}
 .lb .lb__figure.is-landscape .lb__img,
 .lb .lb__figure.is-portrait .lb__img{width:100%;height:100%;max-width:none;max-height:none;object-fit:cover}
+
+/* Full-spec pop-up */
+.smodal{position:fixed;inset:0;z-index:300;display:flex;align-items:center;justify-content:center;padding:clamp(1rem,3vw,1.6rem)}
+.smodal[hidden]{display:none}
+.smodal__overlay{position:absolute;inset:0;background:rgba(23,28,70,.55);backdrop-filter:blur(2px)}
+.smodal__box{position:relative;width:min(640px,96vw);max-height:88vh;background:var(--cream);border-radius:14px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.42)}
+.smodal__head{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.3rem;border-bottom:1px solid var(--grey-100);flex:0 0 auto}
+.smodal__title{font-family:var(--serif);color:var(--navy);font-size:1.25rem;margin:0}
+.smodal__close{background:none;border:0;font-size:1.9rem;line-height:1;color:var(--navy);cursor:pointer;padding:0 .25rem}
+.smodal__body{overflow-y:auto;overscroll-behavior:contain;padding:.4rem 1.3rem 1.3rem}
+.smodal__group{margin-top:2.4rem}
+.smodal__group:first-child{margin-top:1rem}
+.smodal__grouptitle{font-family:var(--sans);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--brass);margin:0 0 .25rem;font-weight:700}
+.smodal__list{list-style:none;margin:0;padding:0}
+.smodal__list li{display:flex;justify-content:space-between;gap:1.5rem;padding:.55rem 0;border-bottom:1px solid var(--grey-100);font-family:var(--sans);font-size:.92rem}
+.smodal__list li>span:first-child{color:var(--charcoal)}
+.smodal__list li>span:last-child{color:var(--brass);font-weight:600;text-align:right}

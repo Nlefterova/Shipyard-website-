@@ -32,16 +32,18 @@
   var titleEl = modal.querySelector(".bmodal__title");
   var dlEl = modal.querySelector(".bmodal__dl");
 
+  var openedAt = 0;
   function open(url, title) {
     titleEl.textContent = title || "Буклет";
     dlEl.href = url;
     frame.src = url + "#view=FitH";
     modal.hidden = false;
-    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden"; document.body.style.overflow = "hidden";
+    openedAt = Date.now();
   }
   function close() {
     modal.hidden = true;
-    document.body.style.overflow = "";
+    document.documentElement.style.overflow = ""; document.body.style.overflow = "";
     frame.src = "about:blank"; // stop the PDF rendering in the background
   }
 
@@ -52,7 +54,8 @@
     });
   });
   modal.addEventListener("click", function (e) {
-    if (e.target.hasAttribute("data-bmodal-close")) close();
+    // ignore the tail of the opening gesture bleeding onto the overlay
+    if (e.target.hasAttribute("data-bmodal-close") && Date.now() - openedAt > 300) close();
   });
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape" && !modal.hidden) close();
