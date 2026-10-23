@@ -69,7 +69,7 @@ const BOATS = [
       ]
     } },
   { id: "trex-44cr", family: "trex", name: "T-Rex 44 CR",  status: "available", year: "2023", img: "trex44cr.jpg", cardImg: "trex44cr-card.jpg",
-    photos: { hero2: "trex44cr-2.jpg", overview: "trex44cr-dock.jpg?v=2", construction: "trex44cr-beach.jpg?v=2", thumbs: ["trex44cr-i1.jpg","trex44cr-i2.jpg","trex44cr-i3.jpg","trex44cr-i4.jpg","trex44cr-i5.jpg","trex44cr-i6.jpg"], captions: ["Камбуз","Камбуз","Мастер-каюта","Носовая каюта","Санузел","Душевая"], gallery: ["trex44cr-i5.jpg","trex44cr-i1.jpg","trex44cr-beach.jpg?v=2","trex44cr-i3.jpg","trex44cr-i4.jpg","trex44cr-dock.jpg?v=2","trex44cr-2.jpg","trex44cr-i2.jpg","trex44cr-i6.jpg"], plans: ["trex44cr-plan1.png","trex44cr-plan2.png"] },
+    photos: { hero2: "trex44cr-2.jpg", overview: "trex44cr-dock.jpg?v=2", construction: "trex44cr-beach.jpg?v=2", thumbs: ["trex44cr-i1.jpg","trex44cr-i2.jpg","trex44cr-i3.jpg","trex44cr-i4.jpg","trex44cr-i5.jpg","trex44cr-i6.jpg"], captions: ["Камбуз","Камбуз","Мастер-каюта","Носовая каюта","Санузел","Душевая"], gallery: ["trex44cr-i5.jpg","trex44cr-i1.jpg","trex44cr-beach.jpg?v=2","trex44cr-i3.jpg","trex44cr-i4.jpg","trex44cr-dock.jpg?v=2","trex44cr-2.jpg","trex44cr-i2.jpg","trex44cr-i6.jpg","trex44cr.jpg","trex44cr-alpine.jpg","trex44cr-drone.jpg","trex44cr-yamaha.jpg","trex44cr-sink.jpg","trex44cr-frontcabin.jpg","trex44cr-smallroom.jpg","trex44cr-master2.jpg","trex44cr-dock-dusk.jpg","trex44cr-cuddy.jpg"], plans: ["trex44cr-plan1.png","trex44cr-plan2.png"] },
     content: {
       eyebrow: "Глиссирующий катер",
       booklet: true,

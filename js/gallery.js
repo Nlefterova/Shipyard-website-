@@ -223,6 +223,7 @@
   var lb = document.getElementById("galLb");
   var lbImg = document.getElementById("galLbImg");
   var lbCap = document.getElementById("galLbCap");
+  var lbFig = lbImg.closest(".gal-lb__fig") || lbImg.parentNode;
   var idx = 0;
 
   function caption(f) {
@@ -231,7 +232,19 @@
       ? '<span class="gal-lb__name">' + m.name + '</span><span class="gal-lb__year">' + m.year + '</span>'
       : "";
   }
-  function show() { lbImg.src = src(current[idx]); caption(current[idx]); }
+  // fixed frame per orientation: one size for landscape, one for portrait
+  function applyOrient() {
+    if (!lbImg.naturalWidth) return;
+    lbFig.classList.remove("is-portrait", "is-landscape");
+    lbFig.classList.add(lbImg.naturalHeight > lbImg.naturalWidth ? "is-portrait" : "is-landscape");
+  }
+  function show() {
+    lbFig.classList.remove("is-portrait", "is-landscape");
+    lbImg.onload = applyOrient;
+    lbImg.src = src(current[idx]);
+    if (lbImg.complete) applyOrient();
+    caption(current[idx]);
+  }
   function open(i) { idx = i; show(); lb.classList.add("is-open"); document.body.style.overflow = "hidden"; }
   function close() { lb.classList.remove("is-open"); lbImg.src = ""; document.body.style.overflow = ""; }
   function step(d) { idx = (idx + d + current.length) % current.length; show(); }

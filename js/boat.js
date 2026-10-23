@@ -84,6 +84,14 @@
           }
         });
         if (boat.fitMedia) gboxes.forEach((el) => { if (!el.classList.contains("is-photo")) el.remove(); });
+
+        // "Галерея" button → open the whole set in a large pop-up.
+        // No per-photo descriptors here: the set mixes interiors and exteriors,
+        // so captions would only cover some photos — keep it clean (counter only).
+        const gbtn = document.querySelector(".wf-gallery__btn");
+        if (gbtn && !(boat && boat.hideGalleryBtn)) {
+          initGalleryModal(gbtn, boat.photos.gallery);
+        }
       }
       // (floor plans are rendered in fillContent, so the box count follows the data)
     }
@@ -99,23 +107,37 @@
     const lb = document.createElement("div");
     lb.className = "lb" + (lbClass ? " " + lbClass : "");
     lb.innerHTML =
-      '<button class="lb__nav lb__prev" aria-label="Назад">‹</button>' +
-      '<figure class="lb__figure">' +
+      '<div class="lb__stage">' +
+        '<figure class="lb__figure">' +
+          '<button class="lb__nav lb__prev" aria-label="Назад">‹</button>' +
+          '<img class="lb__img" alt="">' +
+          '<button class="lb__nav lb__next" aria-label="Вперёд">›</button>' +
+          '<figcaption class="lb__caption"><span class="lb__count"></span><span class="lb__room"></span></figcaption>' +
+        '</figure>' +
         '<button class="lb__close" aria-label="Закрыть">×</button>' +
-        '<img class="lb__img" alt="">' +
-        '<figcaption class="lb__caption"><span class="lb__count"></span><span class="lb__room"></span></figcaption>' +
-      '</figure>' +
-      '<button class="lb__nav lb__next" aria-label="Вперёд">›</button>';
+      '</div>';
     document.body.appendChild(lb);
 
     const imgEl = lb.querySelector(".lb__img");
+    const figEl = lb.querySelector(".lb__figure");
     const countEl = lb.querySelector(".lb__count");
     const roomEl = lb.querySelector(".lb__room");
     let idx = 0;
 
+    // give the figure a portrait/landscape class so the frame stays a fixed
+    // size per orientation (styled for the gallery lightbox, .lb--over)
+    function applyOrient() {
+      if (!imgEl.naturalWidth) return;
+      figEl.classList.remove("is-portrait", "is-landscape");
+      figEl.classList.add(imgEl.naturalHeight > imgEl.naturalWidth ? "is-portrait" : "is-landscape");
+    }
+
     function show(i) {
       idx = (i + files.length) % files.length;
+      figEl.classList.remove("is-portrait", "is-landscape");
+      imgEl.onload = applyOrient;
       imgEl.src = "assets/img/" + files[idx];
+      if (imgEl.complete) applyOrient();
       countEl.textContent = (idx + 1) + " из " + files.length;
       roomEl.textContent = captions[idx] || "";
     }
@@ -134,6 +156,50 @@
       if (e.key === "Escape") close();
       else if (e.key === "ArrowLeft") show(idx - 1);
       else if (e.key === "ArrowRight") show(idx + 1);
+    });
+  }
+
+  /* Gallery pop-up — the "Галерея" button opens a large rectangular modal with
+     a scrollable grid of every photo; clicking a photo expands it in the shared
+     lightbox (layered above the modal). */
+  function initGalleryModal(btn, files, captions) {
+    files = (files || []).filter(Boolean);
+    if (!btn || !files.length) return;
+
+    const modal = document.createElement("div");
+    modal.className = "gmodal";
+    modal.hidden = true;
+    modal.innerHTML =
+      '<div class="gmodal__overlay" data-gmodal-close></div>' +
+      '<div class="gmodal__box" role="dialog" aria-modal="true" aria-label="Галерея">' +
+        '<div class="gmodal__head">' +
+          '<h2 class="gmodal__title">Галерея</h2>' +
+          '<button class="gmodal__close" type="button" data-gmodal-close aria-label="Закрыть">&times;</button>' +
+        '</div>' +
+        '<div class="gmodal__grid"></div>' +
+      '</div>';
+    document.body.appendChild(modal);
+
+    const grid = modal.querySelector(".gmodal__grid");
+    const cells = files.map((f) => {
+      const cell = document.createElement("button");
+      cell.type = "button";
+      cell.className = "gmodal__cell";
+      cell.style.backgroundImage = "url('assets/img/" + f + "')";
+      grid.appendChild(cell);
+      return cell;
+    });
+
+    // reuse the lightbox for the expand view, layered above the modal
+    initLightbox(cells, files, captions, "lb--over");
+
+    function open() { modal.hidden = false; document.body.style.overflow = "hidden"; }
+    function close() { modal.hidden = true; document.body.style.overflow = ""; }
+    btn.addEventListener("click", (e) => { e.preventDefault(); open(); });
+    modal.addEventListener("click", (e) => { if (e.target.hasAttribute("data-gmodal-close")) close(); });
+    document.addEventListener("keydown", (e) => {
+      // Esc closes the lightbox first (if open), then the modal
+      if (e.key === "Escape" && !modal.hidden && !document.querySelector(".lb.is-open")) close();
     });
   }
 
