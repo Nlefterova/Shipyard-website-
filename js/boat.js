@@ -43,6 +43,11 @@
         if (el2) el2.style.backgroundPosition = boat.photos.hero2Pos;
       }
       setPhoto(".wf-overview__img", boat.photos.overview);
+      // optional per-boat crop position for the overview photo
+      if (boat.photos.overviewPos) {
+        const ov = document.querySelector(".wf-overview__img");
+        if (ov) ov.style.backgroundPosition = boat.photos.overviewPos;
+      }
       setPhoto(".wf-story__img", boat.photos.construction);
       if (Array.isArray(boat.photos.thumbs)) {
         const strip = document.querySelector(".wf-thumbs");
@@ -256,6 +261,13 @@
     });
   }
 
+  /* ---- Hide the "Галерея" button in the На борту header (e.g. a boat with no
+     further photos beyond the ones already shown on the page). */
+  if (boat && boat.hideGalleryBtn) {
+    const btn = document.querySelector(".wf-gallery__btn");
+    if (btn) btn.remove();
+  }
+
   /* ---- Drop the sections below the hero (Overview / Construction / Gallery /
      Specsheet) but keep the ENTIRE hero intact and the footer. */
   if (boat && boat.dropSections) {
@@ -307,16 +319,30 @@
     // OVERVIEW
     setText(".wf-overview .wf-lead", c.overviewLead);
     fillBodies(".wf-overview__text .wf-body", c.overviewBody);
-    // booklet button — kept only for boats that actually have a booklet
+    // booklet button — kept only for boats that actually have a booklet.
+    // A string booklet is a PDF path → the button opens it in a pop-up viewer
+    // (js/booklet-modal.js). A bare `true` keeps the button as a placeholder.
     const bookBtn = document.querySelector(".wf-overview .wf-btns .btn--secondary");
     if (bookBtn) {
-      if (c.booklet) { if (typeof c.booklet === "string") bookBtn.href = c.booklet; }
+      if (c.booklet) {
+        if (typeof c.booklet === "string") {
+          bookBtn.href = c.booklet;
+          bookBtn.classList.add("js-booklet-open");
+          bookBtn.setAttribute("data-booklet", c.booklet);
+          bookBtn.setAttribute("data-booklet-title", (boat && boat.name ? boat.name : "") + " — буклет");
+        }
+      }
       else bookBtn.remove();
     }
     // STORY
     if (c.storyTitle) setText(".wf-story .wf-sectitle", c.storyTitle);
     setText(".wf-story .wf-lead", c.storyLead);
     fillBodies(".wf-story__text .wf-body", c.storyBody, true);
+    // drop the story-section buttons (e.g. no story page yet) — per-boat opt-in
+    if (boat && boat.hideStoryBtns) {
+      const sb = document.querySelector(".wf-story .wf-btns");
+      if (sb) sb.remove();
+    }
     // Inline story pop-up: a highlighted phrase opens an annotated photo
     if (c.storyPop && c.storyPop.photo) {
       const triggers = document.querySelectorAll(c.storyPop.sel || ".story-pop");
