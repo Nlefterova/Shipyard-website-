@@ -169,7 +169,7 @@ const BOATS = [
       hero2: "trex37.jpg?v=2", overview: "trex37-overview.jpg", construction: "trex37-story.jpg",
       thumbs: ["trex37-i1.jpg","trex37-i2.jpg","trex37-i3.jpg","trex37-i4.jpg","trex37-i5.jpg","trex37-i6.jpg"],
       captions: ["Пост управления","Салон","Кают-компания","Каюта","Камбуз","На воде"],
-      gallery: ["trex37-i2.jpg","trex37-i1.jpg","trex37.jpg?v=2","trex37-i3.jpg","trex37-i4.jpg","trex37-overview.jpg","trex37-2.jpg","trex37-i5.jpg","trex37-i6.jpg"],
+      gallery: ["trex37-2.jpg","trex37-i1.jpg","trex37.jpg?v=2","trex37-i3.jpg","trex37-i4.jpg","trex37-overview.jpg","trex37-i2.jpg","trex37-i5.jpg","trex37-i6.jpg"],
       plans: ["trex37-plan-side.png"]
     },
     content: {
