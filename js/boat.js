@@ -473,7 +473,22 @@
     // SPEC TABLE
     if (Array.isArray(c.specs)) {
       const st = document.querySelector(".wf-spectable");
-      if (st) st.innerHTML = c.specs.map((r) => "<li><span>" + r[0] + "</span><span>" + r[1] + "</span></li>").join("");
+      const row = (r) => "<li><span>" + r[0] + "</span><span>" + r[1] + "</span></li>";
+      // optional per-boat split: move the last `specsRight` rows under the floor
+      // plan (right column) so a short plan column balances the spec table
+      const splitN = (typeof c.specsRight === "number" && c.specsRight > 0) ? c.specsRight : 0;
+      const leftSpecs = splitN ? c.specs.slice(0, c.specs.length - splitN) : c.specs;
+      const rightSpecs = splitN ? c.specs.slice(c.specs.length - splitN) : [];
+      if (st) st.innerHTML = leftSpecs.map(row).join("");
+      if (rightSpecs.length) {
+        const rcol = document.querySelector(".wf-specsheet__right");
+        if (rcol) {
+          const ul = document.createElement("ul");
+          ul.className = "wf-spectable wf-spectable--underplan";
+          ul.innerHTML = rightSpecs.map(row).join("");
+          rcol.appendChild(ul);
+        }
+      }
       // boats with no floor plans: let the spec table span full width in two columns
       const grid = document.querySelector(".wf-specsheet__grid");
       if (grid) grid.classList.toggle("wf-specsheet--wide", !!boat.specsWide);
