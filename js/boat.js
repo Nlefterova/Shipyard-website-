@@ -440,7 +440,7 @@
     }
     // OVERVIEW
     setText(".wf-overview .wf-lead", c.overviewLead);
-    fillBodies(".wf-overview__text .wf-body", c.overviewBody);
+    fillBodies(".wf-overview__text .wf-body", c.overviewBody, true);
     // booklet button — kept only for boats that actually have a booklet.
     // A string booklet is a PDF path → the button opens it in a pop-up viewer
     // (js/booklet-modal.js). A bare `true` keeps the button as a placeholder.
