@@ -219,16 +219,17 @@
   /* Full-spec pop-up — the "Полная спецификация" button opens a modal with the
      complete, grouped spec sheet. Data is per-boat (content.fullSpecs), so the
      button only appears for boats that supply it. */
-  function initSpecModal(btn, groups) {
+  function initSpecModal(btn, groups, title) {
     if (!btn || !Array.isArray(groups)) return;
+    title = title || "Полная спецификация";
     const modal = document.createElement("div");
     modal.className = "smodal";
     modal.hidden = true;
     modal.innerHTML =
       '<div class="smodal__overlay" data-smodal-close></div>' +
-      '<div class="smodal__box" role="dialog" aria-modal="true" aria-label="Полная спецификация">' +
+      '<div class="smodal__box" role="dialog" aria-modal="true" aria-label="' + title + '">' +
         '<div class="smodal__head">' +
-          '<h2 class="smodal__title">Полная спецификация</h2>' +
+          '<h2 class="smodal__title">' + title + '</h2>' +
           '<button class="smodal__close" type="button" data-smodal-close aria-label="Закрыть">&times;</button>' +
         '</div>' +
         '<div class="smodal__body">' +
@@ -497,9 +498,9 @@
         const sb = document.createElement("a");
         sb.className = "btn btn--secondary wf-specsheet__btn js-spec-open";
         sb.href = "#";
-        sb.textContent = "Полная спецификация";
+        sb.textContent = c.fullSpecsLabel || "Полная спецификация";
         st.parentNode.appendChild(sb);
-        initSpecModal(sb, c.fullSpecs);
+        initSpecModal(sb, c.fullSpecs, c.fullSpecsLabel || "Полная спецификация");
       }
     }
     // FLOOR PLANS — build one box per deck (2 for CR, 3 for Fly, …); drop in
