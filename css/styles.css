@@ -1158,7 +1158,7 @@ a.ct-chip:hover{color:var(--brass)}
   box-shadow:0 20px 60px rgba(0,0,0,.5);display:block}
 /* fixed frames: one size for landscape, one for portrait */
 .gal-lb__fig.is-landscape{width:min(1100px,92vw);aspect-ratio:3/2;max-height:86vh}
-.gal-lb__fig.is-portrait{height:min(86vh,900px);aspect-ratio:2/3;max-width:92vw}
+.gal-lb__fig.is-portrait{width:min(600px,57.33vh,92vw);aspect-ratio:2/3;max-width:92vw}
 .gal-lb__fig.is-landscape .gal-lb__img,
 .gal-lb__fig.is-portrait .gal-lb__img{width:100%;height:100%;max-width:none;max-height:none;object-fit:cover}
 .gal-lb__cap{position:absolute;left:clamp(.9rem,2vw,1.5rem);bottom:clamp(.9rem,2vw,1.5rem);
@@ -1249,7 +1249,7 @@ a.ct-chip:hover{color:var(--brass)}
 .lb.lb--over{z-index:360}
 /* fixed frames so the expanded view is one size for landscape, one for portrait */
 .lb .lb__figure.is-landscape{width:min(1100px,92vw);aspect-ratio:3/2;max-height:86vh}
-.lb .lb__figure.is-portrait{height:min(86vh,900px);aspect-ratio:2/3;max-width:92vw}
+.lb .lb__figure.is-portrait{width:min(600px,57.33vh,92vw);aspect-ratio:2/3;max-width:92vw}
 .lb .lb__figure.is-landscape .lb__img,
 .lb .lb__figure.is-portrait .lb__img{width:100%;height:100%;max-width:none;max-height:none;object-fit:cover}
 

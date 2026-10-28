@@ -383,6 +383,13 @@
     if (btn) btn.remove();
   }
 
+  /* ---- Floor plans not ready yet: blank the plan column (keeps the spec
+     section's two-column layout; the space is reserved for the real plans). */
+  if (boat && boat.noPlans) {
+    const wp = document.querySelector(".wf-plans");
+    if (wp) wp.innerHTML = "";
+  }
+
   /* ---- Drop the sections below the hero (Overview / Construction / Gallery /
      Specsheet) but keep the ENTIRE hero intact and the footer. */
   if (boat && boat.dropSections) {
