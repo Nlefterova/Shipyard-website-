@@ -377,11 +377,21 @@
     });
   }
 
-  /* ---- No numeric specs yet (only the build year): drop the hero
-     "Характеристики" block but keep the Год постройки. */
+  /* ---- No numeric specs (only the build year): drop the hero
+     "Характеристики" block, and turn the lower spec section into a
+     plans-only "Планировка" section. */
   if (boat && boat.noSpecs) {
-    const el = document.querySelector(".wf-specs");
-    if (el) el.remove();
+    const heroSpecs = document.querySelector(".wf-specs");
+    if (heroSpecs) heroSpecs.remove();
+    const sheet = document.querySelector(".wf-specsheet");
+    if (sheet) {
+      const title = sheet.querySelector(".wf-sectitle");
+      if (title) title.textContent = "Планировки";
+      const left = sheet.querySelector(".wf-specsheet__left");
+      if (left) left.remove();
+      const grid = sheet.querySelector(".wf-specsheet__grid");
+      if (grid) grid.style.gridTemplateColumns = "1fr";
+    }
   }
 
   /* ---- Hide the "Галерея" button in the На борту header (e.g. a boat with no
@@ -413,6 +423,30 @@
      overrides whichever fields it provides; anything it omits stays wireframe. */
   fillWireframe();
   if (boat && boat.content) fillContent(boat);
+
+  // noSpecs: the plans were (re)built by fillContent above, so lay them out
+  // in a row here with each deck label below its drawing (no overlap).
+  if (boat && boat.noSpecs) {
+    const plans = document.querySelector(".wf-specsheet .wf-plans");
+    if (plans) {
+      plans.style.flexDirection = "row";
+      plans.style.alignItems = "flex-start";
+      plans.style.width = "100%";
+      plans.querySelectorAll(".wf-plans__img").forEach((b) => {
+        const label = b.querySelector(".wf-plan__label");
+        const wrap = document.createElement("div");
+        wrap.style.cssText = "flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:.6rem";
+        b.parentNode.insertBefore(wrap, b);
+        wrap.appendChild(b);
+        b.style.width = "100%";
+        if (label) {
+          label.style.position = "static";
+          label.style.left = label.style.right = label.style.bottom = "auto";
+          wrap.appendChild(label);
+        }
+      });
+    }
+  }
 
   // tiny DOM helpers
   function setText(sel, txt) { const el = document.querySelector(sel); if (el && txt != null) el.textContent = txt; }

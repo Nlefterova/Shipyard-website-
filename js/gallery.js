@@ -63,6 +63,7 @@
     "volnyi-i1.jpg": "salon", "volnyi-i2.jpg": "captain", "volnyi-i3.jpg": "salon", "volnyi-i4.jpg": "bedroom", "volnyi-i5.jpg": "bedroom", "volnyi-i6.jpg": "salon",
     "yeti-i1.jpg": "salon", "yeti-i2.jpg": "captain", "yeti-i3.jpg": "salon", "yeti-i4.jpg": "bedroom", "yeti-i5.jpg": "bedroom", "yeti-i6.jpg": "bedroom",
     "aleksandriya-i1.jpg": "salon", "aleksandriya-i2.jpg": "salon", "aleksandriya-i3.jpg": "kitchen", "aleksandriya-i4.jpg": "bedroom", "aleksandriya-i5.jpg": "bedroom", "aleksandriya-i6.jpg": "bathroom",
+    "aleksandriya-e1.jpg": "salon", "aleksandriya-e2.jpg": "salon", "aleksandriya-e3.jpg": "salon", "aleksandriya-e4.jpg": "salon", "aleksandriya-e5.jpg": "salon",
     "laita-i1.jpg": "salon", "laita-i2.jpg": "captain", "laita-i3.jpg": "bedroom", "laita-i4.jpg": "bedroom",
     "frank-i1.jpg": "salon", "frank-i2.jpg": "kitchen", "frank-i3.jpg": "bedroom", "frank-i4.jpg": "bedroom", "frank-i5.jpg": "bathroom", "frank-i6.jpg": "captain"
   };
@@ -89,6 +90,7 @@
       "volnyi-i1.jpg", "volnyi-i2.jpg", "volnyi-i3.jpg", "volnyi-i4.jpg", "volnyi-i5.jpg", "volnyi-i6.jpg",
       "yeti-i1.jpg", "yeti-i2.jpg", "yeti-i3.jpg", "yeti-i4.jpg", "yeti-i5.jpg", "yeti-i6.jpg",
       "aleksandriya-i1.jpg", "aleksandriya-i2.jpg", "aleksandriya-i3.jpg", "aleksandriya-i4.jpg", "aleksandriya-i5.jpg", "aleksandriya-i6.jpg",
+      "aleksandriya-e1.jpg", "aleksandriya-e2.jpg", "aleksandriya-e3.jpg", "aleksandriya-e4.jpg", "aleksandriya-e5.jpg",
       "laita-i1.jpg", "laita-i2.jpg", "laita-i3.jpg", "laita-i4.jpg",
       "frank-i1.jpg", "frank-i2.jpg", "frank-i3.jpg", "frank-i4.jpg", "frank-i5.jpg", "frank-i6.jpg"
     ],
@@ -101,7 +103,7 @@
       "exp65lux.jpg", "exp65lux-2.jpg", "exp65lux-overview.jpg", "exp65lux-story.jpg",
       "exp65lux-e1.jpg", "exp65lux-e2.jpg", "exp65lux-e3.jpg", "exp65lux-e4.jpg", "exp65lux-e5.jpg", "exp65lux-e6.jpg",
       "sibirsky.jpg", "sibirsky-2.jpg", "sibirsky-overview.jpg", "sibirsky-story.jpg", "sibirsky-e1.jpg",
-      "aleksandriya.jpg", "aleksandriya-2.jpg", "aleksandriya-3.jpg", "aleksandriya-4.jpg",
+      "aleksandriya.jpg", "aleksandriya-2.jpg", "aleksandriya-3.jpg", "aleksandriya-4.jpg", "aleksandriya-e6.jpg",
       "mius.jpg", "mius-2.jpg", "mius-overview.jpg", "mius-story.jpg",
       "natali.jpg", "natali-2.jpg", "natali-overview.jpg", "natali-story.jpg",
       "kasatka.jpg", "kasatka-2.jpg", "kasatka-overview.jpg", "kasatka-story.jpg",

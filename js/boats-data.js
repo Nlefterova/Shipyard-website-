@@ -393,12 +393,12 @@ const BOATS = [
       thumbs: ["aleksandriya-i1.jpg", "aleksandriya-i2.jpg", "aleksandriya-i3.jpg", "aleksandriya-i4.jpg", "aleksandriya-i5.jpg", "aleksandriya-i6.jpg"],
       captions: ["Салон", "Обеденная зона", "Камбуз", "Каюта", "Интерьер", "Санузел"],
       gallery: ["aleksandriya-2.jpg", "aleksandriya-i1.jpg", "aleksandriya.jpg", "aleksandriya-i2.jpg", "aleksandriya-i4.jpg", "aleksandriya-3.jpg", "aleksandriya-i3.jpg", "aleksandriya-4.jpg", "aleksandriya-i6.jpg", "aleksandriya-e1.jpg", "aleksandriya-e2.jpg", "aleksandriya-e3.jpg", "aleksandriya-e4.jpg", "aleksandriya-e5.jpg", "aleksandriya-e6.jpg"],
-      plans: ["aleksandriya-plan-main.png", "aleksandriya-plan-lower.png", "aleksandriya-plan-side.png"] },
+      plans: ["aleksandriya-plan-side.png?v=2", "aleksandriya-plan-main.png?v=2", "aleksandriya-plan-lower.png?v=2"] },
     content: { eyebrow: "Круизное моторное судно", desc: "Крупное водоизмещающее судно",
       decks: [
+        { name: "Боковой вид", items: [] },
         { name: "Главная палуба", items: ["Пост управления", "Салон", "Обеденная зона", "Камбуз"] },
-        { name: "Нижняя палуба", items: ["Каюты", "Санузлы", "Кают-компания"] },
-        { name: "Боковой вид", items: [] }
+        { name: "Нижняя палуба", items: ["Каюты", "Санузлы", "Кают-компания"] }
       ] } },
   { id: "mius", family: "korabli", name: "Миус", status: "sold", year: "2018", img: "mius.jpg?v=2", cardImg: "mius-card.jpg?v=2", tags: ["На заказ"],
     photos: { hero2: "mius-2.jpg", hero2Pos: "center 64%", overview: "mius-overview.jpg", construction: "mius-story.jpg?v=2",
