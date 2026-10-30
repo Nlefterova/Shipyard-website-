@@ -400,15 +400,15 @@ const BOATS = [
         { name: "Главная палуба", items: ["Пост управления", "Салон", "Обеденная зона", "Камбуз"] },
         { name: "Нижняя палуба", items: ["Каюты", "Санузлы", "Кают-компания"] }
       ] } },
-  { id: "mius", family: "korabli", name: "Миус", status: "sold", year: "2018", img: "mius.jpg?v=2", cardImg: "mius-card.jpg?v=2", tags: ["На заказ"],
+  { id: "mius", family: "korabli", name: "Миус", status: "sold", year: "2018", img: "mius.jpg?v=2", cardImg: "mius-card.jpg?v=2", tags: ["На заказ"], hideGalleryBtn: true,
     photos: { hero2: "mius-2.jpg", hero2Pos: "center 64%", overview: "mius-overview.jpg", construction: "mius-story.jpg?v=2",
-      thumbs: ["mius-i1.jpg","mius-i2.jpg?v=2","mius-i3.jpg?v=2","mius-i4.jpg","mius-i5.jpg","mius-i6.jpg"],
+      thumbs: ["mius-i1.jpg","mius-i2.jpg?v=3","mius-i3.jpg?v=2","mius-i4.jpg","mius-i5.jpg","mius-i6.jpg"],
       captions: ["Ходовая рубка","Кают-компания","Салон","Камбуз","Каюта","Санузел"],
-      gallery: ["mius-i2.jpg?v=2","mius-2.jpg","mius-i5.jpg","mius-i4.jpg","mius-overview.jpg","mius-i3.jpg?v=2","mius-i6.jpg","mius-story.jpg","mius-i1.jpg"],
+      gallery: ["mius-i2.jpg?v=3","mius-2.jpg","mius-i5.jpg","mius-i4.jpg","mius-overview.jpg","mius-i3.jpg?v=2","mius-i6.jpg","mius-story.jpg","mius-i1.jpg"],
       plans: ["mius-plan-side.png?v=2","mius-plan-upper.png?v=2","mius-plan-lower.png?v=2"] },
     content: {
       eyebrow: "Круизный корабль",
-      desc: "Стальной круизный корабль 17,25 метра водоизмещающего типа — для дальних походов по большой воде",
+      desc: "Стальной круизный корабль",
       heroSpecs: [["Длина","17,25 м"],["Каюты","2"],["Вместимость","12 человек"],["Мощность","480 л.с."]],
       overviewLead: "Стальной круизный корабль водоизмещающего типа — 17,25 метра для большой воды",
       overviewBody: [
