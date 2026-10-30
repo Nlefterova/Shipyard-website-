@@ -338,7 +338,7 @@ const BOATS = [
       thumbs: ["sibirsky-i1.jpg","sibirsky-i2.jpg","sibirsky-i3.jpg","sibirsky-i4.jpg","sibirsky-i5.jpg","sibirsky-i6.jpg"],
       captions: ["Салон и рубка","Кают-компания","Камбуз","Мастер-каюта","Носовая каюта","Санузел"],
       gallery: ["sibirsky-i1.jpg","sibirsky-2.jpg","sibirsky-i4.jpg","sibirsky-i3.jpg","sibirsky-overview.jpg","sibirsky-i2.jpg","sibirsky-i5.jpg","sibirsky-story.jpg","sibirsky-i6.jpg"],
-      plans: ["sibirsky-plan-side.png","sibirsky-plan-upper.png","sibirsky-plan-lower.png"] },
+      plans: ["sibirsky-plan-side.png?v=2","sibirsky-plan-upper.png?v=2","sibirsky-plan-lower.png?v=2"] },
     content: {
       eyebrow: "Экспедиционное судно",
       desc: "Экспедиционное судно класса «река-море»",
