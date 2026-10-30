@@ -468,11 +468,9 @@
     if (c.storyTitle) setText(".wf-story .wf-sectitle", c.storyTitle);
     setText(".wf-story .wf-lead", c.storyLead);
     fillBodies(".wf-story__text .wf-body", c.storyBody, true);
-    // drop the story-section buttons (e.g. no story page yet) — per-boat opt-in
-    if (boat && boat.hideStoryBtns) {
-      const sb = document.querySelector(".wf-story .wf-btns");
-      if (sb) sb.remove();
-    }
+    // drop the story-section buttons for every boat (no standalone story pages)
+    const sb = document.querySelector(".wf-story .wf-btns");
+    if (sb) sb.remove();
     // Inline story pop-up: a highlighted phrase opens an annotated photo
     if (c.storyPop && c.storyPop.photo) {
       const triggers = document.querySelectorAll(c.storyPop.sel || ".story-pop");
