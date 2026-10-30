@@ -377,6 +377,13 @@
     });
   }
 
+  /* ---- No numeric specs yet (only the build year): drop the hero
+     "Характеристики" block but keep the Год постройки. */
+  if (boat && boat.noSpecs) {
+    const el = document.querySelector(".wf-specs");
+    if (el) el.remove();
+  }
+
   /* ---- Hide the "Галерея" button in the На борту header (e.g. a boat with no
      further photos beyond the ones already shown on the page). */
   if (boat && boat.hideGalleryBtn) {
