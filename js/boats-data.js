@@ -337,7 +337,7 @@ const BOATS = [
     photos: { hero2: "sibirsky-2.jpg", overview: "sibirsky-overview.jpg", construction: "sibirsky-story.jpg",
       thumbs: ["sibirsky-i1.jpg","sibirsky-i2.jpg","sibirsky-i3.jpg","sibirsky-i4.jpg","sibirsky-i5.jpg","sibirsky-i6.jpg"],
       captions: ["Салон и рубка","Кают-компания","Камбуз","Мастер-каюта","Носовая каюта","Санузел"],
-      gallery: ["sibirsky-i1.jpg","sibirsky-2.jpg","sibirsky-i4.jpg","sibirsky-i3.jpg","sibirsky-overview.jpg","sibirsky-i2.jpg","sibirsky-i5.jpg","sibirsky-story.jpg","sibirsky-i6.jpg"],
+      gallery: ["sibirsky-i1.jpg","sibirsky-2.jpg","sibirsky-i4.jpg","sibirsky-i3.jpg","sibirsky-overview.jpg","sibirsky-i2.jpg","sibirsky-i5.jpg","sibirsky-story.jpg","sibirsky-i6.jpg","sibirsky-e1.jpg","sibirsky-e2.jpg","sibirsky-e3.jpg","sibirsky-e4.jpg"],
       plans: ["sibirsky-plan-side.png?v=2","sibirsky-plan-upper.png?v=2","sibirsky-plan-lower.png?v=2"] },
     content: {
       eyebrow: "Экспедиционное судно",
