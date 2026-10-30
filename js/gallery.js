@@ -36,7 +36,7 @@
   };
 
   function prefixOf(f) {
-    return f.replace(/\.(jpg|png)$/i, "").replace(/-(i?\d+|beach|dock)$/i, "");
+    return f.replace(/\.(jpg|png)$/i, "").replace(/-([ie]?\d+|beach|dock)$/i, "");
   }
   function meta(f) { return META[prefixOf(f)] || null; }
 
@@ -44,6 +44,7 @@
   var ROOM_ORDER = ["salon", "kitchen", "bedroom", "captain", "sauna", "outdoor", "bathroom"];
   var ROOMS = {
     "exp65lux-i1.jpg": "bedroom", "exp65lux-i2.jpg": "salon", "exp65lux-i3.jpg": "salon", "exp65lux-i4.jpg": "kitchen", "exp65lux-i5.jpg": "sauna", "exp65lux-i6.jpg": "bedroom",
+    "exp65lux-e7.jpg": "captain", "exp65lux-e8.jpg": "salon", "exp65lux-e9.jpg": "salon", "exp65lux-e10.jpg": "kitchen", "exp65lux-e11.jpg": "kitchen", "exp65lux-e12.jpg": "kitchen", "exp65lux-e13.jpg": "bathroom", "exp65lux-e14.jpg": "bathroom", "exp65lux-e15.jpg": "bathroom", "exp65lux-e16.jpg": "kitchen", "exp65lux-e17.jpg": "kitchen", "exp65lux-e18.jpg": "bedroom", "exp65lux-e19.jpg": "bedroom", "exp65lux-e20.jpg": "sauna", "exp65lux-e21.jpg": "sauna",
     "gulyanka2003-i1.jpg": "outdoor", "gulyanka2003-i2.jpg": "salon", "gulyanka2003-i3.jpg": "kitchen", "gulyanka2003-i4.jpg": "salon", "gulyanka2003-i5.jpg": "bedroom", "gulyanka2003-i6.jpg": "bathroom",
     "kasatka-i1.jpg": "outdoor", "kasatka-i2.jpg": "captain", "kasatka-i3.jpg": "bedroom", "kasatka-i4.jpg": "kitchen", "kasatka-i5.jpg": "salon", "kasatka-i6.jpg": "sauna",
     "l1050-i1.jpg": "salon", "l1050-i2.jpg": "captain", "l1050-i3.jpg": "kitchen", "l1050-i4.jpg": "bedroom", "l1050-i6.jpg": "bathroom",
@@ -68,6 +69,7 @@
   var GALLERY = {
     interior: [
       "exp65lux-i1.jpg", "exp65lux-i2.jpg", "exp65lux-i3.jpg", "exp65lux-i4.jpg", "exp65lux-i5.jpg", "exp65lux-i6.jpg",
+      "exp65lux-e7.jpg", "exp65lux-e8.jpg", "exp65lux-e9.jpg", "exp65lux-e10.jpg", "exp65lux-e11.jpg", "exp65lux-e12.jpg", "exp65lux-e13.jpg", "exp65lux-e14.jpg", "exp65lux-e15.jpg", "exp65lux-e16.jpg", "exp65lux-e17.jpg", "exp65lux-e18.jpg", "exp65lux-e19.jpg", "exp65lux-e20.jpg", "exp65lux-e21.jpg",
       "gulyanka2003-i1.jpg", "gulyanka2003-i2.jpg", "gulyanka2003-i3.jpg", "gulyanka2003-i4.jpg", "gulyanka2003-i5.jpg", "gulyanka2003-i6.jpg",
       "kasatka-i1.jpg", "kasatka-i2.jpg", "kasatka-i3.jpg", "kasatka-i4.jpg", "kasatka-i5.jpg", "kasatka-i6.jpg",
       "l1050-i1.jpg", "l1050-i2.jpg", "l1050-i3.jpg", "l1050-i4.jpg", "l1050-i6.jpg",
@@ -95,6 +97,7 @@
       "trex40.jpg", "trex40-2.jpg", "trex40-3.jpg", "trex40-4.jpg", "trex40-overview.jpg", "trex40-story.jpg", "trex40-story2.jpg", "trex40-i6.jpg",
       "trex37.jpg", "trex37-2.jpg", "trex37-overview.jpg", "trex37-story.jpg", "trex37-i6.jpg",
       "exp65lux.jpg", "exp65lux-2.jpg", "exp65lux-overview.jpg", "exp65lux-story.jpg",
+      "exp65lux-e1.jpg", "exp65lux-e2.jpg", "exp65lux-e3.jpg", "exp65lux-e4.jpg", "exp65lux-e5.jpg", "exp65lux-e6.jpg",
       "sibirsky.jpg", "sibirsky-2.jpg", "sibirsky-overview.jpg", "sibirsky-story.jpg",
       "aleksandriya.jpg", "aleksandriya-2.jpg", "aleksandriya-3.jpg", "aleksandriya-4.jpg",
       "mius.jpg", "mius-2.jpg", "mius-overview.jpg", "mius-story.jpg",
