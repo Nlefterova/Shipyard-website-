@@ -35,8 +35,17 @@
     bandido: { name: "Bandido", year: 2001 }
   };
 
+  // Resolve a filename to its boat by matching the known prefixes (longest first),
+  // so any suffix (-2, -i1, -e5, -overview, -story, -drone, -dock-dusk, …) still
+  // groups the photo with its boat and year. More robust than stripping suffixes.
+  var PREFIXES = Object.keys(META).sort(function (a, b) { return b.length - a.length; });
   function prefixOf(f) {
-    return f.replace(/\.(jpg|png)$/i, "").replace(/-([ie]?\d+|beach|dock)$/i, "");
+    var base = f.replace(/\.(jpg|png)$/i, "");
+    for (var i = 0; i < PREFIXES.length; i++) {
+      var p = PREFIXES[i];
+      if (base === p || base.indexOf(p + "-") === 0) return p;
+    }
+    return base;
   }
   function meta(f) { return META[prefixOf(f)] || null; }
 
