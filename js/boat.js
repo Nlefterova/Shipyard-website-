@@ -401,6 +401,12 @@
     if (btn) btn.remove();
   }
 
+  /* ---- No story written yet: drop the whole Story section. */
+  if (boat && boat.noStory) {
+    const el = document.querySelector(".wf-story");
+    if (el) el.remove();
+  }
+
   /* ---- Floor plans not ready yet: blank the plan column (keeps the spec
      section's two-column layout; the space is reserved for the real plans). */
   if (boat && boat.noPlans) {

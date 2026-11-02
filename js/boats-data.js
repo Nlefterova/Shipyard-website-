@@ -400,8 +400,8 @@ const BOATS = [
         { name: "Главная палуба", items: ["Пост управления", "Салон", "Обеденная зона", "Камбуз"] },
         { name: "Нижняя палуба", items: ["Каюты", "Санузлы", "Кают-компания"] }
       ] } },
-  { id: "mius", family: "korabli", name: "Миус", status: "sold", year: "2018", img: "mius.jpg?v=2", cardImg: "mius-card.jpg?v=2", tags: ["На заказ"], hideGalleryBtn: true,
-    photos: { hero2: "mius-2.jpg", hero2Pos: "center 64%", overview: "mius-overview.jpg", construction: "mius-story.jpg?v=2",
+  { id: "mius", family: "korabli", name: "Миус", status: "sold", year: "2018", img: "mius.jpg?v=2", cardImg: "mius-card.jpg?v=2", tags: ["На заказ"], hideGalleryBtn: true, noStory: true,
+    photos: { hero2: "mius-2.jpg", hero2Pos: "center 64%", overview: "mius-story.jpg?v=2", construction: "mius-overview.jpg",
       thumbs: ["mius-i1.jpg","mius-i2.jpg?v=3","mius-i3.jpg?v=2","mius-i4.jpg","mius-i5.jpg","mius-i6.jpg"],
       captions: ["Ходовая рубка","Кают-компания","Салон","Камбуз","Каюта","Санузел"],
       gallery: ["mius-i2.jpg?v=3","mius-2.jpg","mius-i5.jpg","mius-i4.jpg","mius-overview.jpg","mius-i3.jpg?v=2","mius-i6.jpg","mius-story.jpg","mius-i1.jpg"],
