@@ -490,7 +490,7 @@ const BOATS = [
       decks: []
     } },
   { id: "fiesta",    family: "korabli", name: "Fiesta",     status: "sold", year: "2012", img: "fiesta.jpg?v=2", cardImg: "fiesta-card.jpg?v=3", tags: ["На заказ"], noInteriors: true,
-    photos: { hero2: "fiesta-2.jpg?v=3", hero2Pos: "center 78%", overview: "fiesta-overview.jpg", construction: "fiesta-story.jpg", plans: ["fiesta-plan-side.png","fiesta-plan-main.png","fiesta-plan-lower.png"] },
+    photos: { hero2: "fiesta-2.jpg?v=3", hero2Pos: "center 78%", overview: "fiesta-overview.jpg", construction: "fiesta-story.jpg", plans: ["fiesta-plan-side.png?v=2","fiesta-plan-main.png?v=2","fiesta-plan-lower.png?v=2"] },
     content: {
       eyebrow: "Круизное моторное судно",
       desc: "Моторная яхта",
