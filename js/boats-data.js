@@ -434,7 +434,7 @@ const BOATS = [
       thumbs: ["natali-i1.jpg","natali-i2.jpg","natali-i3.jpg","natali-i4.jpg","natali-i5.jpg","natali-i6.jpg"],
       captions: ["Кают-компания","Салон","Камбуз","Ходовая рубка","Мастер-каюта","Каюта"],
       gallery: ["natali.jpg","natali-i1.jpg","natali-2.jpg","natali-i5.jpg","natali-i3.jpg","natali-overview.jpg","natali-i2.jpg","natali-i4.jpg","natali-story.jpg","natali-i6.jpg","natali-e1.jpg","natali-e2.jpg","natali-i7.jpg","natali-i8.jpg","natali-i9.jpg","natali-i10.jpg","natali-i11.jpg","natali-i12.jpg"],
-      plans: ["natali-plan-side.png","natali-plan-upper.png","natali-plan-main.png","natali-plan-lower.png"] },
+      plans: ["natali-plan-side.png?v=2","natali-plan-upper.png?v=2","natali-plan-main.png?v=2","natali-plan-lower.png?v=2"] },
     content: {
       eyebrow: "Круизное моторное судно",
       desc: "Водоизмещающее судно",
