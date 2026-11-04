@@ -394,7 +394,7 @@ const BOATS = [
       captions: ["Салон", "Обеденная зона", "Камбуз", "Каюта", "Интерьер", "Санузел"],
       gallery: ["aleksandriya-2.jpg", "aleksandriya-i1.jpg", "aleksandriya.jpg", "aleksandriya-i2.jpg", "aleksandriya-i4.jpg", "aleksandriya-3.jpg", "aleksandriya-i3.jpg", "aleksandriya-4.jpg", "aleksandriya-i6.jpg", "aleksandriya-e1.jpg", "aleksandriya-e2.jpg", "aleksandriya-e3.jpg", "aleksandriya-e4.jpg", "aleksandriya-e5.jpg", "aleksandriya-e6.jpg"],
       plans: ["aleksandriya-plan-side.png?v=2", "aleksandriya-plan-main.png?v=2", "aleksandriya-plan-lower.png?v=2"] },
-    content: { eyebrow: "Круизное моторное судно", desc: "Крупное водоизмещающее судно",
+    content: { eyebrow: "Круизное моторное судно", desc: "Водоизмещающее судно",
       decks: [
         { name: "Боковой вид", items: [] },
         { name: "Главная палуба", items: ["Пост управления", "Салон", "Обеденная зона", "Камбуз"] },
@@ -407,8 +407,8 @@ const BOATS = [
       gallery: ["mius-i2.jpg?v=3","mius-2.jpg","mius-i5.jpg","mius-i4.jpg","mius-overview.jpg","mius-i3.jpg?v=2","mius-i6.jpg","mius-story.jpg","mius-i1.jpg"],
       plans: ["mius-plan-side.png?v=2","mius-plan-upper.png?v=2","mius-plan-lower.png?v=2"] },
     content: {
-      eyebrow: "Круизный корабль",
-      desc: "Стальной круизный корабль",
+      eyebrow: "Круизное моторное судно",
+      desc: "Водоизмещающее судно",
       heroSpecs: [["Длина","17,25 м"],["Каюты","2"],["Вместимость","12 человек"],["Мощность","480 л.с."]],
       overviewLead: "Корабль водоизмещающего типа",
       overviewBody: [
@@ -433,13 +433,13 @@ const BOATS = [
     photos: { hero2: "natali-2.jpg", overview: "natali-overview.jpg", construction: "natali-story.jpg",
       thumbs: ["natali-i1.jpg","natali-i2.jpg","natali-i3.jpg","natali-i4.jpg","natali-i5.jpg","natali-i6.jpg"],
       captions: ["Кают-компания","Салон","Камбуз","Ходовая рубка","Мастер-каюта","Каюта"],
-      gallery: ["natali-i1.jpg","natali-2.jpg","natali-i5.jpg","natali-i3.jpg","natali-overview.jpg","natali-i2.jpg","natali-i4.jpg","natali-story.jpg","natali-i6.jpg"],
+      gallery: ["natali.jpg","natali-i1.jpg","natali-2.jpg","natali-i5.jpg","natali-i3.jpg","natali-overview.jpg","natali-i2.jpg","natali-i4.jpg","natali-story.jpg","natali-i6.jpg","natali-e1.jpg","natali-e2.jpg","natali-i7.jpg","natali-i8.jpg","natali-i9.jpg","natali-i10.jpg","natali-i11.jpg","natali-i12.jpg"],
       plans: ["natali-plan-side.png","natali-plan-upper.png","natali-plan-main.png","natali-plan-lower.png"] },
     content: {
-      eyebrow: "Моторная яхта",
-      desc: "Стальная моторная яхта 19,6 метра класса река-море — пять кают, полная автономность и запас хода больше 1600 км",
+      eyebrow: "Круизное моторное судно",
+      desc: "Водоизмещающее судно",
       heroSpecs: [["Длина","19,6 м"],["Каюты","5"],["Вместимость","12 человек"],["Мощность","270 л.с."]],
-      overviewLead: "Стальная моторная яхта класса река-море — пять кают, полная автономность и запас хода больше четырёх суток",
+      overviewLead: "Маломерный корабль с пятью каютами и полной автономностью",
       overviewBody: [
         "19,6 метра, пять раздельных спальных кают и десять спальных мест плюс отдельное место капитана в рубке. Просторная кают-компания с обеденной зоной и зоной отдыха, полностью оборудованный камбуз, пять гальюнов — три из них с душевыми. Отделка натуральным деревом, отопление и кондиционирование во всех каютах.",
         "Два дизельных двигателя Perkins Sabre по 135 л.с., стальной корпус 5-4-3 и осадка 1,1 метра — для рек и прибрежной морской зоны. Топливо 3500 л дают автономность больше 1600 км, свыше четырёх суток пути. На борту дизель-генератор, носовое подруливающее устройство, автопилот, картплоттер, спутниковое ТВ и полная бытовая техника."
@@ -468,8 +468,8 @@ const BOATS = [
       captions: ["Камбуз и салон","Салон","Каюта","Ходовая рубка","Русская сауна","Кормовая палуба"],
       gallery: ["kasatka-i4.jpg","kasatka-i1.jpg","kasatka-2.jpg","kasatka-i2.jpg","kasatka-i6.jpg","kasatka-overview.jpg","kasatka-i3.jpg","kasatka-i5.jpg","kasatka-story.jpg"] },
     content: {
-      eyebrow: "Прогулочная яхта",
-      desc: "VIP-яхта для отдыха и праздников на Волге — три палубы, русская сауна, до 10 гостей",
+      eyebrow: "Круизное моторное судно",
+      desc: "Моторная яхта",
       heroSpecs: [["Длина","18 м"],["Каюты","4"],["Вместимость","до 10 человек"],["Спальных мест","8"]],
       overviewLead: "VIP-яхта для отдыха на воде — три палубы, четыре каюты, русская сауна",
       overviewBody: [
@@ -492,8 +492,8 @@ const BOATS = [
   { id: "fiesta",    family: "korabli", name: "Fiesta",     status: "sold", year: "2012", img: "fiesta.jpg?v=2", cardImg: "fiesta-card.jpg?v=3", tags: ["На заказ"], noInteriors: true,
     photos: { hero2: "fiesta-2.jpg?v=3", hero2Pos: "center 78%", overview: "fiesta-overview.jpg", construction: "fiesta-story.jpg", plans: ["fiesta-plan-side.png","fiesta-plan-main.png","fiesta-plan-lower.png"] },
     content: {
-      eyebrow: "Моторная яхта",
-      desc: "Стальная моторная яхта 18 метров с флайбриджем — для дальних прогулок и отдыха на большой воде",
+      eyebrow: "Круизное моторное судно",
+      desc: "Моторная яхта",
       heroSpecs: [["Длина","18 м"],["Ширина","5 м"],["Мощность","270 л.с."],["Осадка","0,9 м"]],
       overviewLead: "Стальная моторная яхта 18 метров — два уровня с открытым флайбриджем, водоизмещающий корпус и малая осадка",
       overviewBody: [
@@ -535,8 +535,8 @@ const BOATS = [
       gallery: ["rusich-i1.jpg","rusich-2.jpg","rusich-i4.jpg","rusich-i3.jpg","rusich-overview.jpg","rusich-i2.jpg","rusich-i5.jpg","rusich-story.jpg","rusich-i6.jpg"],
       plans: ["rusich-plan-side.png","rusich-plan-upper.png","rusich-plan-main.png","rusich-plan-lower.png"] },
     content: {
-      eyebrow: "Прогулочная яхта",
-      desc: "Стальная прогулочная яхта 13,6 метра — компактная и автономная, для отдыха на большой воде компанией до 10 человек",
+      eyebrow: "Круизное моторное судно",
+      desc: "Моторная яхта",
       heroSpecs: [["Длина","13,6 м"],["Мощность","135 л.с."],["Вместимость","10 человек"],["Скорость","21 км/ч"]],
       overviewLead: "Компактная стальная яхта прогулочного класса — 13,6 метра, водоизмещающий корпус, до 10 человек на борту",
       overviewBody: [
@@ -565,8 +565,8 @@ const BOATS = [
       gallery: ["volnyi-i1.jpg","volnyi-story.jpg","volnyi-i4.jpg","volnyi-i3.jpg","volnyi-overview.jpg","volnyi-i2.jpg","volnyi-i5.jpg","volnyi-2.jpg","volnyi-i6.jpg"],
       plans: ["volnyi-plan-side.png","volnyi-plan-top.png"] },
     content: {
-      eyebrow: "Моторная яхта",
-      desc: "Стальная моторная яхта 18 метров прогулочного класса — полная автономность на несколько суток и дальность до 1000 км",
+      eyebrow: "Круизное моторное судно",
+      desc: "Моторная яхта",
       heroSpecs: [["Длина","18 м"],["Мощность","225 л.с."],["Вместимость","9 человек"],["Дальность","1000 км"]],
       overviewLead: "Стальная моторная яхта 18 метров — водоизмещающий корпус, автономность на несколько суток и дальность до 1000 км",
       overviewBody: [
@@ -593,8 +593,8 @@ const BOATS = [
       captions: ["Кают-компания","Ходовая рубка","Камбуз","Мастер-каюта","Носовая каюта","Гостевая каюта"],
       gallery: ["yeti-i1.jpg","yeti-2.jpg?v=3","yeti-i4.jpg","yeti-i3.jpg","yeti-overview.jpg","yeti-i2.jpg","yeti-i5.jpg","yeti-story.jpg","yeti-i6.jpg"] },
     content: {
-      eyebrow: "Прогулочная яхта",
-      desc: "Моторная яхта 18 метров для комфортного отдыха на воде — две каюты, баня, палуба с лежаками и мангалом",
+      eyebrow: "Круизное моторное судно",
+      desc: "Моторная яхта",
       heroSpecs: [["Длина","18 м"],["Каюты","2"],["Баня","есть"],["Тип","моторная яхта"]],
       overviewLead: "Моторная яхта 18 метров для отдыха на воде — две гостевые каюты, баня и просторная палуба",
       overviewBody: [
@@ -639,8 +639,8 @@ const BOATS = [
     photos: { hero2: "pilgrim-2.jpg?v=2", overview: "pilgrim-overview.jpg", construction: "pilgrim-story.jpg?v=2",
       plans: ["pilgrim-plan-side.png","pilgrim-plan-main.png","pilgrim-plan-lower.png"] },
     content: {
-      eyebrow: "Моторная яхта",
-      desc: "Стальная моторная яхта 18 метров с флайбриджем — двенадцать человек на борту, автономность на несколько суток и дальность до 1300 миль",
+      eyebrow: "Круизное моторное судно",
+      desc: "Моторная яхта",
       heroSpecs: [["Длина","18 м"],["Мощность","270 л.с."],["Вместимость","12 человек"],["Дальность","1300 миль"]],
       overviewLead: "Стальная моторная яхта 18 метров с открытым флайбриджем — водоизмещающий корпус, автономность на несколько суток и дальность до 1300 миль",
       overviewBody: [
@@ -668,8 +668,8 @@ const BOATS = [
       captions: ["Салон", "Рубка", "Каюта", "Каюта"],
       gallery: ["laita-2.jpg", "laita-i1.jpg", "laita.jpg", "laita-i2.jpg", "laita-i3.jpg", "laita-overview.jpg", "laita-i4.jpg", "laita-story.jpg"] },
     content: {
-      eyebrow: "Моторная яхта",
-      desc: "Стальная моторная яхта с флайбриджем — водоизмещающий корпус для неспешных прогулок и походов по большой воде",
+      eyebrow: "Круизное моторное судно",
+      desc: "Моторная яхта",
       heroSpecs: [["Тип","Моторная яхта"],["Корпус","сталь"],["Палубы","2 + флайбридж"],["Год","2002"]],
       overviewLead: "Стальная моторная яхта водоизмещающего типа с флайбриджем — для прогулок и походов по большой воде",
       overviewBody: [
@@ -686,15 +686,15 @@ const BOATS = [
     photos: { hero2: "dundukovsky-2.jpg",
       thumbs: ["dundukovsky-3.jpg", "dundukovsky-4.jpg", "dundukovsky-5.jpg", "dundukovsky-6.jpg", "dundukovsky-7.jpg", "dundukovsky-8.jpg"],
       captions: ["У причала", "Нос", "Вид сверху", "На Волге", "Корма", "На якоре"] },
-    content: { eyebrow: "Моторная яхта", desc: "Белая моторная яхта водоизмещающего типа — построена на заказ для походов по большой воде" } },
+    content: { eyebrow: "Круизное моторное судно", desc: "Водоизмещающее судно" } },
   { id: "mara",      family: "korabli", name: "Мара",       status: "sold", year: "1998", img: "mara.jpg?v=3", cardImg: "mara-card.jpg",
     photos: { hero2: "mara-2.jpg", overview: "mara-overview.jpg", construction: "mara-story.jpg",
       thumbs: ["mara-i1.jpg","mara-i2.jpg","mara-i3.jpg","mara-i4.jpg","mara-i5.jpg","mara-i6.jpg"],
       captions: ["Кают-компания","Мастер-каюта","Носовая каюта","Камбуз","Санузел","Душевая"],
       gallery: ["mara-i1.jpg","mara-2.jpg","mara-i2.jpg","mara-i4.jpg","mara-overview.jpg","mara-i3.jpg","mara-i6.jpg","mara-story.jpg","mara-i5.jpg"] },
     content: {
-      eyebrow: "Моторная яхта",
-      desc: "Первая лодка верфи — моторная яхта с флайбриджем, с которой всё и началось",
+      eyebrow: "Круизное моторное судно",
+      desc: "Моторная яхта",
       heroSpecs: [["Тип","Моторная яхта"],["Палубы","2 + флайбридж"],["Год","1998"]],
       overviewLead: "Компактная моторная яхта с открытым флайбриджем — для рек, затонов и тихой большой воды",
       overviewBody: [
@@ -715,7 +715,7 @@ const BOATS = [
     photos: { hero2: "proekt1-2.jpg",
       thumbs: ["proekt1-3.jpg", "proekt1-4.jpg", "proekt1-5.jpg", "proekt1-6.jpg", "proekt1-7.jpg", "proekt1-8.jpg"],
       captions: ["У берега", "Нос", "На ходу", "На Волге", "Вид сверху", "Простор"] },
-    content: { eyebrow: "Моторная яхта", desc: "Моторная яхта с флайбриджем — построена на заказ для прогулок и походов по большой воде" } },
+    content: { eyebrow: "Круизное моторное судно", desc: "Моторная яхта" } },
   // Траулеры
   { id: "frank",     family: "traulery", name: "Frenk",   status: "sold", year: "2006", img: "frank.jpg?v=2", tags: ["На заказ"],
     photos: { hero2: "frank-2.jpg", overview: "frank-overview.jpg", construction: "frank-story.jpg",
