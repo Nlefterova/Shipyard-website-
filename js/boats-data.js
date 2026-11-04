@@ -528,11 +528,11 @@ const BOATS = [
         { name: "нижняя палуба", items: [] }
       ]
     } },
-  { id: "rusich",    family: "korabli", name: "Русич",      status: "sold", year: "2011", img: "rusich.jpg?v=2",
-    photos: { hero2: "rusich-2.jpg", overview: "rusich-overview.jpg", construction: "rusich-story.jpg",
+  { id: "rusich",    family: "korabli", name: "Русич",      status: "sold", year: "2011", img: "rusich.jpg?v=2", noStory: true,
+    photos: { hero2: "rusich-2.jpg", overview: "rusich-story.jpg", construction: "rusich-overview.jpg",
       thumbs: ["rusich-i1.jpg","rusich-i2.jpg","rusich-i3.jpg","rusich-i4.jpg","rusich-i5.jpg","rusich-i6.jpg"],
       captions: ["Кают-компания","Ходовая рубка","Камбуз","Мастер-каюта","Камбуз","Санузел"],
-      gallery: ["rusich-i1.jpg","rusich-2.jpg","rusich-i4.jpg","rusich-i3.jpg","rusich-overview.jpg","rusich-i2.jpg","rusich-i5.jpg","rusich-story.jpg","rusich-i6.jpg"],
+      gallery: ["rusich.jpg","rusich-i1.jpg","rusich-2.jpg","rusich-i4.jpg","rusich-i3.jpg","rusich-overview.jpg","rusich-i2.jpg","rusich-i5.jpg","rusich-story.jpg","rusich-i6.jpg","rusich-i7.jpg","rusich-i8.jpg","rusich-i9.jpg"],
       plans: ["rusich-plan-side.png","rusich-plan-upper.png","rusich-plan-main.png","rusich-plan-lower.png"] },
     content: {
       eyebrow: "Круизное моторное судно",
