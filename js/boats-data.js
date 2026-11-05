@@ -562,8 +562,8 @@ const BOATS = [
     photos: { hero2: "volnyi-overview.jpg", hero2Pos: "center 72%", overview: "volnyi-story.jpg", construction: "volnyi-2.jpg",
       thumbs: ["volnyi-i1.jpg","volnyi-i2.jpg","volnyi-i3.jpg","volnyi-i4.jpg","volnyi-i5.jpg","volnyi-i6.jpg"],
       captions: ["Кают-компания","Ходовая рубка","Салон","Мастер-каюта","Каюта","Зона отдыха"],
-      gallery: ["volnyi-i1.jpg","volnyi-story.jpg","volnyi-i4.jpg","volnyi-i3.jpg","volnyi-overview.jpg","volnyi-i2.jpg","volnyi-i5.jpg","volnyi-2.jpg","volnyi-i6.jpg"],
-      plans: ["volnyi-plan-side.png","volnyi-plan-top.png"] },
+      gallery: ["volnyi-i1.jpg","volnyi-story.jpg","volnyi-i4.jpg","volnyi-i3.jpg","volnyi-overview.jpg","volnyi-i2.jpg","volnyi-i5.jpg","volnyi-2.jpg","volnyi-i6.jpg","volnyi-i7.jpg","volnyi-i8.jpg","volnyi-i9.jpg","volnyi-i10.jpg","volnyi-i11.jpg"],
+      plans: ["volnyi-plan-side.png?v=2","volnyi-plan-top.png?v=2"] },
     content: {
       eyebrow: "Круизное моторное судно",
       desc: "Моторная яхта",
@@ -575,6 +575,7 @@ const BOATS = [
       ],
       storyLead: "",
       storyBody: ["",""],
+      specsRight: 2,
       specs: [
         ["Длина габаритная","18,07 м"],["Длина по КВЛ","16,7 м"],["Ширина","5,07 м"],["Ширина по КВЛ","4,85 м"],
         ["Осадка","1,1 м"],["Высота борта","2,05 м"],["Водоизмещение","29 т"],["Вместимость","9 человек"],
