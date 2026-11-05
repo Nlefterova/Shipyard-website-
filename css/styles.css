@@ -820,6 +820,7 @@ body[data-boat="volnyi"] .wf-specsheet__right{align-content:start}
 body[data-boat="trex-37"] .wf-gallery__col--left > .wf-gallery__pair{order:-1}
 .wf-spectable--underplan{margin-top:clamp(4rem,7vw,6rem)}
 body[data-boat="volnyi"] .wf-spectable--underplan{margin-top:clamp(2rem,4vw,3rem)}
+body[data-boat="piligrim"] .wf-spectable--underplan{margin-top:clamp(2rem,4vw,55px)}
 
 /* ============================================================
    ABOUT PAGE — low-fi wireframe
