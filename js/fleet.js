@@ -111,6 +111,24 @@ if (location.hash) {
   else window.scrollTo({ top: 0, behavior: "instant" });
 }
 
+// Browser Back/Forward returning to the fleet: restore the exact scroll position
+// the visitor left from, so a boat deep in the list (e.g. the Гулянки) doesn't
+// dump them back at the top. The on-page "Назад" uses #card-… above instead.
+// scrollRestoration is "manual", so restore on pageshow — it fires on both a full
+// reload AND a back/forward-cache restore (where this script does not re-run).
+window.addEventListener("pagehide", function () {
+  try { sessionStorage.setItem("fleetY", String(window.scrollY || window.pageYOffset || 0)); } catch (e) {}
+});
+window.addEventListener("pageshow", function (ev) {
+  var e = performance.getEntriesByType && performance.getEntriesByType("navigation")[0];
+  var nav = e ? e.type : (performance.navigation && performance.navigation.type === 2 ? "back_forward" : "navigate");
+  if (location.hash) return;                             // arriving at a specific card/section
+  if (!ev.persisted && nav !== "back_forward") return;   // a fresh visit starts at the top
+  var y = null;
+  try { y = sessionStorage.getItem("fleetY"); } catch (e2) {}
+  if (y !== null) requestAnimationFrame(function () { window.scrollTo(0, parseInt(y, 10) || 0); });
+});
+
 /* Back to top — same button as the gallery page */
 (function () {
   var topBtn = document.getElementById("galTop");
