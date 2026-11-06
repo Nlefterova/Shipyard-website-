@@ -688,7 +688,7 @@ const BOATS = [
       thumbs: ["dundukovsky-3.jpg", "dundukovsky-4.jpg", "dundukovsky-5.jpg", "dundukovsky-6.jpg", "dundukovsky-7.jpg", "dundukovsky-8.jpg"],
       captions: ["У причала", "Нос", "Вид сверху", "На Волге", "Корма", "На якоре"] },
     content: { eyebrow: "Круизное моторное судно", desc: "Водоизмещающее судно" } },
-  { id: "mara",      family: "korabli", name: "Мара",       status: "sold", year: "1998", img: "mara.jpg?v=3", cardImg: "mara-card.jpg", noHeroSpecs: true, specsWide: true,
+  { id: "mara",      family: "korabli", name: "Мара",       status: "sold", year: "1998", img: "mara.jpg?v=3", cardImg: "mara-card.jpg", noHeroSpecs: true, specsWide: true, hideGalleryBtn: true,
     photos: { hero2: "mara-2.jpg", overview: "mara-overview.jpg", construction: "mara-story.jpg",
       thumbs: ["mara-i1.jpg","mara-i2.jpg","mara-i3.jpg","mara-i4.jpg","mara-i5.jpg","mara-i6.jpg"],
       captions: ["Кают-компания","Мастер-каюта","Носовая каюта","Камбуз","Санузел","Душевая"],
