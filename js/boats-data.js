@@ -663,8 +663,8 @@ const BOATS = [
         { name: "нижняя палуба", items: [] }
       ]
     } },
-  { id: "laita",     family: "korabli", name: "Лайта",      status: "sold", year: "2002", img: "laita.jpg?v=2", tags: ["На заказ"], fitMedia: true,
-    photos: { hero2: "laita-2.jpg", hero2Pos: "center 62%", overview: "laita-overview.jpg", construction: "laita-story.jpg",
+  { id: "laita",     family: "korabli", name: "Лайта",      status: "sold", year: "2002", img: "laita.jpg?v=2", tags: ["На заказ"], fitMedia: true, noStory: true,
+    photos: { hero2: "laita-story.jpg", hero2Pos: "center 53%", overview: "laita-overview.jpg", construction: "laita-2.jpg",
       thumbs: ["laita-i1.jpg", "laita-i2.jpg", "laita-i3.jpg", "laita-i4.jpg"],
       captions: ["Салон", "Рубка", "Каюта", "Каюта"],
       gallery: ["laita-2.jpg", "laita-i1.jpg", "laita.jpg", "laita-i2.jpg", "laita-i3.jpg", "laita-overview.jpg", "laita-i4.jpg", "laita-story.jpg"] },
