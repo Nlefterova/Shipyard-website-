@@ -723,7 +723,7 @@ const BOATS = [
       thumbs: ["frank-i1.jpg", "frank-i2.jpg", "frank-i3.jpg", "frank-i4.jpg", "frank-i5.jpg", "frank-i6.jpg"],
       captions: ["Салон", "Камбуз", "Мастер-каюта", "Гостевая каюта", "Санузел", "Рубка"],
       gallery: ["frank-i1.jpg", "frank-2.jpg", "frank-i3.jpg", "frank-i2.jpg", "frank-overview.jpg", "frank-i6.jpg", "frank-i4.jpg", "frank.jpg?v=2", "frank-i5.jpg"],
-      plans: ["frank-plan-side.png","frank-plan-upper.png","frank-plan-main.png","frank-plan-lower.png"] },
+      plans: ["frank-plan-side.png?v=2","frank-plan-upper.png?v=2","frank-plan-main.png?v=2","frank-plan-lower.png?v=2"] },
     content: {
       eyebrow: "Траулер голландской школы",
       desc: "Стальной траулер-яхта с флайбриджем — крепкий водоизмещающий корпус для дальних походов по большой воде",
@@ -759,7 +759,7 @@ const BOATS = [
       thumbs: ["sapfir-i1.jpg","sapfir-i2.jpg","sapfir-i3.jpg","sapfir-i4.jpg","sapfir-i5.jpg","sapfir-i6.jpg"],
       captions: ["Ходовая рубка","Кают-компания","Камбуз","Флайбридж","Каюта","Гостевая каюта"],
       gallery: ["sapfir-i1.jpg","sapfir-2.jpg","sapfir-i2.jpg","sapfir-i3.jpg","sapfir-overview.jpg","sapfir-i4.jpg","sapfir-i5.jpg","sapfir-story.jpg","sapfir-i6.jpg","sapfir-i7.jpg","sapfir-i8.jpg","sapfir-i9.jpg","sapfir-i10.jpg","sapfir-i11.jpg","sapfir-i12.jpg","sapfir-i13.jpg"],
-      plans: ["sapfir-plan-fly.png","sapfir-plan-main.png","sapfir-plan-lower.png"] },
+      plans: ["sapfir-plan-side.png?v=2","sapfir-plan-upper.png?v=2","sapfir-plan-main.png?v=2","sapfir-plan-lower.png?v=2"] },
     content: {
       eyebrow: "Траулер голландской школы",
       desc: "Стальной экспедиционный траулер",
@@ -783,7 +783,8 @@ const BOATS = [
         ["Балласт","3 т"],["Материал корпуса","сталь"],["Год постройки","2005"]
       ],
       decks: [
-        { name: "флайбридж", items: [] },
+        { name: "вид сбоку", items: [] },
+        { name: "верхняя палуба", items: [] },
         { name: "главная палуба", items: [] },
         { name: "нижняя палуба", items: [] }
       ]
