@@ -712,7 +712,7 @@ const BOATS = [
       ],
       decks: []
     } },
-  { id: "proekt-1",  family: "korabli", name: "Проект №1",  status: "sold", year: "1995", img: "proekt1.jpg", cardImg: "proekt1-card.jpg", cardScale: 1.45, cardPos: "56% 44%", tags: ["На заказ"], dropSections: true, heroPos: "70% center",
+  { id: "proekt-1",  family: "korabli", name: "Проект №1",  status: "sold", year: "1995", img: "proekt1.jpg", cardImg: "proekt1-card.jpg", cardScale: 1.45, cardPos: "56% 44%", tags: ["На заказ"], dropSections: true, noHeroSpecs: true, heroPos: "70% center",
     photos: { hero2: "proekt1-2.jpg",
       thumbs: ["proekt1-3.jpg", "proekt1-4.jpg", "proekt1-5.jpg", "proekt1-6.jpg", "proekt1-7.jpg", "proekt1-8.jpg"],
       captions: ["У берега", "Нос", "На ходу", "На Волге", "Вид сверху", "Простор"] },
