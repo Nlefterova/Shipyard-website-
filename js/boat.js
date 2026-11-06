@@ -98,6 +98,26 @@
         });
         if (boat.fitMedia) gboxes.forEach((el) => { if (!el.classList.contains("is-photo")) el.remove(); });
 
+        // Лайта: only 8 photos for 9 slots, so instead of a hole in the bottom-right
+        // corner, merge the right + far-right columns and let the big exterior
+        // (laita-2) span the full bottom width. Scoped to this one boat.
+        if (boat.id === "laita") {
+          const gal = document.querySelector(".wf-gallery");
+          const rCol = gal && gal.querySelector(".wf-gallery__col--right");
+          const sCol = gal && gal.querySelector(".wf-gallery__col--sideR");
+          if (rCol && sCol && rCol.children.length === 2 && sCol.children.length === 1) {
+            const ov = rCol.children[0];  // laita-overview  (top-left)
+            const big = rCol.children[1]; // laita-2         (bottom, spans full width)
+            const st = sCol.children[0];  // laita-story     (top-right)
+            const merge = document.createElement("div");
+            merge.className = "wf-gallery__col wf-gallery__col--merge";
+            merge.append(ov, st, big);
+            gal.insertBefore(merge, rCol);
+            rCol.remove();
+            sCol.remove();
+          }
+        }
+
         // "Галерея" button → open the whole set in a large pop-up.
         // No per-photo descriptors here: the set mixes interiors and exteriors,
         // so captions would only cover some photos — keep it clean (counter only).

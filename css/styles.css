@@ -721,6 +721,14 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 .wf-gallery__col--right{grid-template-rows:374fr 611fr}
 .wf-gallery__col--sideR{grid-template-rows:374fr 611fr}
 .wf-gallery__pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+/* Лайта only: merged right block so the big exterior spans the full bottom width */
+@media (min-width:821px){
+  body[data-boat="laita"] .wf-gallery__col--merge{grid-column:3 / span 2;display:grid;
+    grid-template-columns:531fr 410fr;grid-template-rows:374fr 611fr;gap:12px}
+  body[data-boat="laita"] .wf-gallery__col--merge > :nth-child(1){grid-column:1;grid-row:1}
+  body[data-boat="laita"] .wf-gallery__col--merge > :nth-child(2){grid-column:2;grid-row:1}
+  body[data-boat="laita"] .wf-gallery__col--merge > :nth-child(3){grid-column:1 / span 2;grid-row:2}
+}
 
 /* STANDARD SPECIFICATIONS — spec table on the left, floor plans on the right */
 .wf-line--full{width:100%}

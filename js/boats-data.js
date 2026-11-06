@@ -667,7 +667,7 @@ const BOATS = [
     photos: { hero2: "laita-story.jpg", hero2Pos: "center 53%", overview: "laita-overview.jpg", construction: "laita-2.jpg",
       thumbs: ["laita-i1.jpg", "laita-i2.jpg", "laita-i3.jpg", "laita-i4.jpg"],
       captions: ["Салон", "Рубка", "Каюта", "Каюта"],
-      gallery: ["laita-2.jpg", "laita-i1.jpg", "laita.jpg", "laita-i2.jpg", "laita-i3.jpg", "laita-overview.jpg", "laita-i4.jpg", "laita-story.jpg"] },
+      gallery: ["laita-i4.jpg", "laita-i1.jpg", "laita.jpg", "laita-i2.jpg", "laita-i3.jpg", "laita-overview.jpg", "laita-2.jpg", "laita-story.jpg"] },
     content: {
       eyebrow: "Круизное моторное судно",
       desc: "Моторная яхта",
