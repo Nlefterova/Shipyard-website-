@@ -427,6 +427,12 @@
     if (el) el.remove();
   }
 
+  /* ---- Hide just the hero "Характеристики" strip (keep the lower spec table). */
+  if (boat && boat.noHeroSpecs) {
+    const el = document.querySelector(".wf-specs");
+    if (el) el.remove();
+  }
+
   /* ---- Floor plans not ready yet: blank the plan column (keeps the spec
      section's two-column layout; the space is reserved for the real plans). */
   if (boat && boat.noPlans) {

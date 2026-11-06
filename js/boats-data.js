@@ -663,7 +663,7 @@ const BOATS = [
         { name: "нижняя палуба", items: [] }
       ]
     } },
-  { id: "laita",     family: "korabli", name: "Лайта",      status: "sold", year: "2002", img: "laita.jpg?v=2", tags: ["На заказ"], fitMedia: true, noStory: true, specsWide: true,
+  { id: "laita",     family: "korabli", name: "Лайта",      status: "sold", year: "2002", img: "laita.jpg?v=2", tags: ["На заказ"], fitMedia: true, noStory: true, specsWide: true, noHeroSpecs: true,
     photos: { hero2: "laita-story.jpg", hero2Pos: "center 53%", overview: "laita-overview.jpg", construction: "laita-2.jpg",
       thumbs: ["laita-i1.jpg", "laita-i2.jpg", "laita-i3.jpg", "laita-i4.jpg"],
       captions: ["Салон", "Рубка", "Каюта", "Каюта"],
@@ -683,7 +683,7 @@ const BOATS = [
       ],
       decks: []
     } },
-  { id: "dundukovsky-1", family: "korabli", name: "Дундуковский 1", status: "sold", year: "1999", img: "dundukovsky.jpg", cardScale: 1.4, cardPos: "center 85%", tags: ["На заказ"], dropSections: true,
+  { id: "dundukovsky-1", family: "korabli", name: "Дундуковский 1", status: "sold", year: "1999", img: "dundukovsky.jpg", cardScale: 1.4, cardPos: "center 85%", tags: ["На заказ"], dropSections: true, noHeroSpecs: true,
     photos: { hero2: "dundukovsky-2.jpg",
       thumbs: ["dundukovsky-3.jpg", "dundukovsky-4.jpg", "dundukovsky-5.jpg", "dundukovsky-6.jpg", "dundukovsky-7.jpg", "dundukovsky-8.jpg"],
       captions: ["У причала", "Нос", "Вид сверху", "На Волге", "Корма", "На якоре"] },
