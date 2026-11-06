@@ -723,7 +723,7 @@ const BOATS = [
       thumbs: ["frank-i1.jpg", "frank-i2.jpg", "frank-i3.jpg", "frank-i4.jpg", "frank-i5.jpg", "frank-i6.jpg"],
       captions: ["Салон", "Камбуз", "Мастер-каюта", "Гостевая каюта", "Санузел", "Рубка"],
       gallery: ["frank-i1.jpg", "frank-2.jpg", "frank-i3.jpg", "frank-i2.jpg", "frank-overview.jpg", "frank-i6.jpg", "frank-i4.jpg", "frank.jpg?v=2", "frank-i5.jpg"],
-      plans: ["frank-plan-side.png","frank-plan-upper.png","frank-plan-main.png","frank-plan-lower.png"] },
+      plans: ["frank-plan-side.png?v=2","frank-plan-upper.png?v=2","frank-plan-main.png?v=2","frank-plan-lower.png?v=2"] },
     content: {
       eyebrow: "Траулер голландской школы",
       desc: "Стальной траулер с крепким водоизмещающим корпусом",
