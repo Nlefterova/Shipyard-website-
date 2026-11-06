@@ -792,7 +792,7 @@ const BOATS = [
     photos: { hero2: "bandido-2.jpg?v=2",
       thumbs: ["bandido-3.jpg", "bandido-4.jpg", "bandido-5.jpg", "bandido-6.jpg", "bandido-7.jpg", "bandido-8.jpg"],
       captions: ["С высоты", "На ходу", "У берега", "Корма", "На якоре", "Профиль"] },
-    content: { eyebrow: "Траулер голландской школы", desc: "Стальной траулер-яхта с флайбриджем — водоизмещающий корпус для дальних походов по большой воде",
+    content: { eyebrow: "Траулер голландской школы", desc: "Стальной траулер-яхта с флайбриджем",
       heroSpecs: [["Длина","16,8 м"],["Мощность","274 л.с."],["Дальность","3500+ миль"],["Каюты","3"]] } },
   // Гулянки
   { id: "gulyanka-1",family: "gulyanki", name: "Гулянка №5", status: "sold", year: "2017", img: "gulyanka5.jpg", cardImg: "gulyanka5-card.jpg", tags: ["На заказ"], noInteriors: true,
