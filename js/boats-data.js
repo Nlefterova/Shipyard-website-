@@ -758,7 +758,7 @@ const BOATS = [
     photos: { hero2: "sapfir-2.jpg", overview: "sapfir-overview.jpg", construction: "sapfir-story.jpg",
       thumbs: ["sapfir-i1.jpg","sapfir-i2.jpg","sapfir-i3.jpg","sapfir-i4.jpg","sapfir-i5.jpg","sapfir-i6.jpg"],
       captions: ["Ходовая рубка","Кают-компания","Камбуз","Флайбридж","Каюта","Гостевая каюта"],
-      gallery: ["sapfir-i1.jpg","sapfir-2.jpg","sapfir-i2.jpg","sapfir-i3.jpg","sapfir-overview.jpg","sapfir-i4.jpg","sapfir-i5.jpg","sapfir-story.jpg","sapfir-i6.jpg"],
+      gallery: ["sapfir-i1.jpg","sapfir-2.jpg","sapfir-i2.jpg","sapfir-i3.jpg","sapfir-overview.jpg","sapfir-i4.jpg","sapfir-i5.jpg","sapfir-story.jpg","sapfir-i6.jpg","sapfir-i7.jpg","sapfir-i8.jpg","sapfir-i9.jpg","sapfir-i10.jpg","sapfir-i11.jpg","sapfir-i12.jpg","sapfir-i13.jpg"],
       plans: ["sapfir-plan-fly.png","sapfir-plan-main.png","sapfir-plan-lower.png"] },
     content: {
       eyebrow: "Траулер голландской школы",
