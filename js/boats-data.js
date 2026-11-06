@@ -797,7 +797,7 @@ const BOATS = [
   // Гулянки
   { id: "gulyanka-1",family: "gulyanki", name: "Гулянка №5", status: "sold", year: "2017", img: "gulyanka5.jpg", cardImg: "gulyanka5-card.jpg", tags: ["На заказ"], noInteriors: true,
     photos: { hero2: "gulyanka5-2.jpg?v=2", overview: "gulyanka5-overview.jpg", construction: "gulyanka5-story.jpg",
-      plans: ["gulyanka5-plan-side.png"] },
+      plans: ["gulyanka5-plan-side.png?v=2"] },
     content: {
       eyebrow: "Моторная лодка",
       desc: "Волжская лодка с флайбриджем",
