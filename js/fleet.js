@@ -5,11 +5,13 @@
    re-fetch it instead of serving the cached old picture. */
 const IMG_V = 219;
 
-/* Card image style: cardScale zooms (transform), cardPos sets the anchor —
-   as transform-origin when zoomed (to pan the zoom), else as object-position. */
+/* Card image style: cardScale zooms, cardPos sets the anchor — as transform-origin
+   when zoomed (to pan the zoom), else as object-position. The zoom is passed as the
+   --card-scale custom property (not a fixed inline transform) so the CSS hover zoom
+   can compose on top of it instead of being overridden. */
 function cardImgStyle(b) {
   if (b.cardScale) {
-    return ` style="transform:scale(${b.cardScale});transform-origin:${b.cardPos || "center"}"`;
+    return ` style="--card-scale:${b.cardScale};transform-origin:${b.cardPos || "center"}"`;
   }
   if (b.cardPos) return ` style="object-position:${b.cardPos}"`;
   return "";
