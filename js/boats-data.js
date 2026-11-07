@@ -856,7 +856,7 @@ const BOATS = [
     } },
   { id: "gulyanka-3",family: "gulyanki", name: "Гулянка №3", status: "sold", year: "2004", img: "gulyanka3.jpg?v=2", cardImg: "gulyanka3-card.jpg", noInteriors: true,
     photos: { hero2: "gulyanka3-2.jpg", overview: "gulyanka3-overview.jpg", construction: "gulyanka3-story.jpg",
-      plans: ["gulyanka3-plan-side.png","gulyanka3-plan-top.png"] },
+      plans: ["gulyanka3-plan-side.png?v=2","gulyanka3-plan-top.png?v=2"] },
     content: {
       eyebrow: "Моторная лодка",
       desc: "Компактная прогулочная лодка",
@@ -892,7 +892,7 @@ const BOATS = [
       thumbs: ["gulyanka2003-i1.jpg","gulyanka2003-i2.jpg","gulyanka2003-i3.jpg","gulyanka2003-i4.jpg","gulyanka2003-i5.jpg","gulyanka2003-i6.jpg"],
       captions: ["Кокпит","Кают-компания","Камбуз","Салон","Носовая каюта","Санузел"],
       gallery: ["gulyanka2003-i1.jpg","gulyanka2003-2.jpg","gulyanka2003-i2.jpg","gulyanka2003-i3.jpg","gulyanka2003-overview.jpg","gulyanka2003-i4.jpg","gulyanka2003-i5.jpg","gulyanka2003-story.jpg","gulyanka2003-i6.jpg"],
-      plans: ["gulyanka1-plan-side.png","gulyanka1-plan-top.png"] },
+      plans: ["gulyanka1-plan-side.png?v=2","gulyanka1-plan-top.png?v=2"] },
     content: {
       eyebrow: "Моторная лодка",
       desc: "Компактная стальная моторная яхта 10 метров — экономичная, тёплая, для неспешных прогулок по Волге",
