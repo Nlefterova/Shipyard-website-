@@ -37,7 +37,7 @@ const BOATS = [
       thumbs: ["trex44fly-i1.jpg","trex44fly-i2.jpg","trex44fly-i3.jpg","trex44fly-i4.jpg","trex44fly-i5.jpg","trex44fly-i6.jpg"],
       captions: ["Салон","Салон","Камбуз","Мастер-каюта","Гостевая каюта","Санузел"],
       gallery: ["trex44fly-i2.jpg","trex44fly-i5.jpg","trex44fly-overview.jpg?v=2","trex44fly-i3.jpg","trex44fly-i4.jpg","trex44fly-i1.jpg","trex44fly-2.jpg","trex44fly-story.jpg","trex44fly-i6.jpg"],
-      plans: ["trex44fly-plan3.png?v=5","trex44fly-plan2.png?v=6","trex44fly-plan1.png?v=8"]
+      plans: ["trex44fly-plan3.png?v=5","trex44fly-plan1.png?v=8","trex44fly-plan2.png?v=6"]
     },
     content: {
       eyebrow: "Глиссирующий катер",
@@ -92,8 +92,8 @@ const BOATS = [
       ],
       decks: [
         { name: "вид сбоку", items: ["флайбридж","второй пост управления","зона солярия"] },
-        { name: "первая палуба", items: ["мастер-каюта","гостевая каюта","два санузла с душем"] },
-        { name: "вторая палуба", items: ["салон","камбуз","пост управления","кокпит"] }
+        { name: "главная палуба", items: ["салон","камбуз","пост управления","кокпит"] },
+        { name: "нижняя палуба", items: ["мастер-каюта","гостевая каюта","два санузла с душем"] }
       ]
     } },
   { id: "trex-44cr", family: "trex", name: "T-Rex 44 CR",  status: "available", year: "2023", img: "trex44cr.jpg", cardImg: "trex44cr-card.jpg", hideStoryBtns: true,
@@ -153,7 +153,7 @@ const BOATS = [
       ],
       decks: [
         { name: "вид сбоку", items: ["ходовая рубка","кокпит","носовой солярий"] },
-        { name: "верхняя палуба", items: ["камбуз","кокпит","зона отдыха","зона у воды","солярий на носу"] },
+        { name: "главная палуба", items: ["камбуз","кокпит","зона отдыха","зона у воды","солярий на носу"] },
         { name: "нижняя палуба", items: ["мастер-каюта","носовая каюта","детская каюта","два санузла","душевая"] }
       ]
     } },
@@ -443,8 +443,8 @@ const BOATS = [
       ],
       decks: [
         { name: "вид сбоку", items: [] },
-        { name: "верхняя палуба", items: ["рубка","салон","камбуз","кокпит"] },
-        { name: "нижняя палуба", items: ["каюты","санузлы","душ"] }
+        { name: "главная палуба", items: [] },
+        { name: "нижняя палуба", items: [] }
       ]
     } },
   // Корабли
@@ -456,9 +456,9 @@ const BOATS = [
       plans: ["aleksandriya-plan-side.png?v=2", "aleksandriya-plan-main.png?v=2", "aleksandriya-plan-lower.png?v=2"] },
     content: { eyebrow: "Круизное моторное судно", desc: "Водоизмещающее судно",
       decks: [
-        { name: "Боковой вид", items: [] },
-        { name: "Главная палуба", items: ["Пост управления", "Салон", "Обеденная зона", "Камбуз"] },
-        { name: "Нижняя палуба", items: ["Каюты", "Санузлы", "Кают-компания"] }
+        { name: "вид сбоку", items: [] },
+        { name: "главная палуба", items: [] },
+        { name: "нижняя палуба", items: [] }
       ] } },
   { id: "mius", family: "korabli", name: "Миус", status: "sold", year: "2018", img: "mius.jpg?v=2", cardImg: "mius-card.jpg?v=2", tags: ["На заказ"], hideGalleryBtn: true, noStory: true,
     photos: { hero2: "mius-2.jpg", hero2Pos: "center 64%", overview: "mius-story.jpg?v=2", construction: "mius-overview.jpg",
@@ -495,7 +495,7 @@ const BOATS = [
       ],
       decks: [
         { name: "вид сбоку", items: [] },
-        { name: "верхняя палуба", items: [] },
+        { name: "главная палуба", items: [] },
         { name: "нижняя палуба", items: [] }
       ]
     } },

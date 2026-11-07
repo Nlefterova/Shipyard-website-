@@ -457,7 +457,8 @@
   if (boat && boat.content) fillContent(boat);
 
   // noSpecs: the plans were (re)built by fillContent above, so lay them out
-  // in a row here with each deck label below its drawing (no overlap).
+  // in a full-width row here. The deck label stays inside its drawing (bottom),
+  // same as every other boat.
   if (boat && boat.noSpecs) {
     const plans = document.querySelector(".wf-specsheet .wf-plans");
     if (plans) {
@@ -465,17 +466,11 @@
       plans.style.alignItems = "flex-start";
       plans.style.width = "100%";
       plans.querySelectorAll(".wf-plans__img").forEach((b) => {
-        const label = b.querySelector(".wf-plan__label");
         const wrap = document.createElement("div");
-        wrap.style.cssText = "flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:.6rem";
+        wrap.style.cssText = "flex:1 1 0;min-width:0";
         b.parentNode.insertBefore(wrap, b);
         wrap.appendChild(b);
         b.style.width = "100%";
-        if (label) {
-          label.style.position = "static";
-          label.style.left = label.style.right = label.style.bottom = "auto";
-          wrap.appendChild(label);
-        }
       });
     }
   }
