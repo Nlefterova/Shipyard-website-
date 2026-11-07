@@ -455,6 +455,10 @@ const BOATS = [
       gallery: ["aleksandriya-2.jpg", "aleksandriya-i1.jpg", "aleksandriya.jpg", "aleksandriya-i2.jpg", "aleksandriya-i4.jpg", "aleksandriya-3.jpg", "aleksandriya-i3.jpg", "aleksandriya-4.jpg", "aleksandriya-i6.jpg", "aleksandriya-e1.jpg", "aleksandriya-e2.jpg", "aleksandriya-e3.jpg", "aleksandriya-e4.jpg", "aleksandriya-e5.jpg", "aleksandriya-e6.jpg"],
       plans: ["aleksandriya-plan-side.png?v=2", "aleksandriya-plan-main.png?v=2", "aleksandriya-plan-lower.png?v=2"] },
     content: { eyebrow: "Круизное моторное судно", desc: "Водоизмещающее судно",
+      overviewLead: "Моторная яхта с просторной открытой верхней палубой",
+      overviewBody: [
+        "Александрия — трёхпалубная яхта с роскошной отделкой. <span style=\"font-weight:600\">Верхняя палуба полностью открытая и отдана под зону солярия</span> со встроенной кран-балкой под лодку. <span style=\"font-weight:600\">Главная палуба — это общая зона и капитанская рубка</span>. Общая зона оформлена в открытой планировке, то есть большая гостиная совмещена со столовой и с камбузом, а также из этой зоны есть выход на нос, который открыт, со встроенным лежаком, и на корму, где можно посидеть. <span style=\"font-weight:600\">Нижняя палуба отдана под спальную зону</span>, где находятся каюты."
+      ],
       decks: [
         { name: "вид сбоку", items: [] },
         { name: "главная палуба", items: [] },
