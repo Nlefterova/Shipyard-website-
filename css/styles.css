@@ -832,7 +832,7 @@ body[data-boat="trex-37"] .wf-gallery__col--left > .wf-gallery__pair{order:-1}
 body[data-boat="volnyi"] .wf-spectable--underplan{margin-top:clamp(2rem,4vw,3rem)}
 body[data-boat="piligrim"] .wf-spectable--underplan{margin-top:clamp(2rem,4vw,55px)}
 body[data-boat="l-1050"] .wf-plans{margin-top:15px}
-body[data-boat="l-1050"] .wf-spectable--underplan{margin-top:clamp(2rem,5.7vw,82px)}
+body[data-boat="l-1050"] .wf-spectable--underplan{margin-top:clamp(2rem,5.7vw,35px)}
 
 /* ============================================================
    ABOUT PAGE — low-fi wireframe
