@@ -465,9 +465,12 @@
       plans.style.flexDirection = "row";
       plans.style.alignItems = "flex-start";
       plans.style.width = "100%";
+      // a lone plan shouldn't stretch the full width — cap it so it reads at a
+      // normal plan-box size; multiple plans still share the row equally.
+      const single = plans.querySelectorAll(".wf-plans__img").length === 1;
       plans.querySelectorAll(".wf-plans__img").forEach((b) => {
         const wrap = document.createElement("div");
-        wrap.style.cssText = "flex:1 1 0;min-width:0";
+        wrap.style.cssText = single ? "flex:0 0 auto;width:560px;max-width:100%;min-width:0" : "flex:1 1 0;min-width:0";
         b.parentNode.insertBefore(wrap, b);
         wrap.appendChild(b);
         b.style.width = "100%";

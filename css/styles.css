@@ -826,13 +826,16 @@ body[data-boat="trex-44cr"] .wf-plan__label{gap:.1rem .5rem;bottom:clamp(.3rem,.
 body[data-boat="trex-37"] .wf-specsheet__right,
 body[data-boat="trex-40"] .wf-specsheet__right,
 body[data-boat="volnyi"] .wf-specsheet__right,
-body[data-boat="l-1050"] .wf-specsheet__right{align-content:start}
+body[data-boat="l-1050"] .wf-specsheet__right,
+body[data-boat="gulyanka-1"] .wf-specsheet__right{align-content:start}
+body[data-boat="gulyanka-1"] .wf-specsheet__right{margin-top:15px}
 body[data-boat="trex-37"] .wf-gallery__col--left > .wf-gallery__pair{order:-1}
 .wf-spectable--underplan{margin-top:clamp(4rem,7vw,6rem)}
 body[data-boat="volnyi"] .wf-spectable--underplan{margin-top:clamp(2rem,4vw,3rem)}
 body[data-boat="piligrim"] .wf-spectable--underplan{margin-top:clamp(2rem,4vw,55px)}
 body[data-boat="l-1050"] .wf-plans{margin-top:15px}
 body[data-boat="l-1050"] .wf-spectable--underplan{margin-top:clamp(2rem,5.7vw,35px)}
+body[data-boat="gulyanka-1"] .wf-spectable--underplan{margin-top:clamp(1.5rem,4vw,32px)}
 
 /* ============================================================
    ABOUT PAGE — low-fi wireframe
