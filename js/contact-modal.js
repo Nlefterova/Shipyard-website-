@@ -6,7 +6,7 @@
       '<div class="cmodal__box" role="dialog" aria-modal="true" aria-label="Связаться">' +
         '<button class="cmodal__close" type="button" data-cmodal-close aria-label="Закрыть">&times;</button>' +
         '<div class="cmodal__body">' +
-          '<p class="cmodal__eyebrow">Корабельная артель</p>' +
+          '<p class="cmodal__eyebrow">Корабельная Артель</p>' +
           '<h2 class="cmodal__title">Напишите нам</h2>' +
           '<p class="cmodal__sub">Позвоните или напишите — расскажем о верфи, судах и запишем на экскурсию.</p>' +
           '<ul class="cmodal__list">' +

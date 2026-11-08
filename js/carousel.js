@@ -34,9 +34,9 @@
      Slides 2–4 keep the generic pair. */
   const BTNS = [
     { p: ['Смотреть Флот', 'fleet.html'],                 s: ['Наш подход', '#approach'] },
-    { p: ['Смотреть Флот', 'fleet.html#fam-trex'],        s: ['О верфи', 'about.html'] },
-    { p: ['Смотреть Флот', 'fleet.html#fam-expedition'],  s: ['О верфи', 'about.html'] },
-    { p: ['Смотреть Флот', 'fleet.html#fam-korabli'],     s: ['О верфи', 'about.html'] },
+    { p: ['Смотреть Флот', 'fleet.html#fam-trex'],        s: ['О Верфи', 'about.html'] },
+    { p: ['Смотреть Флот', 'fleet.html#fam-expedition'],  s: ['О Верфи', 'about.html'] },
+    { p: ['Смотреть Флот', 'fleet.html#fam-korabli'],     s: ['О Верфи', 'about.html'] },
   ];
   function setButtons(n) {
     const b = BTNS[n]; if (!b) return;
