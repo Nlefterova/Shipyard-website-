@@ -737,7 +737,7 @@ const BOATS = [
       decks: []
     } },
   { id: "yul",       family: "korabli", name: "Юл",         status: "sold", year: "2008", img: "yul.jpg?v=2", noInteriors: true, noStory: true,
-    photos: { hero2: "yul-story.jpg", overview: "yul-overview.jpg", construction: "yul-2.jpg",
+    photos: { hero2: "yul-story.jpg", overview: "yul-overview.jpg?v=2", construction: "yul-2.jpg",
       plans: ["yul-plan-side.png?v=2","yul-plan-top.png?v=2"] },
     content: {
       eyebrow: "Прогулочный катер",

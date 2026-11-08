@@ -128,7 +128,7 @@
       "rusich.jpg", "rusich-2.jpg", "rusich-overview.jpg", "rusich-story.jpg",
       "volnyi.jpg", "volnyi-2.jpg", "volnyi-overview.jpg", "volnyi-story.jpg",
       "yeti.jpg", "yeti-2.jpg", "yeti-overview.jpg", "yeti-story.jpg", "yeti-e1.jpg",
-      "yul.jpg", "yul-2.jpg", "yul-overview.jpg", "yul-story.jpg",
+      "yul.jpg", "yul-2.jpg", "yul-overview.jpg?v=2", "yul-story.jpg",
       "pilgrim.jpg", "pilgrim-2.jpg?v=3", "pilgrim-overview.jpg", "pilgrim-story.jpg",
       "laita.jpg", "laita-2.jpg", "laita-overview.jpg", "laita-story.jpg",
       "dundukovsky.jpg", "dundukovsky-2.jpg", "dundukovsky-3.jpg", "dundukovsky-4.jpg", "dundukovsky-5.jpg", "dundukovsky-6.jpg", "dundukovsky-7.jpg", "dundukovsky-8.jpg",
