@@ -296,7 +296,7 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 }
 .approach__tab:hover{border-color:var(--navy)}
 .approach__tab.is-active{background:var(--navy);color:var(--white);border-color:var(--navy)}
-.approach__right{padding-top:clamp(1.75rem,3.5vw,3.25rem)}
+.approach__right{padding-top:0}
 .approach__panel{display:none}
 .approach__panel.is-active{display:block}
 .approach__lead{
