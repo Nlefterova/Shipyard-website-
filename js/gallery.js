@@ -30,7 +30,7 @@
     pilgrim: { name: "Пилигрим", year: 2007 },
     yul: { name: "Юл", year: 2008 },
     aleksandriya: { name: "Александрия", year: 2019 },
-    dundukovsky: { name: "Дундуковский", year: 1999 },
+    dundukovsky: { name: "Мара 2", year: 1999 },
     proekt1: { name: "Проект №1", year: 1995 },
     bandido: { name: "Bandido", year: 2001 }
   };
