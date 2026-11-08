@@ -981,7 +981,7 @@ const BOATS = [
         { name: "вид сбоку", items: [] }
       ]
     } },
-  { id: "l-1050",    family: "gulyanki", name: "L-1050",     status: "sold", year: "2015", img: "l1050.jpg?v=2", cardImg: "l1050-card.jpg", tags: ["На заказ"], hideGalleryBtn: true,
+  { id: "l-1050",    family: "gulyanki", name: "Гулянка №4",  status: "sold", year: "2015", img: "l1050.jpg?v=2", cardImg: "l1050-card.jpg", tags: ["На заказ"], hideGalleryBtn: true,
     photos: { hero2: "l1050-2.jpg", overview: "l1050-overview.jpg", construction: "l1050-story.jpg",
       thumbs: ["l1050-i1.jpg","l1050-i2.jpg","l1050-i3.jpg","l1050-i4.jpg","l1050-i5.jpg","l1050-i6.jpg"],
       captions: ["Кают-компания","Ходовая рубка","Камбуз","Носовая каюта","Кокпит","Санузел"],

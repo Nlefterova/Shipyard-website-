@@ -11,7 +11,7 @@
     gulyanka3: { name: "Гулянка №3", year: 2004 },
     gulyanka5: { name: "Гулянка №5", year: 2017 },
     kasatka: { name: "Касатка", year: 2013 },
-    l1050: { name: "L-1050", year: 2015 },
+    l1050: { name: "Гулянка №4", year: 2015 },
     mara: { name: "Мара", year: 1998 },
     mius: { name: "Миус", year: 2018 },
     natali: { name: "Natali SRT", year: 2014 },
