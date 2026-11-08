@@ -1,7 +1,7 @@
 /* Gallery page — theme toggle (Интерьеры / Экстерьеры) + tetris mosaic + lightbox.
    Photo lists are a rough auto-sort by filename; curate by editing these arrays. */
 (function () {
-  var IMG_V = 222;
+  var IMG_V = 223;
 
   /* filename prefix -> boat name + year (prefixes differ from data ids) */
   var META = {

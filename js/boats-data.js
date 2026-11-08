@@ -286,8 +286,8 @@ const BOATS = [
   // Expedition
   { id: "exp-65lux", family: "expedition", name: "Expedition 65 Lux", status: "available", year: "2026", img: "exp65lux.jpg", cardImg: "exp65lux-card.jpg", hideStoryBtns: true,
     photos: { hero2: "exp65lux-2.jpg", overview: "exp65lux-overview.jpg", construction: "exp65lux-story.jpg",
-      thumbs: ["exp65lux-i1.jpg","exp65lux-i2.jpg","exp65lux-i3.jpg","exp65lux-i4.jpg","exp65lux-i5.jpg","exp65lux-i6.jpg"], captions: ["Мастер-каюта","Нижний зал","Зал","Кухня","Сауна","Детская каюта"],
-      gallery: ["exp65lux-i3.jpg","exp65lux-i1.jpg","exp65lux.jpg","exp65lux-i2.jpg","exp65lux-i4.jpg","exp65lux-2.jpg","exp65lux-overview.jpg","exp65lux-i5.jpg","exp65lux-i6.jpg","exp65lux-e1.jpg","exp65lux-e2.jpg","exp65lux-e3.jpg","exp65lux-e4.jpg","exp65lux-e5.jpg","exp65lux-e6.jpg","exp65lux-e7.jpg","exp65lux-e8.jpg","exp65lux-e9.jpg","exp65lux-e10.jpg","exp65lux-e11.jpg","exp65lux-e12.jpg","exp65lux-e13.jpg","exp65lux-e14.jpg","exp65lux-e15.jpg","exp65lux-e16.jpg","exp65lux-e17.jpg","exp65lux-e18.jpg","exp65lux-e19.jpg","exp65lux-e20.jpg","exp65lux-e21.jpg"],
+      thumbs: ["exp65lux-i1.jpg","exp65lux-i2.jpg","exp65lux-i3.jpg","exp65lux-i4.jpg?v=2","exp65lux-i5.jpg","exp65lux-i6.jpg"], captions: ["Мастер-каюта","Нижний зал","Зал","Кухня","Сауна","Детская каюта"],
+      gallery: ["exp65lux-i3.jpg","exp65lux-i1.jpg","exp65lux.jpg","exp65lux-i2.jpg","exp65lux-i4.jpg?v=2","exp65lux-2.jpg","exp65lux-overview.jpg","exp65lux-i5.jpg","exp65lux-i6.jpg","exp65lux-e1.jpg","exp65lux-e2.jpg","exp65lux-e3.jpg","exp65lux-e4.jpg","exp65lux-e5.jpg","exp65lux-e6.jpg","exp65lux-e7.jpg","exp65lux-e8.jpg","exp65lux-e9.jpg","exp65lux-e10.jpg","exp65lux-e11.jpg","exp65lux-e12.jpg","exp65lux-e13.jpg","exp65lux-e14.jpg","exp65lux-e15.jpg","exp65lux-e16.jpg","exp65lux-e17.jpg","exp65lux-e18.jpg","exp65lux-e19.jpg","exp65lux-e20.jpg","exp65lux-e21.jpg"],
       plans: ["exp65lux-plan-upper.jpg","exp65lux-plan-main.jpg","exp65lux-plan-lower.jpg"] },
     content: {
       eyebrow: "Экспедиционный хаусбот",
