@@ -303,7 +303,7 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
   font-family:var(--serif);font-weight:600;color:var(--near-black);
   font-size:clamp(1.35rem,2.1vw,1.75rem);line-height:1.25;
 }
-.approach__body{margin-top:1.85rem;color:var(--charcoal);font-size:1rem;line-height:1.65}
+.approach__body{margin-top:48px;color:var(--charcoal);font-size:1rem;line-height:1.65}
 
 /* ============================================================
    ГАЛЕРЕЯ  (masonry grid — 6 col, last col narrow logo strip)
