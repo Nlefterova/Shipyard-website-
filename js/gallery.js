@@ -193,10 +193,34 @@
     if (reversed) list.reverse();
     current = list;
     grid.innerHTML = current.map(function (f, i) {
-      return '<button class="gal-cell" type="button" data-idx="' + i + '" ' +
-        'style="background-image:url(\'' + src(f) + '\')" aria-label="Открыть фото"></button>';
+      return '<button class="gal-cell" type="button" data-idx="' + i + '" aria-label="Открыть фото">' +
+        '<img src="' + src(f) + '" loading="lazy" alt=""></button>';
     }).join("");
+    layoutMasonry();
   }
+
+  /* ---- Grid masonry: size each tile to span the rows its photo needs (no crop, no gaps) ---- */
+  var MGAP = 8;   // vertical gap (matches column-gap); rows are 1px with no row-gap
+  function spanCell(img) {
+    var cell = img.parentNode;
+    if (!cell) return;
+    var h = img.getBoundingClientRect().height;
+    if (!h) return;
+    cell.style.gridRowEnd = "span " + Math.max(1, Math.ceil(h) + MGAP);
+  }
+  function layoutMasonry() {
+    grid.querySelectorAll(".gal-cell img").forEach(function (img) {
+      if (img.complete && img.naturalHeight) spanCell(img);
+      else img.addEventListener("load", function () { spanCell(img); }, { once: true });
+    });
+  }
+  var mResizeT;
+  window.addEventListener("resize", function () {
+    clearTimeout(mResizeT);
+    mResizeT = setTimeout(function () {
+      grid.querySelectorAll(".gal-cell img").forEach(spanCell);
+    }, 150);
+  });
 
   tabs.forEach(function (t) {
     t.addEventListener("click", function () {
