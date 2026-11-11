@@ -449,10 +449,10 @@ const BOATS = [
     } },
   // Корабли
   { id: "aleksandriya", family: "korabli", name: "Александрия", status: "sold", year: "2019", img: "aleksandriya.jpg", cardImg: "aleksandriya.jpg", tags: ["На заказ"], noSpecs: true, noStory: true,
-    photos: { hero2: "aleksandriya-2.jpg", overview: "aleksandriya-3.jpg", construction: "aleksandriya-4.jpg",
+    photos: { hero2: "aleksandriya-2.jpg?v=2", overview: "aleksandriya-3.jpg", construction: "aleksandriya-4.jpg",
       thumbs: ["aleksandriya-i1.jpg", "aleksandriya-i2.jpg", "aleksandriya-i3.jpg", "aleksandriya-i4.jpg", "aleksandriya-i5.jpg", "aleksandriya-i6.jpg"],
       captions: ["Салон", "Обеденная зона", "Камбуз", "Каюта", "Интерьер", "Санузел"],
-      gallery: ["aleksandriya-2.jpg", "aleksandriya-i1.jpg", "aleksandriya.jpg", "aleksandriya-i2.jpg", "aleksandriya-i4.jpg", "aleksandriya-3.jpg", "aleksandriya-i3.jpg", "aleksandriya-4.jpg", "aleksandriya-i6.jpg", "aleksandriya-e1.jpg", "aleksandriya-e2.jpg", "aleksandriya-e3.jpg", "aleksandriya-e4.jpg", "aleksandriya-e5.jpg", "aleksandriya-e6.jpg"],
+      gallery: ["aleksandriya-2.jpg?v=2", "aleksandriya-i1.jpg", "aleksandriya.jpg", "aleksandriya-i2.jpg", "aleksandriya-i4.jpg", "aleksandriya-3.jpg", "aleksandriya-i3.jpg", "aleksandriya-4.jpg", "aleksandriya-i6.jpg", "aleksandriya-e1.jpg", "aleksandriya-e2.jpg", "aleksandriya-e3.jpg", "aleksandriya-e4.jpg", "aleksandriya-e5.jpg", "aleksandriya-e6.jpg"],
       plans: ["aleksandriya-plan-side.png?v=2", "aleksandriya-plan-main.png?v=2", "aleksandriya-plan-lower.png?v=2"] },
     content: { eyebrow: "Круизное моторное судно", desc: "Водоизмещающее судно",
       overviewLead: "Моторная яхта с просторной открытой верхней палубой",
