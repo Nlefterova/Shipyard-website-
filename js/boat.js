@@ -500,7 +500,9 @@
 
   function fillContent(boat) {
     const c = boat.content;
-    document.title = boat.name + " — Корабельная артель";
+    document.title = boat.name + " — Корабельная Артель";
+    var md = document.querySelector('meta[name="description"]');
+    if (md) md.setAttribute("content", boat.name + (c.desc ? " — " + c.desc : "") + ". Судостроительная верфь «Корабельная Артель», Саратов.");
     // HERO
     setText(".wf-hero__info .wf-field .wf-label", c.eyebrow);
     setAll(".wf-name", boat.name);
@@ -602,7 +604,7 @@
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod " +
       "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim " +
       "veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.";
-    document.title = "Судно — Корабельная артель";
+    document.title = "Судно — Корабельная Артель";
     document.querySelectorAll(".wf-name").forEach((el) => (el.textContent = "Название судна"));
     const series = document.querySelector(".wf-hero__info .wf-field .wf-label");
     if (series) series.textContent = "Тип судна";
